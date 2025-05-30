@@ -44,15 +44,7 @@ Bem-vindo ao repositório do projeto ** Interlude **. Aqui você encontra todos 
 - Navegue até a pasta `tools/`
 - Execute o script correspondente ao seu sistema operacional:
 
-### No Windows:
-
-```bat
-install_db.bat
-
-### No Linux:
-chmod +x database_installer.sh
-./install_db.sh
-
+---
 
 # 📦 L2JDream Project - Instalação e Execução
 
