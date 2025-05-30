@@ -1,4 +1,4 @@
-# L2JEder Interlude - Servidor Privado Lineage II
+# L2JDreamV2 Interlude - Servidor Privado Lineage II
 
 Bem-vindo ao repositório do projeto ** Interlude **. Aqui você encontra todos os arquivos e instruções necessárias para rodar seu servidor de Lineage II com base na crônica Interlude.
 
