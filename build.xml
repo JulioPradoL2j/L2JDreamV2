@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="L2JDream_Project" default="dist-local" basedir=".">
+<project name="L2JDreamV2" default="dist-local" basedir=".">
 	<description>
 	</description>
 	<property name="src" location="java" />

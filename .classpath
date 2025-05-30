@@ -9,8 +9,5 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="libs/api-commons.jar"/>
 	<classpathentry kind="lib" path="libs/api-core.jar"/>
-
-
-
 	<classpathentry kind="output" path="bin"/>
 </classpath>
