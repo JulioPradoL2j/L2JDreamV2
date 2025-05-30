@@ -1,0 +1,421 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Akat Long Bow -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="2347" count="1"/>
+  </item>
+
+  <!-- Recipe: Battle Axe -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="2301" count="1"/>
+  </item>
+
+  <!-- Recipe: Bec de Corbin -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="2317" count="1"/>
+  </item>
+
+  <!-- Recipe: Berserker Blade(100%) -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="5436" count="1"/>
+  </item>
+
+  <!-- Recipe: Big Hammer -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="2299" count="1"/>
+  </item>
+
+  <!-- Recipe: Body Slasher -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="2314" count="1"/>
+  </item>
+
+  <!-- Recipe: Caliburs -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="2327" count="1"/>
+  </item>
+
+  <!-- Recipe: Chakram -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="2311" count="1"/>
+  </item>
+
+  <!-- Recipe: Club of Nature -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="2342" count="1"/>
+  </item>
+
+  <!-- Recipe: Crystal Staff -->
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="2305" count="1"/>
+  </item>
+
+  <!-- Recipe: Crystallized Ice Bow -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="2312" count="1"/>
+  </item>
+
+  <!-- Recipe: Cursed Staff -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="2320" count="1"/>
+  </item>
+
+  <!-- Recipe: Dark Screamer -->
+  <item id="13">
+    <ingredient id="57" count="1"/>
+    <production id="2345" count="1"/>
+  </item>
+
+  <!-- Recipe: Deadman's Staff -->
+  <item id="14">
+    <ingredient id="57" count="1"/>
+    <production id="2354" count="1"/>
+  </item>
+
+  <!-- Recipe: Dwarven Hammer (100%) -->
+  <item id="15">
+    <ingredient id="57" count="1"/>
+    <production id="8318" count="1"/>
+  </item>
+
+  <!-- Recipe: Dwarven War Hammer -->
+  <item id="16">
+    <ingredient id="57" count="1"/>
+    <production id="3021" count="1"/>
+  </item>
+
+  <!-- Recipe: Ecliptic Axe (100%) -->
+  <item id="17">
+    <ingredient id="57" count="1"/>
+    <production id="8308" count="1"/>
+  </item>
+
+  <!-- Recipe: Ecliptic Sword (100%) -->
+  <item id="18">
+    <ingredient id="57" count="1"/>
+    <production id="8304" count="1"/>
+  </item>
+
+  <!-- Recipe: Elemental Bow -->
+  <item id="19">
+    <ingredient id="57" count="1"/>
+    <production id="2323" count="1"/>
+  </item>
+
+  <!-- Recipe: Elven Bow of Nobility -->
+  <item id="20">
+    <ingredient id="57" count="1"/>
+    <production id="2324" count="1"/>
+  </item>
+
+  <!-- Recipe: Eminence Bow -->
+  <item id="21">
+    <ingredient id="57" count="1"/>
+    <production id="2359" count="1"/>
+  </item>
+
+  <!--  Recipe: Fisted Blade -->
+   <item id="22">
+    <ingredient id="57" count="1"/>
+    <production id="2346" count="1"/>
+  </item>
+
+  <!-- Recipe: Flamberge -->
+  <item id="23">
+    <ingredient id="57" count="1"/>
+    <production id="2297" count="1"/>
+  </item>
+
+  <!-- Recipe: Ghoul's Staff -->
+  <item id="24">
+    <ingredient id="57" count="1"/>
+    <production id="2355" count="1"/>
+  </item>
+  
+  <!-- Recipe: Grace Dagger -->
+  <item id="25">
+    <ingredient id="57" count="1"/>
+    <production id="2344" count="1"/>
+  </item>
+
+  <!-- Recipe: Great Pata -->
+  <item id="26">
+    <ingredient id="57" count="1"/>
+    <production id="2358" count="1"/>
+  </item>
+
+  <!-- Recipe: Heathen's Book -->
+  <item id="27">
+    <ingredient id="57" count="1"/>
+    <production id="2348" count="1"/>
+  </item>
+
+  <!-- Recipe: Heavy Doom Axe -->
+  <item id="28">
+    <ingredient id="57" count="1"/>
+    <production id="2307" count="1"/>
+  </item>
+
+  <!-- Recipe: Heavy Doom Hammer -->
+  <item id="29">
+    <ingredient id="57" count="1"/>
+    <production id="2304" count="1"/>
+  </item>
+
+  <!-- Recipe: Homunkulus's Sword -->
+  <item id="30">
+    <ingredient id="57" count="1"/>
+    <production id="2330" count="1"/>
+  </item>
+
+  <!-- Recipe: Horn of Glory -->
+  <item id="31">
+    <ingredient id="57" count="1"/>
+    <production id="2326" count="1"/>
+  </item>
+
+  <!-- Recipe: Inferno Staff -->
+  <item id="32">
+    <ingredient id="57" count="1"/>
+    <production id="2339" count="1"/>
+  </item>
+
+  <!-- Recipe: Karik Horn (100%) -->
+  <item id="33">
+    <ingredient id="57" count="1"/>
+    <production id="8319" count="1"/>
+  </item>
+
+  <!-- Recipe: Katana -->
+  <item id="34">
+    <ingredient id="57" count="1"/>
+    <production id="2316" count="1"/>
+  </item>
+
+  <!-- Recipe: Knuckle Duster -->
+  <item id="35">
+    <ingredient id="57" count="1"/>
+    <production id="4440" count="1"/>
+  </item>
+
+  <!-- Recipe: Mace of the Underworld -->
+  <item id="36">
+    <ingredient id="57" count="1"/>
+    <production id="2343" count="1"/>
+  </item>
+
+  <!-- Recipe: Mysterious Sword (100%) -->
+  <item id="37">
+    <ingredient id="57" count="1"/>
+    <production id="8303" count="1"/>
+  </item>
+
+  <!-- Recipe: Nirvana Axe -->
+  <item id="38">
+    <ingredient id="57" count="1"/>
+    <production id="2336" count="1"/>
+  </item>
+
+  <!-- Recipe: Orcish Glaive -->
+  <item id="39">
+    <ingredient id="57" count="1"/>
+    <production id="2313" count="1"/>
+  </item>
+
+  <!-- Recipe: Orcish Poleaxe -->
+  <item id="40">
+    <ingredient id="57" count="1"/>
+    <production id="2360" count="1"/>
+  </item>
+
+  <!-- Recipe: Pa'agrian Axe -->
+  <item id="41">
+    <ingredient id="57" count="1"/>
+    <production id="2350" count="1"/>
+  </item>
+
+  <!-- Recipe: Pa'agrian Hammer -->
+  <item id="42">
+    <ingredient id="57" count="1"/>
+    <production id="2340" count="1"/>
+  </item>
+
+  <!-- Recipe: Pa'agrian Sword (100%) -->
+  <item id="43">
+    <ingredient id="57" count="1"/>
+    <production id="8296" count="1"/>
+  </item>
+
+  <!-- Recipe: Paradia Staff -->
+  <item id="44">
+    <ingredient id="57" count="1"/>
+    <production id="2338" count="1"/>
+  </item>
+
+  <!-- Recipe: Poleaxe -->
+  <item id="45">
+    <ingredient id="57" count="1"/>
+    <production id="2331" count="1"/>
+  </item>
+
+  <!-- Recipe: Raid Sword -->
+  <item id="46">
+    <ingredient id="57" count="1"/>
+    <production id="2319" count="1"/>
+  </item>
+
+  <!-- Recipe: Sage's Staff -->
+  <item id="47">
+    <ingredient id="57" count="1"/>
+    <production id="2341" count="1"/>
+  </item>
+  
+  <!-- Recipe: Samurai Longsword -->
+  <item id="48">
+    <ingredient id="57" count="1"/>
+    <production id="2353" count="1"/>
+  </item>
+
+  <!-- Recipe: Scorpion -->
+  <item id="49">
+    <ingredient id="57" count="1"/>
+    <production id="2351" count="1"/>
+  </item>
+
+  <!-- Recipe: Scythe -->
+  <item id="50">
+    <ingredient id="57" count="1"/>
+    <production id="2300" count="1"/>
+  </item>
+
+  <!-- Recipe: Shamshir -->
+  <item id="51">
+    <ingredient id="57" count="1"/>
+    <production id="2315" count="1"/>
+  </item>
+
+  <!-- Recipe: Silver Axe -->
+  <item id="52">
+    <ingredient id="57" count="1"/>
+    <production id="2302" count="1"/>
+  </item>
+
+  <!-- Recipe: Skull Graver -->
+  <item id="53">
+    <ingredient id="57" count="1"/>
+    <production id="2303" count="1"/>
+  </item>  
+
+  <!-- Recipe: Soulfire Dirk -->
+  <item id="54">
+    <ingredient id="57" count="1"/>
+    <production id="2322" count="1"/>
+  </item>  
+
+  <!-- Recipe: Stick of Eternity -->
+  <item id="55">
+    <ingredient id="57" count="1"/>
+    <production id="2337" count="1"/>
+  </item>  
+
+  <!-- Recipe: Stick of Faith -->
+  <item id="56">
+    <ingredient id="57" count="1"/>
+    <production id="2306" count="1"/>
+  </item>  
+
+  <!-- Recipe: Stiletto -->
+  <item id="57">
+    <ingredient id="57" count="1"/>
+    <production id="2321" count="1"/>
+  </item>  
+
+  <!--  Recipe: Stormbringer -->
+  <item id="58">
+    <ingredient id="57" count="1"/>
+    <production id="2298" count="1"/>
+  </item>  
+
+  <!-- Recipe: Sword of Delusion -->
+  <item id="59">
+    <ingredient id="57" count="1"/>
+    <production id="2328" count="1"/>
+  </item>  
+
+  <!-- Recipe: Sword of Limit -->
+  <item id="60">
+    <ingredient id="57" count="1"/>
+    <production id="2332" count="1"/>
+  </item>  
+
+  <!-- Recipe: Sword of Nightmare -->
+  <item id="61">
+    <ingredient id="57" count="1"/>
+    <production id="2333" count="1"/>
+  </item>  
+
+  <!-- Recipe: Sword of Whispering Death -->
+  <item id="62">
+    <ingredient id="57" count="1"/>
+    <production id="2334" count="1"/>
+  </item>  
+
+  <!-- Recipe: Tsurugi -->
+  <item id="63">
+    <ingredient id="57" count="1"/>
+    <production id="2352" count="1"/>
+  </item>  
+
+  <!-- Recipe: War Axe -->
+  <item id="64">
+    <ingredient id="57" count="1"/>
+    <production id="2335" count="1"/>
+  </item>  
+
+  <!-- Recipe: Widow Maker -->
+  <item id="65">
+    <ingredient id="57" count="1"/>
+    <production id="2352" count="1"/>
+  </item>  
+
+  <!-- Recipe: Yaksa Mace -->
+  <item id="66">
+    <ingredient id="57" count="1"/>
+    <production id="3022" count="1"/>
+  </item>    
+  
+  <!-- Recipe: Crystal Dagger -->
+  <item id="67">
+    <ingredient id="57" count="1"/>
+    <production id="2357" count="1"/>
+  </item>  
+
+  <!-- Recipe: Cursed Dagger -->
+  <item id="68">
+    <ingredient id="57" count="1"/>
+    <production id="2308" count="1"/>
+  </item>  
+
+  <!-- Recipe: Dark Elven Dagger -->
+  <item id="69">
+    <ingredient id="57" count="1"/>
+    <production id="2310" count="1"/>
+  </item>    
+</list>

@@ -1,0 +1,145 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Music Box M-->
+  <item id="1">
+    <ingredient id="57" count="20"/>
+    <production id="6903" count="1"/>
+  </item>
+
+  <!-- Echo Crystal 1st Carol -->
+  <item id="2">
+    <ingredient id="57" count="20"/>
+    <production id="5562" count="1"/>
+  </item>
+
+  <!-- Echo Crystal 2st Carol -->
+  <item id="3">
+    <ingredient id="57" count="20"/>
+    <production id="5563" count="1"/>
+  </item>
+
+  <!-- Echo Crystal 3st Carol -->
+  <item id="4">
+    <ingredient id="57" count="20"/>
+    <production id="5564" count="1"/>
+  </item>
+
+  <!-- Echo Crystal 4st Carol -->
+  <item id="5">
+    <ingredient id="57" count="20"/>
+    <production id="5565" count="1"/>
+  </item>
+
+  <!-- Echo Crystal 5st Carol -->
+  <item id="6">
+    <ingredient id="57" count="20"/>
+    <production id="5566" count="1"/>
+  </item>
+
+  <!-- Echo Crystal 6st Carol -->
+  <item id="7">
+    <ingredient id="57" count="20"/>
+    <production id="5583" count="1"/>
+  </item>
+
+  <!-- Echo Crystal 7st Carol -->
+  <item id="8">
+    <ingredient id="57" count="20"/>
+    <production id="5584" count="1"/>
+  </item>
+
+  <!-- Echo Crystal 8st Carol -->
+  <item id="9">
+    <ingredient id="57" count="20"/>
+    <production id="5585" count="1"/>
+  </item>
+
+  <!-- Echo Crystal 9st Carol -->
+  <item id="10">
+    <ingredient id="57" count="20"/>
+    <production id="5586" count="1"/>
+  </item>
+
+  <!-- Echo Crystal 10st Carol -->
+  <item id="10">
+    <ingredient id="57" count="20"/>
+    <production id="5587" count="1"/>
+  </item>
+
+  <!-- Echo Crystal - Forgotten Song -->
+  <item id="11">
+    <ingredient id="57" count="20"/>
+    <production id="7589" count="1"/>
+  </item>
+  
+  <!-- Echo Crystal - Theme of Battle -->
+  <item id="12">
+    <ingredient id="57" count="20"/>
+    <production id="4412" count="1"/>
+  </item>
+
+  <!-- Echo Crystal - Theme of Birthday -->
+  <item id="13">
+    <ingredient id="57" count="20"/>
+    <production id="7061" count="1"/>
+  </item>
+
+  <!-- Echo Crystal - Theme of Celebration -->
+  <item id="14">
+    <ingredient id="57" count="20"/>
+    <production id="4416" count="1"/>
+  </item> 
+
+  <!-- Echo Crystal - Theme of Comedy -->
+  <item id="15">
+    <ingredient id="57" count="20"/>
+    <production id="4417" count="1"/>
+  </item>  
+  
+  <!-- Echo Crystal - Theme of Journey -->
+  <item id="16">
+    <ingredient id="57" count="20"/>
+    <production id="4411" count="1"/>
+  </item>  
+  
+  <!-- Echo Crystal - Theme of the Love -->
+  <item id="17">
+    <ingredient id="57" count="20"/>
+    <production id="4413" count="1"/>
+  </item>  
+  
+  <!-- Echo Crystal - Theme of Solitude -->
+  <item id="18">
+    <ingredient id="57" count="20"/>
+    <production id="4414" count="1"/>
+  </item>  
+  
+  <!-- Echo Crystal - Theme of the Feast -->
+  <item id="19">
+    <ingredient id="57" count="20"/>
+    <production id="4415" count="1"/>
+  </item>
+
+  <!-- Echo Crystal - Theme Victory -->
+  <item id="20">
+    <ingredient id="57" count="20"/>
+    <production id="5010" count="1"/>
+  </item>
+
+  <!-- Echo Crystal - Theme of Wedding -->
+  <item id="21">
+    <ingredient id="57" count="20"/>
+    <production id="7062" count="1"/>
+  </item>
+
+  <!-- Echo Crystal - Viva Victory -->
+  <item id="22">
+    <ingredient id="57" count="20"/>
+    <production id="8555" count="1"/>
+  </item>  
+</list>

@@ -1,0 +1,26 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  
+  <item id="1">
+    <ingredient id="57" count="5000000"/>
+    <production id="1419" count="1"/>
+  </item>
+
+  <item id="2">
+    <ingredient id="57" count="10000000"/>
+    <production id="3874" count="1"/>
+  </item>
+ 
+  <item id="3">
+    <ingredient id="57" count="30000000"/>
+    <production id="3870" count="1"/>
+  </item>
+
+
+
+</list>

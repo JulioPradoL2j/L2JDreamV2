@@ -1,0 +1,79 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Potions-->
+
+<list>
+
+<!-- Mana Potion -->
+  <item id="1">
+    <production id="728" count="10"/>
+    <ingredient id="57" count="150000"/>
+    </item>
+
+<!-- Greater Healing Potion -->
+  <item id="2">
+    <production id="1539" count="10"/>
+    <ingredient id="57" count="9000"/>
+    </item>
+	
+<!-- Magic Haste Potion -->
+  <item id="3">
+    <production id="6035" count="10"/>
+    <ingredient id="57" count="15000"/>
+    </item>	
+			
+<!-- Greater Magic Haste Potion -->
+  <item id="4">
+    <production id="6036" count="10"/>
+    <ingredient id="57" count="30000"/>
+    </item>
+	
+<!-- Haste Potion  -->
+  <item id="5">
+    <production id="734" count="10"/>
+    <ingredient id="57" count="15000"/>
+    </item>		
+
+<!-- Greater Haste Potion -->
+  <item id="6">
+    <production id="1374" count="10"/>
+    <ingredient id="57" count="30000"/>
+    </item>	
+
+<!-- Potion of Alacrity -->
+  <item id="7">
+    <production id="735" count="10"/>
+    <ingredient id="57" count="15000"/>
+    </item>			
+	
+<!-- Greater Swift Attack Potion -->
+  <item id="8">
+    <production id="1375" count="10"/>
+    <ingredient id="57" count="30000"/>
+    </item>	
+	
+<!-- Buff Scroll Empower -->
+  <item id="9">
+    <production id="3932" count="10"/>
+    <ingredient id="57" count="250000"/>
+    </item>	
+
+<!-- CP 50 -->
+  <item id="10">
+    <production id="5591" count="10"/>
+    <ingredient id="57" count="250000"/>
+    </item>	
+
+ <!-- Greater CP Potion -->
+  <item id="11">
+    <production id="5592" count="1"/>
+    <ingredient id="57" count="100000"/>
+  </item>  	
+
+ <!-- Quick Healing Potion -->
+  <item id="12">
+    <production id="1540" count="1"/>
+    <ingredient id="57" count="100000"/>
+  </item>  	
+  
+ </list>

@@ -1,0 +1,371 @@
+<?xml version="1.0"?>
+<list>
+	<autochat groupId="1" npcId="31093" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="2" npcId="31172" chatDelay="60000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="3" npcId="31174" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="4" npcId="31176" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="5" npcId="31178" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="6" npcId="31180" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="7" npcId="31182" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="8" npcId="31184" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="9" npcId="31186" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="10" npcId="31188" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="11" npcId="31190" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="12" npcId="31192" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="13" npcId="31194" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="14" npcId="31196" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="15" npcId="31198" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="16" npcId="31200" chatDelay="300000">
+		<chatText>%player_cabal_loser%! All is lost! Prepare to meet the
+			goddess of death!</chatText>
+		<chatText>%player_cabal_loser%! You bring an ill wind!</chatText>
+		<chatText>%player_cabal_loser%! You might as well give up!</chatText>
+		<chatText>A curse upon you!</chatText>
+		<chatText>All is lost! Prepare to meet the goddess of death!</chatText>
+		<chatText>All is lost! The prophecy of destruction has been fulfilled!</chatText>
+		<chatText>The prophecy of doom has awoken!</chatText>
+		<chatText>This world will soon be annihilated!</chatText>
+	</autochat>
+	<autochat groupId="17" npcId="31094" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="18" npcId="31173" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="19" npcId="31175" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="20" npcId="31177" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="21" npcId="31179" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="22" npcId="31181" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="23" npcId="31183" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="24" npcId="31185" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="25" npcId="31187" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="26" npcId="31189" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="27" npcId="31191" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="28" npcId="31193" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="29" npcId="31195" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="30" npcId="31197" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="31" npcId="31199" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+	<autochat groupId="32" npcId="31201" chatDelay="300000">
+		<chatText>%player_cabal_winner%! I bestow on you the authority of the
+			abyss!</chatText>
+		<chatText>%player_cabal_winner%, Darkness shall be banished forever!</chatText>
+		<chatText>%player_cabal_winner%, the time for glory is at hand!</chatText>
+		<chatText>All hail the eternal twilight!</chatText>
+		<chatText>As foretold in the prophecy of darkness, the era of chaos
+			has begun!</chatText>
+		<chatText>The day of judgment is near!</chatText>
+		<chatText>The prophecy of darkness has been fulfilled!</chatText>
+		<chatText>The prophecy of darkness has come to pass!</chatText>
+	</autochat>
+</list>

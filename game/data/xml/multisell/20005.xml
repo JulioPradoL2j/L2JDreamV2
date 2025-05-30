@@ -1,0 +1,80 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Elven Long Sword -->
+  <item id="1">
+    <ingredient id="57" count="1000000"/>
+    <production id="2499" count="1"/>
+  </item>
+
+  <!-- Claymore -->
+  <item id="2">
+    <ingredient id="57" count="1000000"/>
+    <production id="70" count="1"/>
+  </item>
+
+  <!-- Bonebreaker -->
+  <item id="3">
+    <ingredient id="57" count="1000000"/>
+    <production id="159" count="1"/>
+  </item>
+
+  <!-- Tarbar -->
+  <item id="4">
+    <ingredient id="57" count="1000000"/>
+    <production id="158" count="1"/>
+  </item>
+
+  <!-- Atuba Mace -->
+  <item id="5">
+    <ingredient id="57" count="1000000"/>
+    <production id="190" count="1"/>
+  </item>
+
+  <!-- Ghost Staff -->
+  <item id="6">
+    <ingredient id="57" count="1000000"/>
+    <production id="188" count="1"/>
+  </item>
+
+  <!-- Staff of Life -->
+  <item id="7">
+    <ingredient id="57" count="1000000"/>
+    <production id="189" count="1"/>
+  </item>
+  
+  <!-- Scallop Jamadhr -->
+  <item id="8">
+    <ingredient id="57" count="1000000"/>
+    <production id="262" count="1"/>
+  </item>
+
+  <!-- Light Crossbow -->
+  <item id="9">
+    <ingredient id="57" count="1000000"/>
+    <production id="280" count="1"/>
+  </item>
+
+  <!-- Mithril Dagger -->
+  <item id="10">
+    <ingredient id="57" count="1000000"/>
+    <production id="225" count="1"/>
+  </item>
+
+  <!-- Glaive -->
+  <item id="11">
+    <ingredient id="57" count="1000000"/>
+    <production id="297" count="1"/>
+  </item>
+
+  <!-- Bastard Sword*Crimson Sword -->
+  <item id="12">
+    <ingredient id="57" count="1000000"/>
+    <production id="2529" count="1"/>
+  </item>
+
+</list>

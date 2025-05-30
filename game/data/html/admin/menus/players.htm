@@ -1,0 +1,59 @@
+﻿<html><title>Server Control Panel</title><body>
+<center>
+<table width=270><tr>
+<tr>
+  <td><a action="bypass -h admin_admin" width=54 height=19><font color="FFD306">Main</font></a></td>
+  <td><a action="bypass -h admin_gamemenu" width=54 height=19><font color="FFD306">Game</font></a></td>
+  <td><a action="bypass -h admin_server" width=54 height=19><font color="FFD306">Server</font></a></td>
+  <td><a action="bypass -h admin_effects" width=54 height=19><font color="FFD306">Effects</font></a></td>
+  <td><a action="bypass -h admin_mod" width=54 height=19><font color="FFD306">Mods</font></a></td>
+</tr>
+</table>
+<br>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+
+<!-- Windows Info -->
+<br><font color="LEVEL">List, search players</font>
+<table width=260>
+<tr>
+<td width=50><font color="LEVEL"></font></td>
+<td width=160><edit var="qbox" width=160 height=19></td>
+<td width=50><font color="LEVEL"></font></td>
+</tr>
+</table>
+
+<br><table width=190>
+<tr>
+<td><button value="List" action="bypass -h admin_find_character" width=90 height=19 back="sek.cbui94" fore="sek.cbui94"></td>
+<td><button value="Find" action="bypass -h admin_find_character $qbox" width=90 height=19 back="sek.cbui94" fore="sek.cbui94"></td>
+</tr>
+</table>
+
+<br><font color="LEVEL">Mass Teleport Players</font>
+<table width=270>
+<tr>
+<td><button value="Get party" action="bypass -h admin_recallparty $qbox" width=90 height=19 back="sek.cbui94" fore="sek.cbui94"></td>
+<td><button value="Get clan" action="bypass -h admin_recallclan $qbox" width=90 height=19 back="sek.cbui94" fore="sek.cbui94"></td>
+<td><button value="Get ally" action="bypass -h admin_recallally $qbox" width=90 height=19 back="sek.cbui94" fore="sek.cbui94"></td>
+</tr>
+<tr>
+<td><button value="Get player" action="bypass -h admin_recall_all" width=90 height=19 back="sek.cbui94" fore="sek.cbui94"></td>
+<td><button value="Get all" action="bypass -h admin_recall_all" width=90 height=19 back="sek.cbui94" fore="sek.cbui94"></td>
+<td><button value="To player" action="bypass -h admin_teleportto $qbox" width=90 height=19 back="sek.cbui94" fore="sek.cbui94"></td>
+</tr>
+</table>
+
+
+<br><font color="LEVEL">Regeneration Hp/Mp</font>
+<table width=190>
+<tr>
+<td><button value="Stop task" action="bypass -h admin_stop_regen" width=90 height=19 back="sek.cbui94" fore="sek.cbui94"></td>
+<td><button value="Start task" action="bypass -h admin_start_regen" width=90 height=19 back="sek.cbui94" fore="sek.cbui94"></td>
+</tr>
+</table>
+
+</center>
+</body></html>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="L2JDream_Project" default="dist-local" basedir=".">
+	<description>
+	</description>
+	<property name="src" location="java" />
+	<property name="src-lib" location="libs" />
+	<target name="prepare-final"
+		description="Prepare the final folders properties">
+		<property name="build.classes" location="${build}/classes" />
+	</target>
+	<path id="classpath">
+		<fileset dir="${src-lib}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	<target name="init" description="Create the output directories.">
+		<mkdir dir="${build}" />
+		<mkdir dir="${build.classes}" />
+	</target>
+	<target name="compile" description="Compile the source.">
+		<javac destdir="${build.classes}" includeantruntime="false" optimize="on" debug="on" release="14" encoding="utf-8" nowarn="off">
+			<src path="${src}" />
+			<classpath refid="classpath" />
+		</javac>
+	</target>
+	<target name="jar" depends="compile"
+		description="Create the jar file">
+		<jar destfile="${src-lib}/api-dream.jar">
+			<fileset dir="${build.classes}" />
+		</jar>
+	</target>
+	<target name="export" depends="jar">
+		<delete dir="${build.classes}" />
+	</target>
+	<target name="dist-local"
+		description="Generate core jar into 'build-core' folder">
+		<property name="build" location="build" />
+		<property name="build.classes" location="${build}/classes" />
+		<delete dir="${build.classes}" />
+		<delete file="${src-lib}/api-dream.jar" />
+		<mkdir dir="${build}" />
+		<mkdir dir="${build.classes}" />
+		<javac destdir="${build.classes}" includeantruntime="false" optimize="on" debug="on" release="14" encoding="UTF-8" nowarn="off">
+			<src path="${src}" />
+			<classpath refid="classpath" />
+		</javac>
+		<jar destfile="${src-lib}/api-dream.jar">
+			<fileset dir="${build.classes}" />
+		</jar>
+		<delete dir="${build}" />
+	</target>
+</project>

@@ -1,0 +1,43 @@
+<html><title>Server Control Panel</title><body>
+<center>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=270>
+<tr>
+<td width=45><a action="bypass -h admin_admin" width=54 height=19><font color="FFD306">Main</font></a></td>
+<td width=180><center><font color="LEVEL">%fortName%</font></center></td>
+<td width=45><a action="bypass -h admin_fortsiege" width=54 height=19><font color="FFD306">Back</font></a></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+
+<br><font color="LEVEL">Action</font>
+
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=270>
+<tr>
+<td><button value="Add.Attakers" action="bypass -h admin_add_fortattacker %fortId%" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Clear List" action="bypass -h admin_clear_fortsiege_list %fortId%" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+<tr>
+<td><button value="List of clans" action="bypass -h admin_list_fortsiege_clans %fortId%" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="ProSpawnDoors" action="bypass -h admin_spawn_fortdoors %fortId%" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+<tr>
+<td><button value="Launch of siege" action="bypass -h admin_startfortsiege %fortId%" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="End the siege" action="bypass -h admin_endfortsiege %fortId%" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+<tr>
+<tr><td><button value="Give Fort" action="bypass -h admin_setfort %fortId%" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Pick up Fort" action="bypass -h admin_removefort %fortId%" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+</center></body></html>

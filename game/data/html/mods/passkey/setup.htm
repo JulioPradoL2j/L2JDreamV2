@@ -1,0 +1,27 @@
+<html>
+<title>Personal Password Manager</title>
+<body>
+<center>
+<img src="L2Font.mini_logo-k" width=250 height=90><br>
+<img src="L2UI_CH3.herotower_deco" width=256 height=32><br>
+</center>
+<br>
+Hello, stranger! What i do?! Protect you from hacking.
+I'll help you set a password for the character.
+This way if someone theft your account no one can make any action with the character.
+It is not recommended to enter as password the same as you use in the account.
+The security question is required if you lose or forget your password.
+<center>
+<table>
+<tr><td><font color="732cde">Enter the password: </font></td><td><edit var="pass1" type="password" width=70 height=10></td></tr><br>
+<tr><td><font color="732cde">Repeat password: </font></td><td><edit var="pass2" type="password" width=70 height=10></td></tr><br>
+<tr><td><font color="732cde">Enter a security question: </font></td><td><edit var="question" width=70 height=10></td></tr><br>
+<tr><td><font color="732cde">Enter the answer: </font></td><td><edit var="answer" width=70 height=10></td></tr><br>
+</table>
+<br>
+<button value="Confirm" action="bypass -h pkset ] $pass1 ] $pass2 ] $question ] $answer" width=75 height=21 back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normal">        
+<br>
+<img src="L2UI_CH3.herotower_deco" width=256 height=32>
+</center>
+</body>
+</html>

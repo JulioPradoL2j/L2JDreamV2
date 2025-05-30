@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<item id='9999' name="AIOxDualSword">
+		<for>
+			<set val='0' order='0x08' stat='pAtk' />
+			<set val='0' order='0x08' stat='mAtk' />
+			<set val='0' order='0x08' stat='rCrit' />
+			<add val='0' order='0x40' stat='accCombat' />
+			<add val='5000' order='0x08' stat='pAtkSpd' />
+			<add val='5000' order='0x08' stat='mAtkSpd' />
+			<mul order="0x30" stat="maxMp" val="30" />
+			<mul order="0x30" stat="maxHp" val="0.01" />
+			<add order="0x40" stat="regMp" val="999" />
+		</for>
+	</item>
+</list>

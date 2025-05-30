@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Warcryer Classe -->
+<list>
+  <!-- Mark of Piligrim -->
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="2721" count="1"/>
+  </item>
+  
+  <!-- Mark of Glory -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="3203" count="1"/>
+  </item>
+
+  <!-- Mark of Warspirit -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="2879" count="1"/>
+  </item>
+</list>

@@ -1,0 +1,27 @@
+<list>
+ <achievement id="1" name="Champion" description="Player level 80" reward="9142,5" minLevel="80"/>
+ <achievement id="2" name="Hero" description="player hero status" reward="9142,10" mustBeHero="true"/>
+ <achievement id="3" name="Noble" description="Player noblesse status" reward="9142,10" mustBeNoble="true"/>
+ <achievement id="4" name="Weapon" description="Enchant a weapon min + 20" reward="9142,15" minWeaponEnchant="16" />
+ <achievement id="5" name="Pvp's" description="Need 1,000 PvPs" reward="9142,15" minPvPCount="1000"/>
+ <achievement id="6" name="Leader" description="Be a clan leader" reward="9142,10" mustBeClanLeader="true"/>
+ <achievement id="7" name="Pk's" description="Need 1,000 Pks" reward="9142,15" minPkCount="1000"/>
+ <achievement id="8" name="Craft" description="Event Medal" reward="9142,15" itemAmmount="6392,200"/>
+ <achievement id="9" name="Comander" description="Be clan leader of a clan level 8" reward="9142,10" minClanLevel="8" mustBeClanLeader="true"/>
+ <achievement id="10" name="You Life" description="Max HP,CP,MP" reward="9142,10" maxHP="1000" maxMP="1000" maxCP="1000"/>
+ <achievement id="11" name="Karma Player" description="Min Karma" reward="9142,5" minKarmaCount="100"/>
+ <achievement id="12" name="Adena Player" description="Min adena cout" reward="9142,5" minAdenaCount="100"/>
+ <achievement id="13" name="Player In Clan" description="Min player clan" reward="9142,5" minClanMembersCount="1"/>
+ <achievement id="14" name="Achievements" description="Complete all personal achievements" reward="9142,40" CompleteAchievements="18"/>
+ <achievement id="15" name="Reputation Clan" description="Reputation in his clan" reward="9142,5" crpAmmount="100"/>
+ <achievement id="16" name="Leader Of Clan" description="Ter Castle" reward="9142,5" lordOfCastle="true"/>
+ <achievement id="17" name="Mage Class" description="Mage Class" reward="9142,5" mustBeMageClass="true"/>
+ <achievement id="18" name="Slayer" description="Kill Boss and be level 80" reward="9142,5" raidToKill="77771" minLevel="80" />
+ <achievement id="19" name="Skills" description="Have a +10 skill" reward="9142,15" minSkillEnchant="10"/>
+ <achievement id="20" name="SubClasses" description="Have 1 subclasses" reward="9142,5" minSubclassCount="1"/>
+ <achievement id="21" name="Gamer" description="Be online for 1 days" reward="9142,10" minOnlineTime="1"/>
+ <achievement id="22" name="Cursed" description="Cursed Weapon" reward="9142,10" Cursedweapon="true"/>
+ <achievement id="23" name="Armor" description="Complete the enchantment of armor" reward="9142,10" minHeadEnchant="16" minChestEnchant="16" minFeetEnchant="16" minLegsEnchant="16" minGlovestEnchant="16"/>
+ <achievement id="24" name="Married" description="Getting married in the game" reward="9142,10" mustBeMarried="true"/>
+ <achievement id="25" name="Vip" description="Become a VIP player" reward="9142,10" mustBeVip="true"/>
+ </list>

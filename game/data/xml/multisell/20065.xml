@@ -1,0 +1,308 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Assault Boots -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="2202" count="1"/>
+  </item>
+
+  <!-- Recipe: Bone Helmet -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="2177" count="1"/>
+  </item>
+
+  <!-- Recipe: Boots of Power -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="2193" count="1"/>
+  </item>
+
+  <!-- Recipe: Brigandine Boots -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="2977" count="1"/>
+  </item>
+
+  <!-- Recipe: Brigandine Gaiters -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="2972" count="1"/>
+  </item>
+
+  <!-- Recipe: Brigandine Gauntlets -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="2980" count="1"/>
+  </item>
+
+  <!-- Recipe: Brigandine Helmet -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="2975" count="1"/>
+  </item>
+
+  <!-- Recipe: Brigandine Shield -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="2982" count="1"/>
+  </item>
+
+  <!--  Recipe: Brigandine Tunic -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="2186" count="1"/>
+  </item>
+
+  <!-- Recipe: Crafted Leather Gloves -->
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="2179" count="1"/>
+  </item>
+
+  <!-- Recipe: Dark Stockings -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="2178" count="1"/>
+  </item>
+
+  <!-- Recipe: Elven Mithril Boots -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="2978" count="1"/>
+  </item>
+
+  <!-- Recipe: Elven Mithril Gloves -->
+  <item id="13">
+    <ingredient id="57" count="1"/>
+    <production id="2981" count="1"/>
+  </item>
+
+  <!-- Recipe: Half Plate Armor -->
+  <item id="14">
+    <ingredient id="57" count="1"/>
+    <production id="2195" count="1"/>
+  </item>
+
+  <!-- Recipe: Iron Boots -->
+  <item id="15">
+    <ingredient id="57" count="1"/>
+    <production id="2185" count="1"/>
+  </item>
+
+  <!-- Recipe: Kite Shield -->
+  <item id="16">
+    <ingredient id="57" count="1"/>
+    <production id="2192" count="1"/>
+  </item>
+
+  <!-- Recipe: Leather Boots) -->
+  <item id="17">
+    <ingredient id="57" count="1"/>
+    <production id="2176" count="1"/>
+  </item>
+
+  <!-- Recipe: Manticore Skin Boots -->
+  <item id="18">
+    <ingredient id="57" count="1"/>
+    <production id="2976" count="1"/>
+  </item>
+
+  <!-- Recipe: Manticore Skin Gaiters -->
+  <item id="19">
+    <ingredient id="57" count="1"/>
+    <production id="2188" count="1"/>
+  </item>
+
+  <!-- Recipe: Manticore Skin Gloves -->
+  <item id="20">
+    <ingredient id="57" count="1"/>
+    <production id="2979" count="1"/>
+  </item>
+
+  <!--  Recipe: Manticore Skin Shirt -->
+  <item id="21">
+    <ingredient id="57" count="1"/>
+    <production id="2187" count="1"/>
+  </item>
+
+  <!--  Recipe: Mithril Banded Gaiters -->
+   <item id="22">
+    <ingredient id="57" count="1"/>
+    <production id="2184" count="1"/>
+  </item>
+
+  <!-- Recipe: Mithril Banded Mail -->
+  <item id="23">
+    <ingredient id="57" count="1"/>
+    <production id="2183" count="1"/>
+  </item>
+
+  <!-- Recipe: Mithril Gloves -->
+  <item id="24">
+    <ingredient id="57" count="1"/>
+    <production id="2194" count="1"/>
+  </item>
+  
+  <!-- Recipe: Mithril Scale Gaiters -->
+  <item id="25">
+    <ingredient id="57" count="1"/>
+    <production id="2971" count="1"/>
+  </item>
+
+  <!-- Recipe: Mithril Stockings -->
+  <item id="26">
+    <ingredient id="57" count="1"/>
+    <production id="2190" count="1"/>
+  </item>
+
+  <!--  Recipe: Mithril Tunic -->
+  <item id="27">
+    <ingredient id="57" count="1"/>
+    <production id="2189" count="1"/>
+  </item>
+
+  <!--  Recipe: Ogre Power Gauntlets -->
+  <item id="28">
+    <ingredient id="57" count="1"/>
+    <production id="2208" count="1"/>
+  </item>
+
+  <!-- Recipe: Plate Boots -->
+  <item id="29">
+    <ingredient id="57" count="1"/>
+    <production id="2985" count="1"/>
+  </item>
+
+  <!-- Recipe: Plate Gaiters -->
+  <item id="30">
+    <ingredient id="57" count="1"/>
+    <production id="2196" count="1"/>
+  </item>
+
+  <!-- Recipe: Plate Helmet -->
+  <item id="31">
+    <ingredient id="57" count="1"/>
+    <production id="2983" count="1"/>
+  </item>
+
+  <!-- Recipe: Plate Shield -->
+  <item id="32">
+    <ingredient id="57" count="1"/>
+    <production id="2987" count="1"/>
+  </item>
+
+  <!-- Recipe: RIP Gauntlets -->
+  <item id="33">
+    <ingredient id="57" count="1"/>
+    <production id="2191" count="1"/>
+  </item>
+
+  <!-- Recipe: Sage's Rag -->
+  <item id="34">
+    <ingredient id="57" count="1"/>
+    <production id="2198" count="1"/>
+  </item>
+
+  <!-- Recipe: Sage's Worn Gloves -->
+  <item id="35">
+    <ingredient id="57" count="1"/>
+    <production id="2986" count="1"/>
+  </item>
+
+  <!-- Recipe: Salamander Skin Boots -->
+  <item id="36">
+    <ingredient id="57" count="1"/>
+    <production id="2984" count="1"/>
+  </item>
+
+  <!-- Recipe: Salamander Skin Mail -->
+  <item id="37">
+    <ingredient id="57" count="1"/>
+    <production id="2197" count="1"/>
+  </item>
+
+  <!-- Recipe: Scale Gaiters -->
+  <item id="38">
+    <ingredient id="57" count="1"/>
+    <production id="2182" count="1"/>
+  </item>
+
+  <!-- Recipe: Scale Mail -->
+  <item id="39">
+    <ingredient id="57" count="1"/>
+    <production id="2180" count="1"/>
+  </item>
+
+  <!-- Recipe: Square Shield -->
+  <item id="40">
+    <ingredient id="57" count="1"/>
+    <production id="2201" count="1"/>
+  </item>
+
+  <!-- Recipe: White Tunic -->
+  <item id="41">
+    <ingredient id="57" count="1"/>
+    <production id="2181" count="1"/>
+  </item>
+
+  <!-- Recipe: Elven Earring -->
+  <item id="42">
+    <ingredient id="57" count="1"/>
+    <production id="2154" count="1"/>
+  </item>
+
+  <!-- Recipe: Elven Necklace -->
+  <item id="43">
+    <ingredient id="57" count="1"/>
+    <production id="2156" count="1"/>
+  </item>
+
+  <!-- Recipe: Elven Ring -->
+  <item id="44">
+    <ingredient id="57" count="1"/>
+    <production id="2155" count="1"/>
+  </item>
+
+  <!-- Recipe: Enchanted Necklace -->
+  <item id="45">
+    <ingredient id="57" count="1"/>
+    <production id="2152" count="1"/>
+  </item>
+
+  <!-- Recipe: Mithril Ring -->
+  <item id="46">
+    <ingredient id="57" count="1"/>
+    <production id="2158" count="1"/>
+  </item>
+
+  <!-- Recipe: Necklace of Darkness -->
+  <item id="47">
+    <ingredient id="57" count="1"/>
+    <production id="2159" count="1"/>
+  </item>
+  
+  <!-- Recipe: Necklace of Devotion -->
+  <item id="48">
+    <ingredient id="57" count="1"/>
+    <production id="2151" count="1"/>
+  </item>
+
+  <!-- Recipe: Omen Beast's Eye Earring -->
+  <item id="49">
+    <ingredient id="57" count="1"/>
+    <production id="2157" count="1"/>
+  </item>
+  
+  <!-- Recipe: Tiger's Eye Earring -->
+  <item id="50">
+    <ingredient id="57" count="1"/>
+    <production id="2153" count="1"/>
+  </item>  
+  
+</list>

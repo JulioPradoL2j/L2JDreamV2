@@ -1,0 +1,206 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Barakiel's Axe (60%) -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="8694" count="1"/>
+  </item>
+
+  <!-- Recipe: Behemoth's Tuning Fork (60%) -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="8696" count="1"/>
+  </item>
+
+  <!-- Recipe: Blood Tornado(60%) -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="5452" count="1"/>
+  </item>
+
+  <!-- Recipe: Bloody Orchid(60%) -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="5446" count="1"/>
+  </item>
+
+  <!-- Recipe: Branch of The Mother Tree(60%) -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="5462" count="1"/>
+  </item>
+
+  <!-- Recipe: Cabrio's Hand (60%) -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="8708" count="1"/>
+  </item>
+
+  <!-- Recipe: Carnage Bow (60%) -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="5444" count="1"/>
+  </item>
+
+  <!-- Recipe: Daimon Crystal (60%) -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="8710" count="1"/>
+  </item>
+
+  <!-- Recipe: Dark Legion's Edge (60%) -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="5464" count="1"/>
+  </item>
+
+  <!-- Recipe: Dasparion's Staff (60%) -->
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="5460" count="1"/>
+  </item>
+
+  <!-- Recipe: Destroyer Hammer (60%) -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="8487" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Crusher (60%) -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="8326" count="1"/>
+  </item>
+
+  <!-- Recipe: Dragon Grinder (60%) -->
+  <item id="13">
+    <ingredient id="57" count="1"/>
+    <production id="5450" count="1"/>
+  </item>
+
+  <!-- Recipe: Dragon Slayer (60%) -->
+  <item id="14">
+    <ingredient id="57" count="1"/>
+    <production id="5434" count="1"/>
+  </item>
+
+  <!-- Recipe: Elemental Sword (60%) -->
+  <item id="15">
+    <ingredient id="57" count="1"/>
+    <production id="5468" count="1"/>
+  </item>
+
+  <!-- Recipe: Elysian (60%) -->
+  <item id="16">
+    <ingredient id="57" count="1"/>
+    <production id="5440" count="1"/>
+  </item>
+
+  <!-- Recipe: Flaming Dragon Skull (60%) -->
+  <item id="17">
+    <ingredient id="57" count="1"/>
+    <production id="8316" count="1"/>
+  </item>
+
+  <!-- Recipe: Halberd (60%) -->
+  <item id="18">
+    <ingredient id="57" count="1"/>
+    <production id="5458" count="1"/>
+  </item>
+
+  <!-- Recipe: Infernal Master (60%) -->
+  <item id="19">
+    <ingredient id="57" count="1"/>
+    <production id="8300" count="1"/>
+  </item>
+
+  <!-- Recipe: Meteor Shower (60%) -->
+  <item id="20">
+    <ingredient id="57" count="1"/>
+    <production id="5438" count="1"/>
+  </item>
+
+  <!-- Recipe: Naga Storm (60%) -->
+  <item id="21">
+    <ingredient id="57" count="1"/>
+    <production id="8698" count="1"/>
+  </item>
+
+  <!-- Recipe: Shyeed's Bow (60%) -->
+   <item id="22">
+    <ingredient id="57" count="1"/>
+    <production id="8702" count="1"/>
+  </item>
+
+  <!--  Recipe: Sirra's Blade (60%) -->
+  <item id="23">
+    <ingredient id="57" count="1"/>
+    <production id="8690" count="1"/>
+  </item>
+
+  <!-- Recipe: Sobekk's Hurricane (60%) -->
+  <item id="24">
+    <ingredient id="57" count="1"/>
+    <production id="8704" count="1"/>
+  </item>
+  
+  <!-- Recipe: Soul Bow (60%) -->
+  <item id="25">
+    <ingredient id="57" count="1"/>
+    <production id="5442" count="1"/>
+  </item>
+
+  <!-- Recipe: Soul Separator (60%) -->
+  <item id="26">
+    <ingredient id="57" count="1"/>
+    <production id="5448" count="1"/>
+  </item>
+
+  <!-- Recipe: Spiritual Eye (60%) -->
+  <item id="27">
+    <ingredient id="57" count="1"/>
+    <production id="8314" count="1"/>
+  </item>
+
+  <!-- Recipe: Sword of Ipos (60%) -->
+  <item id="28">
+    <ingredient id="57" count="1"/>
+    <production id="8692" count="1"/>
+  </item>
+
+  <!-- Recipe: Sword of Miracles (60%) -->
+  <item id="29">
+    <ingredient id="57" count="1"/>
+    <production id="5466" count="1"/>
+  </item>
+
+  <!-- Recipe: Tallum Blade (60%) -->
+  <item id="30">
+    <ingredient id="57" count="1"/>
+    <production id="5470" count="1"/>
+  </item>
+
+  <!-- Recipe: Tallum Glaive (60%) -->
+  <item id="31">
+    <ingredient id="57" count="1"/>
+    <production id="5456" count="1"/>
+  </item>
+
+  <!-- Recipe: Themis' Tongue (60%) -->
+  <item id="32">
+    <ingredient id="57" count="1"/>
+    <production id="8706" count="1"/>
+  </item>
+
+  <!-- Recipe: Tiphon's Spear (60%) -->
+  <item id="33">
+    <ingredient id="57" count="1"/>
+    <production id="8700" count="1"/>
+  </item>
+
+</list>

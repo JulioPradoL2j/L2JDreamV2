@@ -1,0 +1,32 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Ice Crystal  -->  
+  <item id="1">
+    <ingredient id="57" count="5000000"/>
+    <production id="7080" count="1"/>
+  </item>
+
+  <!-- Divine Stone Wisdom  -->
+   <item id="2">
+    <ingredient id="57" count="5000000"/>
+    <production id="7081" count="1"/>
+  </item>
+
+  <!-- Big White Fat Fish -->
+   <item id="3">
+    <ingredient id="57" count="100000"/>
+    <production id="6482" count="1"/>
+  </item>
+
+  <!-- Big White Nimble Fish -->
+   <item id="4">
+    <ingredient id="57" count="100000"/>
+    <production id="6480" count="1"/>
+  </item>
+
+</list>

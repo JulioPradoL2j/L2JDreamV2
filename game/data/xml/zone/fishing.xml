@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<!-- Fishing Zones -->
+	<zone id="1" name="Fishing_1" type="Fishing">
+		<shape type="Poly" zMin="-3634" maxZ="-3434"><!-- fishing_place_1 -->
+			<point x="141249" y="-109636" />
+			<point x="141473" y="-109798" />
+			<point x="141739" y="-109821" />
+			<point x="141924" y="-109669" />
+			<point x="142038" y="-109397" />
+			<point x="141852" y="-109130" />
+			<point x="141604" y="-109051" />
+			<point x="141321" y="-109091" />
+			<point x="141213" y="-109266" />
+		</shape>
+	</zone>
+	<zone id="2" name="Fishing_2" type="Fishing">
+		<shape type="Poly" zMin="-3634" maxZ="-3434"><!-- fishing_place_2 -->
+			<point x="141249" y="-109636" />
+			<point x="141473" y="-109798" />
+			<point x="141739" y="-109821" />
+			<point x="141924" y="-109669" />
+			<point x="142038" y="-109397" />
+			<point x="141852" y="-109130" />
+			<point x="141604" y="-109051" />
+			<point x="141321" y="-109091" />
+			<point x="141213" y="-109266" />
+		</shape>
+	</zone>
+	<zone id="3" name="Fishing_3" type="Fishing">
+		<shape type="Poly" zMin="-3668" maxZ="-3468"><!-- fishing_place_3 -->
+			<point x="140174" y="-105832" />
+			<point x="140490" y="-105875" />
+			<point x="140962" y="-105738" />
+			<point x="141039" y="-105378" />
+			<point x="140872" y="-105119" />
+			<point x="140081" y="-105295" />
+		</shape>
+	</zone>
+	<zone id="4" name="Fishing_4" type="Fishing">
+		<shape type="Poly" zMin="-3724" maxZ="-3524"><!-- fishing_place_4 -->
+			<point x="144927" y="-105193" />
+			<point x="145226" y="-105412" />
+			<point x="145576" y="-105344" />
+			<point x="145819" y="-104976" />
+			<point x="145575" y="-104555" />
+			<point x="145217" y="-104490" />
+			<point x="144935" y="-104684" />
+			<point x="144832" y="-104959" />
+		</shape>
+	</zone>
+	<zone id="5" name="Fishing_5" type="Fishing">
+		<shape type="Poly" zMin="-2871" maxZ="-2671"><!-- fishing_place_5 -->
+			<point x="152081" y="-108262" />
+			<point x="152455" y="-108588" />
+			<point x="152835" y="-108448" />
+			<point x="152992" y="-108120" />
+			<point x="152817" y="-107670" />
+			<point x="152310" y="-107632" />
+			<point x="152069" y="-107905" />
+		</shape>
+	</zone>
+	<zone id="6" name="Fishing_6" type="Fishing">
+		<shape type="Poly" zMin="-2787" maxZ="-2587"><!-- fishing_place_6 -->
+			<point x="155279" y="-105735" />
+			<point x="155448" y="-105880" />
+			<point x="155992" y="-105963" />
+			<point x="156201" y="-105790" />
+			<point x="156133" y="-105320" />
+			<point x="155896" y="-105229" />
+			<point x="155459" y="-105254" />
+			<point x="155283" y="-105478" />
+		</shape>
+	</zone>
+	<zone id="7" name="Fishing_7" type="Fishing">
+		<shape type="Poly" zMin="-2717" maxZ="-2517"><!-- fishing_place_7 -->
+			<point x="156838" y="-109948" />
+			<point x="157133" y="-110046" />
+			<point x="157436" y="-109918" />
+			<point x="157491" y="-109405" />
+			<point x="157197" y="-109197" />
+			<point x="156843" y="-109261" />
+			<point x="156683" y="-109569" />
+		</shape>
+	</zone>
+	<zone id="8" name="Fishing_8" type="Fishing">
+		<shape type="Poly" zMin="-1609" maxZ="-1409"><!-- fishing_place_8 -->
+			<point x="152063" y="-116732" />
+			<point x="152505" y="-116982" />
+			<point x="152904" y="-116927" />
+			<point x="153020" y="-116469" />
+			<point x="152881" y="-116221" />
+			<point x="152555" y="-116100" />
+			<point x="152285" y="-116160" />
+			<point x="152099" y="-116415" />
+		</shape>
+	</zone>
+	<zone id="9" name="Fishing_9" type="Fishing">
+		<shape type="Poly" zMin="-1694" maxZ="-1494"><!-- fishing_place_9 -->
+			<point x="152683" y="-112829" />
+			<point x="152796" y="-113129" />
+			<point x="153125" y="-113339" />
+			<point x="153557" y="-113190" />
+			<point x="153649" y="-112721" />
+			<point x="153344" y="-112385" />
+			<point x="152937" y="-112409" />
+		</shape>
+	</zone>
+	<zone id="10" name="Fishing_10" type="Fishing">
+		<shape type="Poly" zMin="-1979" maxZ="-1779"><!-- fishing_place_10 -->
+			<point x="157444" y="-115790" />
+			<point x="157774" y="-115907" />
+			<point x="158174" y="-115759" />
+			<point x="158017" y="-114971" />
+			<point x="157625" y="-114984" />
+			<point x="157439" y="-115101" />
+		</shape>
+	</zone>
+	<zone id="11" name="Fishing_11" type="Fishing">
+		<shape type="Poly" zMin="-2152" maxZ="-1952"><!-- fishing_place_11 -->
+			<point x="147182" y="-113255" />
+			<point x="147194" y="-113430" />
+			<point x="147312" y="-113584" />
+			<point x="147467" y="-113630" />
+			<point x="147748" y="-113523" />
+			<point x="147816" y="-113273" />
+			<point x="147723" y="-113074" />
+			<point x="147512" y="-112956" />
+			<point x="147258" y="-113048" />
+		</shape>
+	</zone>
+	<zone id="12" name="Fishing_12" type="Fishing">
+		<shape type="Poly" zMin="-4388" maxZ="-1388"><!-- fishing_place_12 -->
+			<point x="35360" y="70052" />
+			<point x="54640" y="70780" />
+			<point x="58104" y="89528" />
+			<point x="38900" y="91644" />
+		</shape>
+	</zone>
+	<zone id="13" name="Fishing_13" type="Fishing">
+		<shape type="Poly" zMin="-4916" maxZ="-1916"><!-- fishing_place_13 -->
+			<point x="-99139" y="207208" />
+			<point x="-65905" y="254858" />
+			<point x="-65905" y="261841" />
+			<point x="-124577" y="261607" />
+			<point x="-128220" y="215665" />
+		</shape>
+	</zone>
+	<zone id="14" name="Fishing_14" type="Fishing">
+		<shape type="Poly" zMin="-4640" maxZ="-1640"><!-- fishing_place_14 -->
+			<point x="134452" y="66180" />
+			<point x="170228" y="67184" />
+			<point x="172464" y="97052" />
+			<point x="136188" y="94940" />
+		</shape>
+	</zone>
+	<zone id="15" name="Fishing_15" type="Fishing">
+		<shape type="Poly" zMin="-4216" maxZ="-1216"><!-- fishing_place_15 -->
+			<point x="135800" y="35476" />
+			<point x="162960" y="35364" />
+			<point x="161056" y="64920" />
+			<point x="136496" y="65092" />
+		</shape>
+	</zone>
+	<zone id="16" name="Fishing_16" type="Fishing">
+		<shape type="Poly" zMin="-2568" maxZ="1432"><!-- fishing_place_16 -->
+			<point x="97311" y="-229576" />
+			<point x="201955" y="-229291" />
+			<point x="201926" y="-163450" />
+			<point x="97636" y="-164202" />
+		</shape>
+	</zone>
+	<zone id="17" name="Fishing_17" type="Fishing">
+		<shape type="Poly" zMin="-7356" maxZ="-1356"><!-- fishing_place_17 -->
+			<point x="89909" y="158343" />
+			<point x="130731" y="153447" />
+			<point x="130741" y="261840" />
+			<point x="65549" y="262183" />
+			<point x="65612" y="189166" />
+		</shape>
+	</zone>
+	<zone id="18" name="Fishing_18" type="Fishing">
+		<shape type="Poly" zMin="-3892" maxZ="-892"><!-- fishing_place_18 -->
+			<point x="81328" y="136658" />
+			<point x="139003" y="123356" />
+			<point x="138584" y="145204" />
+			<point x="121150" y="155944" />
+			<point x="80807" y="160436" />
+		</shape>
+	</zone>
+	<zone id="19" name="Fishing_19" type="Fishing">
+		<shape type="Poly" zMin="-4684" maxZ="-1684"><!-- fishing_place_19 -->
+			<point x="67326" y="160359" />
+			<point x="86813" y="160109" />
+			<point x="64159" y="189723" />
+			<point x="42375" y="183029" />
+		</shape>
+	</zone>
+	<zone id="20" name="Fishing_20" type="Fishing">
+		<shape type="Poly" zMin="-4874" maxZ="-1874"><!-- fishing_place_20 -->
+			<point x="30606" y="184275" />
+			<point x="40957" y="182824" />
+			<point x="62226" y="189792" />
+			<point x="62509" y="228946" />
+			<point x="30706" y="228846" />
+		</shape>
+	</zone>
+	<zone id="21" name="Fishing_21" type="Fishing">
+		<shape type="Poly" zMin="-4372" maxZ="-1372"><!-- fishing_place_21 -->
+			<point x="65472" y="71452" />
+			<point x="86420" y="82248" />
+			<point x="97656" y="93300" />
+			<point x="97692" y="98032" />
+			<point x="64528" y="97660" />
+		</shape>
+	</zone>
+	<zone id="22" name="Fishing_22" type="Fishing">
+		<shape type="Poly" zMin="-4328" maxZ="-1328"><!-- fishing_place_22 -->
+			<point x="66204" y="3448" />
+			<point x="121052" y="30384" />
+			<point x="87064" y="56664" />
+			<point x="69484" y="31724" />
+		</shape>
+	</zone>
+	<zone id="23" name="Fishing_23" type="Fishing">
+		<shape type="Poly" zMin="-4096" maxZ="-1096"><!-- fishing_place_23 -->
+			<point x="4721" y="99932" />
+			<point x="60654" y="99812" />
+			<point x="60606" y="158582" />
+			<point x="40546" y="154557" />
+			<point x="3147" y="123027" />
+		</shape>
+	</zone>
+	<zone id="24" name="Fishing_24" type="Fishing">
+		<shape type="Poly" zMin="-4724" maxZ="-1724"><!-- fishing_place_24 -->
+			<point x="36902" y="-98025" />
+			<point x="9543" y="-42544" />
+			<point x="54988" y="-7732" />
+			<point x="96957" y="-65614" />
+		</shape>
+	</zone>
+	<zone id="25" name="Fishing_25" type="Fishing">
+		<shape type="Poly" zMin="-4764" maxZ="-1764"><!-- fishing_place_25 -->
+			<point x="436" y="128216" />
+			<point x="10168" y="128584" />
+			<point x="42184" y="182056" />
+			<point x="31996" y="197312" />
+			<point x="680" y="197804" />
+		</shape>
+	</zone>
+	<zone id="26" name="Fishing_26" type="Fishing">
+		<shape type="Poly" zMin="-3900" maxZ="-900"><!-- fishing_place_26 -->
+			<point x="35960" y="34780" />
+			<point x="61228" y="52232" />
+			<point x="61704" y="77128" />
+			<point x="43360" y="66444" />
+			<point x="32924" y="37972" />
+		</shape>
+	</zone>
+	<zone id="27" name="Fishing_27" type="Fishing">
+		<shape type="Poly" zMin="-4004" maxZ="-1004"><!-- fishing_place_27 -->
+			<point x="11764" y="36204" />
+			<point x="42092" y="63036" />
+			<point x="44408" y="69824" />
+			<point x="444" y="75320" />
+			<point x="2780" y="51824" />
+		</shape>
+	</zone>
+	<zone id="28" name="Fishing_28" type="Fishing">
+		<shape type="Poly" zMin="-3856" maxZ="-856"><!-- fishing_place_28 -->
+			<point x="148" y="77464" />
+			<point x="4116" y="80668" />
+			<point x="4816" y="95352" />
+			<point x="460" y="94180" />
+		</shape>
+	</zone>
+	<zone id="29" name="Fishing_29" type="Fishing">
+		<shape type="Poly" zMin="-4848" maxZ="-1848"><!-- fishing_place_29 -->
+			<point x="-37560" y="16423" />
+			<point x="-8388" y="126" />
+			<point x="50773" y="98" />
+			<point x="35243" y="16780" />
+			<point x="-76016" y="81087" />
+			<point x="-75777" y="65779" />
+		</shape>
+	</zone>
+	<zone id="30" name="Fishing_30" type="Fishing">
+		<shape type="Poly" zMin="-4044" maxZ="-1044"><!-- fishing_place_30 -->
+			<point x="-27548" y="90040" />
+			<point x="3188" y="95180" />
+			<point x="1816" y="117348" />
+			<point x="-1732" y="130032" />
+			<point x="-25952" y="130540" />
+		</shape>
+	</zone>
+	<zone id="31" name="Fishing_31" type="Fishing">
+		<shape type="Poly" zMin="-4084" maxZ="-1084"><!-- fishing_place_31 -->
+			<point x="-13628" y="57148" />
+			<point x="-428" y="57856" />
+			<point x="3668" y="90204" />
+			<point x="-21376" y="89884" />
+			<point x="-26808" y="87940" />
+		</shape>
+	</zone>
+	<zone id="32" name="Fishing_32" type="Fishing">
+		<shape type="Poly" zMin="-4880" maxZ="-1880"><!-- fishing_place_32 -->
+			<point x="-64990" y="-109438" />
+			<point x="32369" y="-96091" />
+			<point x="31964" y="-83063" />
+			<point x="4840" y="-60901" />
+			<point x="-30730" y="-68637" />
+		</shape>
+	</zone>
+	<zone id="33" name="Fishing_33" type="Fishing">
+		<shape type="Poly" zMin="-4828" maxZ="-1828"><!-- fishing_place_33 -->
+			<point x="-65739" y="186145" />
+			<point x="-188" y="193188" />
+			<point x="-470" y="213105" />
+			<point x="-22923" y="225218" />
+			<point x="-58597" y="224836" />
+		</shape>
+	</zone>
+	<zone id="34" name="Fishing_34" type="Fishing">
+		<shape type="Poly" zMin="-3772" maxZ="-772"><!-- fishing_place_34 -->
+			<point x="-62980" y="111764" />
+			<point x="-50756" y="126392" />
+			<point x="-63940" y="140572" />
+			<point x="-71220" y="133792" />
+			<point x="-69448" y="120784" />
+		</shape>
+	</zone>
+	<zone id="35" name="Fishing_35" type="Fishing">
+		<shape type="Poly" zMin="-4892" maxZ="-1892"><!-- fishing_place_35 -->
+			<point x="-111370" y="100078" />
+			<point x="-77020" y="67100" />
+			<point x="-65711" y="190964" />
+			<point x="-99937" y="150239" />
+		</shape>
+	</zone>
+	<zone id="36" name="Fishing_36" type="Fishing">
+		<shape type="Poly" zMin="-4115" maxZ="-3415"><!-- fishing_place_36 -->
+			<point x="107720" y="-121415" />
+			<point x="107976" y="-121486" />
+			<point x="108054" y="-121203" />
+			<point x="107681" y="-121077" />
+		</shape>
+	</zone>
+	<zone id="37" name="Fishing_37" type="Fishing">
+		<shape type="Poly" zMin="-4114" maxZ="-3414"><!-- fishing_place_37 -->
+			<point x="107174" y="-120338" />
+			<point x="107675" y="-121072" />
+			<point x="107771" y="-120739" />
+			<point x="107596" y="-120492" />
+		</shape>
+	</zone>
+	<zone id="38" name="Fishing_38" type="Fishing">
+		<shape type="Poly" zMin="-4100" maxZ="-3400"><!-- fishing_place_38 -->
+			<point x="106925" y="-121468" />
+			<point x="107499" y="-121754" />
+			<point x="107718" y="-121406" />
+			<point x="107676" y="-121070" />
+			<point x="107140" y="-120299" />
+			<point x="106748" y="-121104" />
+		</shape>
+	</zone>
+	<zone id="39" name="Fishing_39" type="Fishing">
+		<shape type="Poly" zMin="-4106" maxZ="-3406"><!-- fishing_place_39 -->
+			<point x="107669" y="-120279" />
+			<point x="108087" y="-120174" />
+			<point x="108270" y="-119950" />
+			<point x="107870" y="-119379" />
+			<point x="107437" y="-119884" />
+		</shape>
+	</zone>
+	<zone id="40" name="Fishing_40" type="Fishing">
+		<shape type="Poly" zMin="-4108" maxZ="-3408"><!-- fishing_place_40 -->
+			<point x="108275" y="-119951" />
+			<point x="108903" y="-119964" />
+			<point x="108806" y="-119162" />
+			<point x="108431" y="-118887" />
+			<point x="107867" y="-119376" />
+		</shape>
+	</zone>
+	<zone id="41" name="Fishing_41" type="Fishing">
+		<shape type="Poly" zMin="-4155" maxZ="-3455"><!-- fishing_place_41 -->
+			<point x="108405" y="-120801" />
+			<point x="109222" y="-120654" />
+			<point x="109288" y="-120048" />
+			<point x="108946" y="-120080" />
+			<point x="108812" y="-120306" />
+			<point x="108160" y="-120322" />
+			<point x="108127" y="-120625" />
+		</shape>
+	</zone>
+	<zone id="42" name="Fishing_42" type="Fishing">
+		<shape type="Poly" zMin="-4157" maxZ="-3457"><!-- fishing_place_42 -->
+			<point x="108450" y="-121409" />
+			<point x="109231" y="-121384" />
+			<point x="109222" y="-120651" />
+			<point x="108396" y="-120801" />
+			<point x="108274" y="-121123" />
+			<point x="108507" y="-121226" />
+		</shape>
+	</zone>
+	<zone id="43" name="Fishing_43" type="Fishing">
+		<shape type="Poly" zMin="-4142" maxZ="-3442"><!-- fishing_place_43 -->
+			<point x="108544" y="-121991" />
+			<point x="109133" y="-121703" />
+			<point x="109226" y="-121385" />
+			<point x="108343" y="-121415" />
+			<point x="108122" y="-121599" />
+			<point x="108468" y="-121820" />
+		</shape>
+	</zone>
+</list>

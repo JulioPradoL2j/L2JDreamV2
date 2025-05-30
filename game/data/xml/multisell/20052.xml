@@ -1,0 +1,115 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+    <!-- Ancient Adena -->
+  <item id="1">
+    <ingredient id="57" count="1000000"/>
+    <production id="5575" count="1000"/>
+  </item>
+
+  <!-- Book Sloot lv 52 -->
+  <item id="2">
+    <ingredient id="57" count="20"/>
+    <production id="8618" count="1"/>
+  </item>
+
+  <!-- Book Sloot lv 61 -->
+  <item id="3">
+    <ingredient id="57" count="20"/>
+    <production id="8619" count="1"/>
+  </item>
+
+  <!-- Book Sloot lv 76 -->
+  <item id="4">
+    <ingredient id="57" count="20"/>
+    <production id="8620" count="1"/>
+  </item>
+
+  <!-- Book Sloot lv 78 -->
+  <item id="5">
+    <ingredient id="57" count="20"/>
+    <production id="8621" count="1"/>
+  </item>
+  
+  <!-- Farmol Wear  -->  
+  <item id="6">
+    <ingredient id="57" count="100"/>		
+    <production id="6408" count="1"/>
+  </item>     
+
+  <!-- Green Soul crystal 13  -->  
+  <item id="7">
+    <ingredient id="57" count="100"/>	
+    <production id="5911" count="1"/>
+  </item>
+  
+  <!-- Red Soul crystal 13  -->  
+  <item id="8">
+    <ingredient id="57" count="100"/>	
+    <production id="5908" count="1"/>
+  </item>
+  
+  <!-- Blue Soul crystal 13  -->  
+  <item id="9">
+    <ingredient id="57" count="100"/>		
+    <production id="5914" count="1"/>
+  </item>
+
+  <!-- Donator Scroll Armor  -->  
+  <item id="10">
+    <ingredient id="57" count="100"/>		
+    <production id="9881" count="1"/>
+  </item>
+
+  <!-- Donator Scroll Weapon   -->  
+  <item id="11">
+    <ingredient id="57" count="100"/>		
+    <production id="9880" count="1"/>
+  </item>
+
+  <!-- Nobles Letter  -->  
+  <item id="12">
+    <ingredient id="57" count="100"/>		
+    <production id="9889" count="1"/>
+  </item>  
+
+  <!-- Vip Manuscript 30-Days  -->  
+  <item id="13">
+    <ingredient id="57" count="100"/>		
+    <production id="9882" count="1"/>
+  </item>  
+  
+  <!-- Vip Manuscript 60-Days  -->  
+  <item id="14">
+    <ingredient id="57" count="100"/>		
+    <production id="9883" count="1"/>
+  </item>  
+  
+  <!-- Vip Manuscript 90-Days  -->  
+  <item id="15">
+    <ingredient id="57" count="100"/>		
+    <production id="9884" count="1"/>
+  </item>  
+  
+  <!-- Aio Manuscript 30-Days  -->  
+  <item id="16">
+    <ingredient id="57" count="100"/>		
+    <production id="9886" count="1"/>
+  </item>  
+
+  <!-- Aio Manuscript 60-Days  -->  
+  <item id="17">
+    <ingredient id="57" count="100"/>		
+    <production id="9887" count="1"/>
+  </item>  
+
+  <!-- Aio Manuscript 90-Days  -->  
+  <item id="18">
+    <ingredient id="57" count="100"/>		
+    <production id="9888" count="1"/>
+  </item>  
+ 
+</list>

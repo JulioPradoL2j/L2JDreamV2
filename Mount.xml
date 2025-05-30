@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project>
+<project name="L2JDreamV2" default="dist-local" basedir=".">
+	<scriptdef name="substring" language="javascript">
+		<attribute name="text" />
+		<attribute name="start" />
+		<attribute name="end" />
+		<attribute name="property" />
+		<![CDATA[
+		var text = attributes.get("text");
+		var start = attributes.get("start");
+		var end = attributes.get("end") || text.length();
+		project.setProperty(attributes.get("property"), text.substring(start, end));
+		]]>
+	</scriptdef>
+
+	<target name="prepare-local" description="Prepare the local folder property">
+		<property name="build" location="build" />
+		<property name="buildZip" location="Zip" />
+	</target>
+
+	<target name="prepare-final" description="Prepare the final folders properties">
+		<property name="build.dist" location="${build}/dist" />
+		<property name="build.dist.server" location="${build.dist}/Trunk" />
+		<property name="build.dist.server.tools" location="${build.dist.server}/tools" />
+		<property name="build.dist.server.game" location="${build.dist.server}/game" />
+		<property name="build.dist.server.login" location="${build.dist.server}/login" />
+		<property name="build.dist.server.imgs" location="${build.dist.server}/imgs" />
+		<property name="build.dist.server.libs" location="${build.dist.server}/libs" />
+	</target>
+
+	<target name="init" description="Create the output directories. Do nothing if dirs were already created">
+		<mkdir dir="${buildZip}" />
+		<mkdir dir="${build}" />
+		<mkdir dir="${build.dist}" />
+		<mkdir dir="${build.dist.server}" />
+		<mkdir dir="${build.dist.server.tools}" />
+		<mkdir dir="${build.dist.server.login}" />
+		<mkdir dir="${build.dist.server.imgs}" />
+		<mkdir dir="${build.dist.server.game}" />
+		<mkdir dir="${build.dist.server.libs}" />
+	</target>
+
+	<target name="export" description="Syncronizes build space contents with project.">
+		<copy todir="${build.dist.server.game}/data">
+			<fileset dir="${basedir}/game/data">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${build.dist.server.tools}">
+			<fileset dir="${basedir}/tools">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${build.dist.server.imgs}">
+					<fileset dir="${basedir}/imgs">
+						<include name="**/*.*" />
+					</fileset>
+		</copy>
+		<copy todir="${build.dist.server.login}">
+			<fileset dir="${basedir}/login">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${build.dist.server.libs}">
+			<fileset dir="${basedir}/libs">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+		<copy todir="${build.dist.server.game}">
+			<fileset dir="${basedir}/game">
+				<include name="**/*.*" />
+			</fileset>
+		</copy>
+	</target>
+
+	<target name="dist-local" depends="prepare-local,prepare-final,export" description="Create distribution files and Zip one into 'Zip' folder.">
+		<zip destfile="${buildZip}/Trunk.zip" basedir="${build.dist}" update="true" />
+		<delete dir="${build}" />
+	</target>
+</project>

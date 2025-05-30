@@ -1,0 +1,96 @@
+<html><title>Main Control Panel</title><body>
+<center>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+  <td><a action="bypass -h admin_admin" width=54 height=19><font color="FFD306">Main</font></a></td>
+  <td><a action="bypass -h admin_gamemenu" width=54 height=19><font color="FFD306">Game</font></a></td>
+  <td><a action="bypass -h admin_server" width=54 height=19><font color="FFD306">Server</font></a></td>
+  <td><a action="bypass -h admin_effects" width=54 height=19><font color="FFD306">Effects</font></a></td>
+  <td><a action="bypass -h admin_mod" width=54 height=19><font color="FFD306">Mods</font></a></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<!-- Windows Info -->
+<table width=180>
+		<tr>
+			<td>Team</td>
+			<td><edit var="qbox" width=120 height=15></td>
+		</tr>
+	</table><br>
+
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+
+<!-- menu 1-->
+<br><font color="LEVEL">List of submenu</font>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width="300">
+<tr>
+<td><button value="Item" action="bypass -h admin_create_item $qbox" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Teleport" action="bypass -h admin_show_moves" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Reload" action="bypass -h admin_reload" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+<tr>
+<td><button value="Shop" action="bypass -h admin_gmshop" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Enchant" action="bypass -h admin_enchant" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Spawn" action="bypass -h admin_spawn_menu" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<!-- Announce-->
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width="300">
+<tr>
+<td><img src="L2UI_CH3.shortcut_prev" width=16 height=16></td>
+<td align="center"><button value="Announce" action="bypass -h admin_announce_menu" width=145 height=21 back="L2UI_CH3.bigbutton3_over" fore="L2UI_CH3.bigbutton3"></td>
+<td><img src="L2UI_CH3.shortcut_next" width=16 height=16></td></tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<font color="LEVEL">Administrator status</font>
+
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width="300">
+<tr>
+<td><button value="Invul" action="bypass -h admin_invul" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Invis" action="bypass -h admin_invis" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Visible" action="bypass -h admin_vis" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+<tr>
+<td><button value="GM Lis On" action="bypass -h admin_gmliston" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="GM Lis Off" action="bypass -h admin_gmlistoff" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Diet" action="bypass -h admin_diet" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+<tr>
+<td><button value="Silence" action="bypass -h admin_silence" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="TradeOff" action="bypass -h admin_tradeoff" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Snoop" action="bypass -h admin_snoop $qbox" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+<tr>
+<td><button value="GM Chat" action="bypass -h admin_gmchat $qbox" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Wyvern" action="bypass -h admin_ride_wyvern" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Strider" action="bypass -h admin_ride_strider" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+
+<font color="00ccf0">L2JDream - V2:</font><font color="ae9987"> www.l2jdream.org</font>
+</center></body></html>

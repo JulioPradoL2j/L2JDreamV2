@@ -1,0 +1,318 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+ <!-- Composite Armor  -->
+  <item id="1">
+    <ingredient id="57" count="657500"/>
+    <production id="60" count="1"/>
+  </item>
+
+ <!-- Composite Boots  -->
+  <item id="2">
+    <ingredient id="57" count="121000"/>
+    <production id="64" count="1"/>
+  </item>
+
+ <!-- Chain Armor -->
+  <item id="3">
+    <ingredient id="57" count="223000"/>
+    <production id="354" count="1"/>
+  </item>
+
+ <!-- Chain Gaiters -->
+  <item id="4">
+    <ingredient id="57" count="145000"/>
+    <production id="381" count="1"/>
+  </item>
+
+ <!-- Chain Boots -->
+  <item id="5">
+    <ingredient id="57" count="74500"/>
+    <production id="2429" count="1"/>
+  </item>
+
+ <!-- Chain Gloves -->
+  <item id="6">
+    <ingredient id="57" count="74500"/>
+    <production id="2453" count="1"/>
+  </item>
+
+ <!-- Mithril Armor  -->
+  <item id="7">
+    <ingredient id="57" count="173600"/>
+    <production id="397" count="1"/>
+  </item>
+
+ <!-- Mithril Gaiters -->
+  <item id="8">
+    <ingredient id="57" count="117000"/>
+    <production id="2387" count="1"/>
+  </item>
+
+ <!-- Mithril Boots -->
+  <item id="9">
+    <ingredient id="57" count="74500"/>
+    <production id="62" count="1"/>
+  </item>
+
+<!-- Mithril Gloves -->
+  <item id="10">
+    <ingredient id="57" count="57230"/>
+    <production id="61" count="1"/>
+  </item>
+
+ <!-- Plated Armor -->
+  <item id="11">
+    <ingredient id="57" count="197200"/>
+    <production id="398" count="1"/>
+  </item>
+
+ <!-- Plated Gaiters -->
+  <item id="12">
+    <ingredient id="57" count="131700"/>
+    <production id="418" count="1"/>
+  </item>
+
+ <!-- Plated Boots -->
+  <item id="13">
+    <ingredient id="57" count="67200"/>
+    <production id="2431" count="1"/>
+  </item>
+
+ <!-- Plated Gloves -->
+  <item id="14">
+    <ingredient id="57" count="83600"/>
+    <production id="2455" count="1"/>
+  </item>
+
+<!-- Theca Armor -->
+  <item id="15">
+    <ingredient id="57" count="338000"/>
+    <production id="400" count="1"/>
+  </item>
+
+<!-- Theca Gaiters -->
+  <item id="16">
+    <ingredient id="57" count="222200"/>
+    <production id="420" count="1"/>
+  </item>
+
+<!-- Theca Boots -->
+  <item id="17">
+    <ingredient id="57" count="133100"/>
+    <production id="2436" count="1"/>
+  </item>
+
+<!-- Theca Gloves -->
+  <item id="18">
+    <ingredient id="57" count="133100"/>
+    <production id="2460" count="1"/>
+  </item>
+
+<!-- Karmian Armor -->
+  <item id="19">
+    <ingredient id="57" count="187100"/>
+    <production id="439" count="1"/>
+  </item>
+
+<!-- Karmian Gaiters -->
+  <item id="20">
+    <ingredient id="57" count="114900"/>
+    <production id="471" count="1"/>
+  </item>
+
+<!-- Karmian Gloves -->
+  <item id="21">
+    <ingredient id="57" count="68900"/>
+    <production id="2454" count="1"/>
+  </item>
+
+<!-- Karmian Boots -->
+  <item id="22">
+    <ingredient id="57" count="68900"/>
+    <production id="2430" count="1"/>
+  </item>
+
+<!-- demons Armor -->
+  <item id="23">
+    <ingredient id="57" count="321600"/>
+    <production id="441" count="1"/>
+  </item>
+
+<!-- demons Gaiters -->
+  <item id="24">
+    <ingredient id="57" count="193300"/>
+    <production id="472" count="1"/>
+  </item>
+
+<!-- demons Gloves -->
+  <item id="25">
+    <ingredient id="57" count="127100"/>
+    <production id="2459" count="1"/>
+  </item>
+
+<!-- demons Boots -->
+  <item id="26">
+    <ingredient id="57" count="127100"/>
+    <production id="2435" count="1"/>
+  </item>
+
+<!-- Full Patle Armor -->
+  <item id="27">
+    <ingredient id="57" count="957700"/>
+    <production id="356" count="1"/>
+  </item>
+
+<!-- Full Patle Boots -->
+  <item id="28">
+    <ingredient id="57" count="171300"/>
+    <production id="2438" count="1"/>
+  </item>
+
+<!-- Full Patle Gloves -->
+  <item id="29">
+    <ingredient id="57" count="171300"/>
+    <production id="2462" count="1"/>
+  </item>
+
+<!-- divine Armor -->
+  <item id="30">
+    <ingredient id="57" count="457300"/>
+    <production id="442" count="1"/>
+  </item>
+
+<!-- divine Gaiters -->
+  <item id="31">
+    <ingredient id="57" count="291600"/>
+    <production id="473" count="1"/>
+  </item>
+
+<!-- divine Gloves -->
+  <item id="32">
+    <ingredient id="57" count="164800"/>
+    <production id="2463" count="1"/>
+  </item>
+
+<!-- divine Boots -->
+  <item id="33">
+    <ingredient id="57" count="215400"/>
+    <production id="603" count="1"/>
+  </item>
+
+<!-- Drake Leather -->
+  <item id="34">
+    <ingredient id="57" count="781200"/>
+    <production id="401" count="1"/>
+  </item>
+
+<!-- Drake Boots -->
+  <item id="35">
+    <ingredient id="57" count="179200"/>
+    <production id="2437" count="1"/>
+  </item>
+
+<!-- Drake Gloves -->
+  <item id="36">
+    <ingredient id="57" count="179200"/>
+    <production id="2461" count="1"/>
+  </item>
+
+<!-- Helmet Chain hood -->
+  <item id="37">
+    <ingredient id="57" count="113300"/>
+    <production id="2413" count="1"/>
+  </item>
+
+<!-- Composite Helmet -->
+  <item id="38">
+    <ingredient id="57" count="177100"/>
+    <production id="517" count="1"/>
+  </item>
+  
+<!-- Full Patle Helmet -->
+  <item id="39">
+    <ingredient id="57" count="268700"/>
+    <production id="2414" count="1"/>
+  </item>  
+
+<!-- Chain Shield  -->
+  <item id="40">
+    <ingredient id="57" count="83400"/>
+    <production id="2495" count="1"/>
+  </item>
+  
+<!-- Eldarake shield -->
+  <item id="41">
+    <ingredient id="57" count="83400"/>
+    <production id="631" count="1"/>
+  </item>
+    
+<!-- Composite Shield -->
+  <item id="42">
+    <ingredient id="57" count="137900"/>
+    <production id="107" count="1"/>
+  </item>
+
+<!-- Full Plate shield -->
+  <item id="43">
+    <ingredient id="57" count="183700"/>
+    <production id="2497" count="1"/>
+  </item> 
+  
+  <!-- Aquastone Ring -->
+  <item id="44">
+    <ingredient id="57" count="67800"/>
+    <production id="883" count="1"/>
+  </item>
+
+  <!-- Ring of Ages -->
+  <item id="45">
+    <ingredient id="57" count="103400"/>
+    <production id="885" count="1"/>
+  </item>
+
+  <!-- Blessed Ring -->
+  <item id="46">
+    <ingredient id="57" count="187100"/>
+    <production id="888" count="1"/>
+  </item>
+  
+  <!-- Moonstone Earring -->
+  <item id="47">
+    <ingredient id="57" count="93700"/>
+    <production id="852" count="1"/>
+  </item>
+
+  <!-- Earring of binding -->
+  <item id="48">
+    <ingredient id="57" count="139780"/>
+    <production id="854" count="1"/>
+  </item>
+  
+  <!-- Blessed Earring -->
+  <item id="49">
+    <ingredient id="57" count="248300"/>
+    <production id="857" count="1"/>
+  </item>
+  
+  <!-- Aquastone  Necklace -->
+  <item id="50">
+    <ingredient id="57" count="113500"/>
+    <production id="915" count="1"/>
+  </item>
+
+  <!-- Necklace of Mermaid -->
+  <item id="51">
+    <ingredient id="57" count="203400"/>
+    <production id="917" count="1"/>
+  </item>
+
+  <!-- Blessed Necklace -->
+  <item id="52">
+    <ingredient id="57" count="331200"/>
+    <production id="919" count="1"/>
+  </item>
+</list>

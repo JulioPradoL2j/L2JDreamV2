@@ -1,0 +1,440 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Boots of Seal -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="2994" count="1"/>
+  </item>
+
+  <!-- Recipe: Chain Boots -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="2990" count="1"/>
+  </item>
+
+  <!-- Recipe: Chain Gaiters -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="2205" count="1"/>
+  </item>
+
+  <!-- Recipe: Chain Gloves -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="2996" count="1"/>
+  </item>
+
+  <!-- Recipe: Chain Hood -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="2989" count="1"/>
+  </item>
+
+  <!-- Recipe: Chain Mail Shirt -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="2204" count="1"/>
+  </item>
+
+  <!-- Recipe: Chain Shield -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="2998" count="1"/>
+  </item>
+
+  <!-- Recipe: Composite Armor -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="2222" count="1"/>
+  </item>
+
+  <!-- Recipe: Composite Boots -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="3009" count="1"/>
+  </item>
+
+  <!-- Recipe: Composite Helmet -->
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="3010" count="1"/>
+  </item>
+
+  <!--  Recipe: Composite Shield -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="4132" count="1"/>
+  </item>
+
+  <!-- Recipe: Crimson Boots -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="2219" count="1"/>
+  </item>
+
+  <!-- Recipe: Demon's Boots -->
+  <item id="13">
+    <ingredient id="57" count="1"/>
+    <production id="3005" count="1"/>
+  </item>
+
+  <!-- Recipe: Demon's Gloves -->
+  <item id="14">
+    <ingredient id="57" count="1"/>
+    <production id="3006" count="1"/>
+  </item>
+
+  <!-- Recipe: Demon's Stockings -->
+  <item id="15">
+    <ingredient id="57" count="1"/>
+    <production id="2225" count="1"/>
+  </item>
+
+  <!-- Recipe: Demon's Tunic -->
+  <item id="16">
+    <ingredient id="57" count="1"/>
+    <production id="2224" count="1"/>
+  </item>
+
+  <!-- Recipe: Divine Gloves -->
+  <item id="17">
+    <ingredient id="57" count="1"/>
+    <production id="3017" count="1"/>
+  </item>
+
+  <!-- Recipe: Divine Stockings -->
+  <item id="18">
+    <ingredient id="57" count="1"/>
+    <production id="2234" count="1"/>
+  </item>
+
+  <!-- Recipe: Divine Tunic -->
+  <item id="19">
+    <ingredient id="57" count="1"/>
+    <production id="2233" count="1"/>
+  </item>
+
+  <!-- Recipe: Drake Leather Armor -->
+  <item id="20">
+    <ingredient id="57" count="1"/>
+    <production id="2232" count="1"/>
+  </item>
+
+  <!-- Recipe: Drake Leather Boots -->
+  <item id="21">
+    <ingredient id="57" count="1"/>
+    <production id="3013" count="1"/>
+  </item>
+
+  <!-- Recipe: Drake Leather Gloves -->
+   <item id="22">
+    <ingredient id="57" count="1"/>
+    <production id="3015" count="1"/>
+  </item>
+
+  <!-- Recipe: Dwarven Chain Boots -->
+  <item id="23">
+    <ingredient id="57" count="1"/>
+    <production id="2993" count="1"/>
+  </item>
+
+  <!-- Recipe: Dwarven Chain Gaiters -->
+  <item id="24">
+    <ingredient id="57" count="1"/>
+    <production id="2214" count="1"/>
+  </item>
+  
+  <!-- Recipe: Dwarven Chain Gloves -->
+  <item id="25">
+    <ingredient id="57" count="1"/>
+    <production id="3002" count="1"/>
+  </item>
+
+  <!-- Recipe: Dwarven Chain Mail Shirt -->
+  <item id="26">
+    <ingredient id="57" count="1"/>
+    <production id="2213" count="1"/>
+  </item>
+
+  <!-- Recipe: Dwarven Chain Shield -->
+  <item id="27">
+    <ingredient id="57" count="1"/>
+    <production id="3000" count="1"/>
+  </item>
+
+  <!-- Recipe: Eldarake -->
+  <item id="28">
+    <ingredient id="57" count="1"/>
+    <production id="2209" count="1"/>
+  </item>
+
+  <!-- Recipe: Full Plate Armor -->
+  <item id="29">
+    <ingredient id="57" count="1"/>
+    <production id="2231" count="1"/>
+  </item>
+
+  <!-- Recipe: Full Plate Boots -->
+  <item id="30">
+    <ingredient id="57" count="1"/>
+    <production id="3014" count="1"/>
+  </item>
+
+  <!-- Recipe: Full Plate Gauntlets -->
+  <item id="31">
+    <ingredient id="57" count="1"/>
+    <production id="3016" count="1"/>
+  </item>
+
+  <!-- Recipe: Full Plate Helmet -->
+  <item id="32">
+    <ingredient id="57" count="1"/>
+    <production id="3012" count="1"/>
+  </item>
+
+  <!-- Recipe: Full Plate Shield -->
+  <item id="33">
+    <ingredient id="57" count="1"/>
+    <production id="3019" count="1"/>
+  </item>
+
+  <!-- Recipe: Gloves of Seal -->
+  <item id="34">
+    <ingredient id="57" count="1"/>
+    <production id="3003" count="1"/>
+  </item>
+
+  <!-- Recipe: Great Helmet -->
+  <item id="35">
+    <ingredient id="57" count="1"/>
+    <production id="2216" count="1"/>
+  </item>
+
+  <!--  Recipe: Karmian Boots -->
+  <item id="36">
+    <ingredient id="57" count="1"/>
+    <production id="2991" count="1"/>
+  </item>
+
+  <!-- Recipe: Karmian Gloves -->
+  <item id="37">
+    <ingredient id="57" count="1"/>
+    <production id="2997" count="1"/>
+  </item>
+
+  <!-- Recipe: Karmian Stockings -->
+  <item id="38">
+    <ingredient id="57" count="1"/>
+    <production id="2199" count="1"/>
+  </item>
+
+  <!-- Recipe: Karmian Tunic -->
+  <item id="39">
+    <ingredient id="57" count="1"/>
+    <production id="2207" count="1"/>
+  </item>
+
+  <!-- Recipe: Knight's Shield -->
+  <item id="40">
+    <ingredient id="57" count="1"/>
+    <production id="2217" count="1"/>
+  </item>
+
+  <!-- Recipe: Mithril Boots -->
+  <item id="41">
+    <ingredient id="57" count="1"/>
+    <production id="2203" count="1"/>
+  </item>
+
+  <!-- Recipe: Mithril Gauntlets -->
+  <item id="42">
+    <ingredient id="57" count="1"/>
+    <production id="2226" count="1"/>
+  </item>
+
+  <!-- Recipe: Mithril Shirt -->
+  <item id="43">
+    <ingredient id="57" count="1"/>
+    <production id="2206" count="1"/>
+  </item>
+
+  <!-- Recipe: Plated Leather Armor -->
+  <item id="44">
+    <ingredient id="57" count="1"/>
+    <production id="2211" count="1"/>
+  </item>
+
+  <!-- Recipe: Plated Leather Boots -->
+  <item id="45">
+    <ingredient id="57" count="1"/>
+    <production id="2992" count="1"/>
+  </item>
+
+  <!-- Recipe: Plated Leather Gaiters -->
+  <item id="46">
+    <ingredient id="57" count="1"/>
+    <production id="2212" count="1"/>
+  </item>
+
+  <!-- Recipe: Plated Leather Gloves -->
+  <item id="47">
+    <ingredient id="57" count="1"/>
+    <production id="2999" count="1"/>
+  </item>
+  
+  <!-- Recipe: Reinforced Mithril Gloves -->
+  <item id="48">
+    <ingredient id="57" count="1"/>
+    <production id="2995" count="1"/>
+  </item>
+
+  <!-- Recipe: Rind Leather Armor -->
+  <item id="49">
+    <ingredient id="57" count="1"/>
+    <production id="2220" count="1"/>
+  </item>
+
+  <!-- Recipe: Rind Leather Boots -->
+  <item id="50">
+    <ingredient id="57" count="1"/>
+    <production id="3001" count="1"/>
+  </item>
+
+  <!-- Recipe: Rind Leather Gaiters -->
+  <item id="51">
+    <ingredient id="57" count="1"/>
+    <production id="2221" count="1"/>
+  </item>
+
+  <!-- Recipe: Rind Leather Gloves -->
+  <item id="52">
+    <ingredient id="57" count="1"/>
+    <production id="3004" count="1"/>
+  </item>
+
+  <!-- Recipe: Robe of Seal -->
+  <item id="53">
+    <ingredient id="57" count="1"/>
+    <production id="2215" count="1"/>
+  </item>  
+
+  <!-- Recipe: Shining Circlet -->
+  <item id="54">
+    <ingredient id="57" count="1"/>
+    <production id="2228" count="1"/>
+  </item>  
+
+  <!-- Recipe: Tempered Mithril Gaiters -->
+  <item id="55">
+    <ingredient id="57" count="1"/>
+    <production id="2988" count="1"/>
+  </item>  
+
+  <!-- Recipe: Theca Leather Armor -->
+  <item id="56">
+    <ingredient id="57" count="1"/>
+    <production id="2229" count="1"/>
+  </item>  
+
+  <!-- Recipe: Theca Leather Boots -->
+  <item id="57">
+    <ingredient id="57" count="1"/>
+    <production id="3007" count="1"/>
+  </item>  
+
+  <!-- Recipe: Theca Leather Gaiters -->
+  <item id="58">
+    <ingredient id="57" count="1"/>
+    <production id="2230" count="1"/>
+  </item>  
+
+  <!-- Recipe: Theca Leather Gloves -->
+  <item id="59">
+    <ingredient id="57" count="1"/>
+    <production id="3008" count="1"/>
+  </item>  
+
+  <!-- Recipe: Tower Shield -->
+  <item id="60">
+    <ingredient id="57" count="1"/>
+    <production id="2223" count="1"/>
+  </item>  
+
+  <!-- Recipe: Aquastone Necklace -->
+  <item id="61">
+    <ingredient id="57" count="1"/>
+    <production id="2162" count="1"/>
+  </item>  
+
+  <!-- Recipe: Aquastone Ring -->
+  <item id="62">
+    <ingredient id="57" count="1"/>
+    <production id="2161" count="1"/>
+  </item>  
+
+  <!-- Recipe: Earring of Protection -->
+  <item id="63">
+    <ingredient id="57" count="1"/>
+    <production id="2163" count="1"/>
+  </item>  
+
+  <!-- Recipe: Earrings of Binding -->
+  <item id="64">
+    <ingredient id="57" count="1"/>
+    <production id="2166" count="1"/>
+  </item>  
+
+  <!-- Recipe: Moonstone Earring -->
+  <item id="65">
+    <ingredient id="57" count="1"/>
+    <production id="2160" count="1"/>
+  </item>  
+
+  <!-- Recipe: Nassen's Earring -->
+  <item id="66">
+    <ingredient id="57" count="1"/>
+    <production id="2170" count="1"/>
+  </item>    
+  
+  <!-- Recipe: Necklace of Binding -->
+  <item id="67">
+    <ingredient id="57" count="1"/>
+    <production id="2169" count="1"/>
+  </item>   
+
+  <!-- Recipe: Necklace of Mermaid -->
+  <item id="68">
+    <ingredient id="57" count="1"/>
+    <production id="2168" count="1"/>
+  </item>   
+
+  <!-- Recipe: Necklace of Protection -->
+  <item id="69">
+    <ingredient id="57" count="1"/>
+    <production id="2165" count="1"/>
+  </item>   
+
+  <!-- Recipe: Ring of Ages -->
+  <item id="70">
+    <ingredient id="57" count="1"/>
+    <production id="2167" count="1"/>
+  </item>   
+
+  <!-- Recipe: Ring of Binding -->
+  <item id="71">
+    <ingredient id="57" count="1"/>
+    <production id="2970" count="1"/>
+  </item>   
+
+  <!-- Recipe: Ring of Protection -->
+  <item id="72">
+    <ingredient id="57" count="1"/>
+    <production id="2164" count="1"/>
+  </item>   
+
+</list>

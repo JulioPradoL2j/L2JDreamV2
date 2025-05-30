@@ -1,0 +1,71 @@
+<html><title>Server Control Panel</title><body>
+<center>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+<td width=45><a action="bypass -h admin_admin" width=54 height=19><font color="FFD306">Main</font></a></td>
+<td width=180><center><font color="LEVEL">Group</font></center></td>
+<td width=45><a action="bypass -h admin_effects" width=54 height=19><font color="FFD306">Back</font></a></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+
+<!-- Windows Info -->
+<table width=180>
+		<tr>
+			<td>Team</td>
+			<td><edit var="qbox" width=120 height=15></td>
+		</tr>
+	</table><br>
+
+<font color="LEVEL">Manage groups</font>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+<td><button value="Create" action="bypass -h admin_mobgroup_create $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="Spawn" action="bypass -h admin_mobgroup_spawn $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="Unspawn" action="bypass -h admin_mobgroup_unspawn $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="Rem/Del" action="bypass -h admin_mobgroup_remove $qbox"  width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+</tr><tr>
+<td><button value="List" action="bypass -h admin_mobgroup_list $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="AtkTrgt" action="bypass -h admin_mobgroup_attack $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="AtkGrp" action="bypass -h admin_mobgroup_attackgrp $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="AtkRnd" action="bypass -h admin_mobgroup_rnd $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+</tr></table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+
+<br>
+
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+<td><button value="Return" action="bypass -h admin_mobgroup_return $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="Follow" action="bypass -h admin_mobgroup_follow $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="Teleport" action="bypass -h admin_mobgroup_teleport $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="Kill" action="bypass -h admin_mobgroup_kill $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+</tr><tr>
+<td><button value="Invul" action="bypass -h admin_mobgroup_invul $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="Idle" action="bypass -h admin_mobgroup_idle $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="No/Move" action="bypass -h admin_mobgroup_nomove $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="CastOnly" action="bypass -h admin_mobgroup_casting $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+</tr></table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+</center>
+</body>
+</html>

@@ -1,0 +1,80 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Bow -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="1788" count="1"/>
+  </item>
+
+  <!-- Recipe: Brandish -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="1791" count="1"/>
+  </item>
+
+  <!--  Recipe: Broad Sword -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="1786" count="1"/>
+  </item>
+
+  <!-- Recipe: Cedar Staff -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="1789" count="1"/>
+  </item>
+
+  <!-- Recipe: Composition Bow -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="2254" count="1"/>
+  </item>
+
+  <!--  Recipe: Dirk -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="1790" count="1"/>
+  </item>
+
+  <!-- Recipe: Forest Bow -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="1794" count="1"/>
+  </item>
+
+  <!-- Recipe: Iron Hammer -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="2252" count="1"/>
+  </item>
+
+  <!-- Recipe: Short Spear -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="1792" count="1"/>
+  </item>
+
+  <!--  Recipe: Sword Breaker -->
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="2253" count="1"/>
+  </item>
+
+  <!-- Recipe: Sword of Reflection -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="1793" count="1"/>
+  </item>
+
+  <!--  Recipe: Willow Staff -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="1787" count="1"/>
+  </item>
+
+</list>

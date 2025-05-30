@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<item id='15000' name="White Knight Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15001' name="White Knight Helmet">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15002' name="Barbarian Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15003' name="Barbarian Helmet">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15004' name="Valkyrie Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15005' name="Valkyrie Helmet">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15006' name="Red Noble Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15007' name="Red Noble Helmet">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15008' name="Dragon Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15009' name="Dragon Helmet">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15010' name="Cowboy Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15011' name="Cowboy Helmet">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15012' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15013' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15014' name="Dark Helmet">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15015' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15016' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15017' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15018' name="Beleth Boots">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15019' name="Beleth Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15020' name="Beleth Pants">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15021' name="Beleth Gloves">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15022' name="School Body_1">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15023' name="School Body_2">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15024' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15025' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15026' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15027' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15028' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15029' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15030' name="Japan General">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15031' name="Robe Costume">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15032' name="Stealth Helmet">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15033' name="Stealth Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15034' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15035' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15036' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15037' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15038' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15039' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15040' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15041' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15042' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15043' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15044' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15045' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15046' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15047' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15048' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15049' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15050' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15051' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15052' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15053' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15054' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15055' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15056' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15057' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15058' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+	<item id='15059' name="Dark Body">
+		<for>
+			<add val='0' order='0x10' stat='pDef' />
+		</for>
+	</item>
+</list>

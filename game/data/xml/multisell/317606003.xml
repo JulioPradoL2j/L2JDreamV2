@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!-- Miss Queen (Adventurers' Guide) -->
+<list>
+	<item id="1">
+		<production id="7822" count="1" />
+		<ingredient id="7833" count="1" />
+	</item>
+	<item id="2">
+		<production id="7823" count="1" />
+		<ingredient id="7833" count="1" />
+	</item>
+	<item id="3">
+		<production id="7824" count="1" />
+		<ingredient id="7833" count="1" />
+	</item>
+	<item id="4">
+		<production id="7825" count="1" />
+		<ingredient id="7833" count="1" />
+	</item>
+	<item id="5">
+		<production id="7826" count="1" />
+		<ingredient id="7833" count="1" />
+	</item>
+	<item id="6">
+		<production id="7827" count="1" />
+		<ingredient id="7833" count="1" />
+	</item>
+	<item id="7">
+		<production id="7828" count="1" />
+		<ingredient id="7833" count="1" />
+	</item>
+	<item id="8">
+		<production id="7829" count="1" />
+		<ingredient id="7833" count="1" />
+	</item>
+	<item id="9">
+		<production id="7830" count="1" />
+		<ingredient id="7833" count="1" />
+	</item>
+	<item id="10">
+		<production id="7831" count="1" />
+		<ingredient id="7833" count="1" />
+	</item>
+</list>

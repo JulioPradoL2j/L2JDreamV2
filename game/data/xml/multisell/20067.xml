@@ -1,0 +1,487 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Avadon Boots (100%) -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="4175" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Boots (60%) -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="4959" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Breastplate (100%) -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="4141" count="1"/>
+  </item>
+
+  <!--  Recipe: Avadon Breastplate (60%) -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="4944" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Circlet (100%) -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="4149" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Circlet (60%) -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="4952" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Gaiters (100%) -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="4142" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Gaiters (60%) -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="4945" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Gloves (100%) -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="4150" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Gloves (60%) -->
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="4953" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Leather Armor (100%) -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="4145" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Leather Armor (60%) -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="4948" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Robe (100%) -->
+  <item id="13">
+    <ingredient id="57" count="1"/>
+    <production id="4148" count="1"/>
+  </item>
+
+  <!-- Recipe: Avadon Robe (60%) -->
+  <item id="14">
+    <ingredient id="57" count="1"/>
+    <production id="4951" count="1"/>
+  </item>
+
+  <!--  Recipe: Avadon Shield (100%) -->
+  <item id="15">
+    <ingredient id="57" count="1"/>
+    <production id="4441" count="1"/>
+  </item>
+
+  <!--  Recipe: Avadon Shield (60%) -->
+  <item id="16">
+    <ingredient id="57" count="1"/>
+    <production id="4936" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Boots (100%) -->
+  <item id="17">
+    <ingredient id="57" count="1"/>
+    <production id="4167" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Boots (60%) -->
+  <item id="18">
+    <ingredient id="57" count="1"/>
+    <production id="4992" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Breastplate (100%) -->
+  <item id="19">
+    <ingredient id="57" count="1"/>
+    <production id="4155" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Breastplate (60%) -->
+  <item id="20">
+    <ingredient id="57" count="1"/>
+    <production id="4981" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Gaiters (100%) -->
+  <item id="21">
+    <ingredient id="57" count="1"/>
+    <production id="4157" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Gaiters (60%-->
+   <item id="22">
+    <ingredient id="57" count="1"/>
+    <production id="4982" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Gloves (100%) -->
+  <item id="23">
+    <ingredient id="57" count="1"/>
+    <production id="4173" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Gloves (60%) -->
+  <item id="24">
+    <ingredient id="57" count="1"/>
+    <production id="4998" count="1"/>
+  </item>
+  
+  <!-- Recipe: Blue Wolf Helmet (100%) -->
+  <item id="25">
+    <ingredient id="57" count="1"/>
+    <production id="4165" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Helmet (60%) -->
+  <item id="26">
+    <ingredient id="57" count="1"/>
+    <production id="4990" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Leather Armor (100%) -->
+  <item id="27">
+    <ingredient id="57" count="1"/>
+    <production id="4157" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Leather Armor (60%) -->
+  <item id="28">
+    <ingredient id="57" count="1"/>
+    <production id="4984" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Stockings (100%) -->
+  <item id="29">
+    <ingredient id="57" count="1"/>
+    <production id="4163" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Stockings (60%) -->
+  <item id="30">
+    <ingredient id="57" count="1"/>
+    <production id="4988" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Tunic (100%) -->
+  <item id="31">
+    <ingredient id="57" count="1"/>
+    <production id="4161" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Wolf Tunic (60%) -->
+  <item id="32">
+    <ingredient id="57" count="1"/>
+    <production id="4986" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Boots (100%) -->
+  <item id="33">
+    <ingredient id="57" count="1"/>
+    <production id="4176" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Boots (60%) -->
+  <item id="34">
+    <ingredient id="57" count="1"/>
+    <production id="4999" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Gloves (100%) -->
+  <item id="35">
+    <ingredient id="57" count="1"/>
+    <production id="4168" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Gloves (60%) -->
+  <item id="36">
+    <ingredient id="57" count="1"/>
+    <production id="4993" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Helmet (100%) -->
+  <item id="37">
+    <ingredient id="57" count="1"/>
+    <production id="4166" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Helmet (60%) -->
+  <item id="38">
+    <ingredient id="57" count="1"/>
+    <production id="4991" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Plate Armor (100%) -->
+  <item id="39">
+    <ingredient id="57" count="1"/>
+    <production id="4158" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Plate Armor (60%) -->
+  <item id="40">
+    <ingredient id="57" count="1"/>
+    <production id="4983" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Shield (100%) -->
+  <item id="41">
+    <ingredient id="57" count="1"/>
+    <production id="4154" count="1"/>
+  </item>
+
+  <!-- Recipe: Doom Shield (60%) -->
+  <item id="42">
+    <ingredient id="57" count="1"/>
+    <production id="4980" count="1"/>
+  </item>
+
+  <!-- Recipe: Leather Armor of Doom (100%) -->
+  <item id="43">
+    <ingredient id="57" count="1"/>
+    <production id="4160" count="1"/>
+  </item>
+
+  <!-- Recipe: Leather Armor of Doom (60%) -->
+  <item id="44">
+    <ingredient id="57" count="1"/>
+    <production id="4985" count="1"/>
+  </item>
+
+  <!-- Recipe: Stockings of Doom (100%) -->
+  <item id="45">
+    <ingredient id="57" count="1"/>
+    <production id="4164" count="1"/>
+  </item>
+
+  <!-- Recipe: Stockings of Doom (60%) -->
+  <item id="46">
+    <ingredient id="57" count="1"/>
+    <production id="4989" count="1"/>
+  </item>
+
+  <!-- Recipe: Stockings of Zubei (100%) -->
+  <item id="47">
+    <ingredient id="57" count="1"/>
+    <production id="4147" count="1"/>
+  </item>
+  
+  <!-- Recipe: Stockings of Zubei (60%) -->
+  <item id="48">
+    <ingredient id="57" count="1"/>
+    <production id="4950" count="1"/>
+  </item>
+
+  <!-- Recipe: Tunic of Doom (100%) -->
+  <item id="49">
+    <ingredient id="57" count="1"/>
+    <production id="4162" count="1"/>
+  </item>
+
+  <!-- Recipe: Tunic of Doom (60%) -->
+  <item id="50">
+    <ingredient id="57" count="1"/>
+    <production id="4987" count="1"/>
+  </item>
+
+  <!-- Recipe: Tunic of Zubei (100%) -->
+  <item id="51">
+    <ingredient id="57" count="1"/>
+    <production id="4146" count="1"/>
+  </item>
+
+  <!-- Recipe: Tunic of Zubei (60%) -->
+  <item id="52">
+    <ingredient id="57" count="1"/>
+    <production id="4949" count="1"/>
+  </item>
+
+  <!--  Recipe: Zubei's Boots (100%) -->
+  <item id="53">
+    <ingredient id="57" count="1"/>
+    <production id="4174" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Boots (60%) -->
+  <item id="54">
+    <ingredient id="57" count="1"/>
+    <production id="4958" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Breastplate (100%) -->
+  <item id="55">
+    <ingredient id="57" count="1"/>
+    <production id="4133" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Breastplate (60%) -->
+  <item id="56">
+    <ingredient id="57" count="1"/>
+    <production id="4940" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Gaiters (100%) -->
+  <item id="57">
+    <ingredient id="57" count="1"/>
+    <production id="4134" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Gaiters (60%) -->
+  <item id="58">
+    <ingredient id="57" count="1"/>
+    <production id="4941" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Gauntlets (100%) -->
+  <item id="59">
+    <ingredient id="57" count="1"/>
+    <production id="4177" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Gauntlets (60%) -->
+  <item id="60">
+    <ingredient id="57" count="1"/>
+    <production id="4960" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Helmet (100%) -->
+  <item id="61">
+    <ingredient id="57" count="1"/>
+    <production id="4179" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Helmet (60%) -->
+  <item id="62">
+    <ingredient id="57" count="1"/>
+    <production id="4962" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Leather Gaiters (100%) -->
+  <item id="63">
+    <ingredient id="57" count="1"/>
+    <production id="4144" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Leather Gaiters (60%) -->
+  <item id="64">
+    <ingredient id="57" count="1"/>
+    <production id="4947" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Leather Shirt (100%) -->
+  <item id="65">
+    <ingredient id="57" count="1"/>
+    <production id="4143" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Leather Shirt (60%) -->
+  <item id="66">
+    <ingredient id="57" count="1"/>
+    <production id="4946" count="1"/>
+  </item>    
+  
+  <!-- Recipe: Zubei's Shield (100%) -->
+  <item id="67">
+    <ingredient id="57" count="1"/>
+    <production id="4178" count="1"/>
+  </item>  
+
+  <!-- Recipe: Zubei's Shield (60%) -->
+  <item id="68">
+    <ingredient id="57" count="1"/>
+    <production id="4961" count="1"/>
+  </item>  
+
+  <!-- Recipe: Adamantite Earrings (100%) -->
+  <item id="69">
+    <ingredient id="57" count="1"/>
+    <production id="4126" count="1"/>
+  </item>    
+  
+  <!-- Recipe: Adamantite Earrings (70%) -->
+  <item id="70">
+    <ingredient id="57" count="1"/>
+    <production id="4937" count="1"/>
+  </item>  
+
+  <!-- Recipe: Adamantite Necklace (100%) -->
+  <item id="71">
+    <ingredient id="57" count="1"/>
+    <production id="4128" count="1"/>
+  </item>  
+
+  <!-- Recipe: Adamantite Necklace (70%) -->
+  <item id="72">
+    <ingredient id="57" count="1"/>
+    <production id="4939" count="1"/>
+  </item>  
+
+  <!-- Recipe: Adamantite Ring (100%) -->
+  <item id="73">
+    <ingredient id="57" count="1"/>
+    <production id="4127" count="1"/>
+  </item>  
+
+  <!-- Recipe: Adamantite Ring (70%) -->
+  <item id="74">
+    <ingredient id="57" count="1"/>
+    <production id="4938" count="1"/>
+  </item>  
+
+  <!-- Recipe: Earrings of Black Ore (100%) -->
+  <item id="75">
+    <ingredient id="57" count="1"/>
+    <production id="4129" count="1"/>
+  </item>  
+
+  <!-- Recipe: Earring of Black Ore (70%) -->
+  <item id="76">
+    <ingredient id="57" count="1"/>
+    <production id="4973" count="1"/>
+  </item>  
+
+  <!-- Recipe: Necklace of Black Ore (100%) -->
+  <item id="77">
+    <ingredient id="57" count="1"/>
+    <production id="4131" count="1"/>
+  </item>  
+
+  <!-- Recipe: Necklace of Black Ore (70%) -->
+  <item id="78">
+    <ingredient id="57" count="1"/>
+    <production id="4975" count="1"/>
+  </item>  
+
+  <!-- Recipe: Ring of Black Ore (100%) -->
+  <item id="79">
+    <ingredient id="57" count="1"/>
+    <production id="4130" count="1"/>
+  </item>  
+
+  <!-- Recipe: Ring of Black Ore (70%) -->
+  <item id="80">
+    <ingredient id="57" count="1"/>
+    <production id="4974" count="1"/>
+  </item>    
+</list>

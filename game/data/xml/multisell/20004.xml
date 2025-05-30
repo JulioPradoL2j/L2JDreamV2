@@ -1,0 +1,56 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<list>
+
+  <!-- Falchion -->
+  <item id="1">
+    <ingredient id="57" count="100000"/>
+    <production id="68" count="1"/>
+  </item>
+  <!-- Long Spear -->
+  <item id="2">
+    <ingredient id="57" count="100000"/>
+    <production id="16" count="1"/>
+  </item>
+  <!-- ubiquistous Axe -->
+  <item id="3">
+    <ingredient id="57" count="100000"/>
+    <production id="4221" count="1"/>
+  </item>
+  <!-- Buzdygan -->
+  <item id="4">
+    <ingredient id="57" count="100000"/>
+    <production id="155" count="1"/>
+  </item>  
+  <!-- Sword Breaker -->
+  <item id="5">
+    <ingredient id="57" count="100000"/>
+    <production id="219" count="1"/>
+  </item>
+  <!-- Composition Bow -->
+  <item id="6">
+    <ingredient id="57" count="100000"/>
+    <production id="273" count="1"/>
+    <production id="17" count="1000"/>	
+  </item>
+  <!-- Zweihander -->
+  <item id="7">
+    <ingredient id="57" count="100000"/>
+    <production id="5284" count="1"/>
+  </item>  
+  <!-- Viper Fang -->
+  <item id="8">
+    <ingredient id="57" count="100000"/>
+    <production id="257" count="1"/>
+  </item>
+  <!-- Crucifix of Blessing -->
+  <item id="9">
+    <ingredient id="57" count="100000"/>
+    <production id="311" count="1"/>
+  </item>
+  <!-- Mage Staff -->
+  <item id="10">
+    <ingredient id="57" count="100000"/>
+    <production id="177" count="1"/>
+  </item>
+</list>

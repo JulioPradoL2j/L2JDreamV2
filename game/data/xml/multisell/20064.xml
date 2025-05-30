@@ -1,0 +1,80 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Boots -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="2175" count="1"/>
+  </item>
+
+  <!-- Recipe: Hard Leather Gaiters -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="2174" count="1"/>
+  </item>
+
+  <!--  Recipe: Hard Leather Shirt -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="2173" count="1"/>
+  </item>
+
+  <!-- Recipe: Leather Gloves -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="1799" count="1"/>
+  </item>
+
+  <!-- Recipe: Leather Helmet -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="1798" count="1"/>
+  </item>
+
+  <!-- Recipe: Leather Stockings -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="1797" count="1"/>
+  </item>
+
+  <!-- Recipe: Leather Tunic -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="1796" count="1"/>
+  </item>
+
+  <!-- Recipe: Piece Bone Breastplate -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="1800" count="1"/>
+  </item>
+
+  <!-- Recipe: Piece Bone Gaiters -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="1801" count="1"/>
+  </item>
+
+  <!--  Recipe: Leather Shoes -->
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="1795" count="1"/>
+  </item>
+
+  <!-- Recipe: Blue Diamond Necklace -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="2150" count="1"/>
+  </item>
+
+  <!-- Recipe: Necklace of Anguish -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="1802" count="1"/>
+  </item>
+
+</list>

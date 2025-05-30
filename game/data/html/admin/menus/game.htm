@@ -1,0 +1,100 @@
+<html><title>Game Control Panel</title><body>
+<center>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+  <td><a action="bypass -h admin_admin" width=54 height=19><font color="FFD306">Main</font></a></td>
+  <td><a action="bypass -h admin_gamemenu" width=54 height=19><font color="FFD306">Game</font></a></td>
+  <td><a action="bypass -h admin_server" width=54 height=19><font color="FFD306">Server</font></a></td>
+  <td><a action="bypass -h admin_effects" width=54 height=19><font color="FFD306">Effects</font></a></td>
+  <td><a action="bypass -h admin_mod" width=54 height=19><font color="FFD306">Mods</font></a></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<!-- Windows Info -->
+<table width=180>
+		<tr>
+			<td>Team</td>
+			<td><edit var="qbox" width=120 height=15></td>
+		</tr>
+	</table><br>
+	
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+
+<!-- menu 1-->
+<br><font color="LEVEL">Char Menu</font>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+<td><button value="Manager" action="bypass -h admin_find_character $qbox" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="List" action="bypass -h admin_find_character" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="Name" action="bypass -h admin_changename $name" width=67 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><button value="Title" action="bypass -h admin_settitle $title" width=67 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+
+<br><font color="LEVEL">With the clans</font>
+
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+<td><button value="Create" action="bypass -h admin_pledge create $qbox" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Delete" action="bypass -h admin_pledge dismiss $qbox" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Level" action="bypass -h admin_pledge setlevel $qbox" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+<tr>
+<td><button value="Reputation" action="bypass -h admin_pledge rep $qbox" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Castless" action="bypass -h admin_siege" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Fortress" action="bypass -h admin_fortsiege" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+
+<br><font color="LEVEL">Cursed weapons</font>
+
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+<td><button value="Show" action="bypass -h admin_cw_info_menu $qbox" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Add" action="bypass -h admin_cw_add $qbox" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Del" action="bypass -h admin_cw_remove $qbox" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+
+<br><font color="LEVEL">Seven Sings</font>
+
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+<td><button value="Blacksmith" action="bypass -h admin_mammon_find 1" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Merchant" action="bypass -h admin_mammon_find 2" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Next period" action="bypass -h admin_ss_period_change" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+
+<font color="00ccf0">L2JDream - V2:</font><font color="ae9987"> www.l2jdream.org</font>
+</center></body></html>

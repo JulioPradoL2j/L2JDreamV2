@@ -1,0 +1,64 @@
+<html><title>Server Control Panel</title><body>
+<center>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+  <td><a action="bypass -h admin_admin" width=54 height=19><font color="FFD306">Main</font></a></td>
+  <td><a action="bypass -h admin_gamemenu" width=54 height=19><font color="FFD306">Game</font></a></td>
+  <td><a action="bypass -h admin_server" width=54 height=19><font color="FFD306">Server</font></a></td>
+  <td><a action="bypass -h admin_effects" width=54 height=19><font color="FFD306">Effects</font></a></td>
+  <td><a action="bypass -h admin_reload" width=54 height=19><font color="FFD306">Mods</font></a></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+
+<font color="LEVEL">Move Menu</font>
+<table>
+<tr><td width=70></td>
+<td><button value="Up" action="bypass -h admin_go up $offset" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td width=70></td></tr>
+<tr><td width=70></td>
+<td><button value="North" action="bypass -h admin_go north $offset" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td width=70></td></tr>
+<tr><td><button value="West" action="bypass -h admin_go west $offset" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td><edit var="offset" width=70></td>
+<td><button value="East" action="bypass -h admin_go east $offset" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td></tr>
+<tr><td width=70></td>
+<td><button value="South" action="bypass -h admin_go south $offset" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td width=70></td></tr>
+<tr><td width=70></td>
+<td><button value="Down" action="bypass -h admin_go down $offset" width=68 height=19 back="L2UI_CH3.smallbutton2_over" fore="L2UI_CH3.smallbutton2"></td>
+<td width=70></td></tr>
+</table>
+
+<br><font color="LEVEL">Navigation modes</font>
+<table width=190><tr>
+<td><button value="Walking" action="bypass -h admin_telemode norm" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="Jumping" action="bypass -h admin_telemode demon" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr></table>
+
+<br><font color="LEVEL">Travel speed</font>
+<table width=260><tr>
+<td><button value="1" action="bypass -h admin_gmspeed 1" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="2" action="bypass -h admin_gmspeed 2" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="3" action="bypass -h admin_gmspeed 3" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="4" action="bypass -h admin_gmspeed 4" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="Off" action="bypass -h admin_gmspeed 0" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+</tr></table>
+
+<br><font color="LEVEL">Navigation coordinates</font>
+<table width=260>
+<tr>
+<td width=5>X</td><td><edit var="char_cord_x" width=42></td>
+<td width=5>Y</td><td><edit var="char_cord_y" width=42></td>
+<td width=5>Z</td><td><edit var="char_cord_z" width=42></td>
+<td><button value="Tele" action="bypass -h admin_move_to $char_cord_x $char_cord_y $char_cord_z" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="Walk" action="bypass -h admin_walk $char_cord_x $char_cord_y $char_cord_z" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+</tr>
+</table>
+
+</center></body></html>

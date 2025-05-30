@@ -1,0 +1,67 @@
+<html>
+<title>
+Dark Elves Skills Menu
+</title>
+<body>
+<center>
+<table width=240 bgcolor="12334">
+<tr>
+	<td><button value="Main" action="bypass -h admin_admin" width=65 height=19 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+	<td><button value="Game" action="bypass -h admin_admin2" width=65 height=19 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+	<td><button value="Effects" action="bypass -h admin_admin3" width=65 height=19 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+	<td><button value="GM" action="bypass -h admin_admin4" width=65 height=19 back="L2UI_ch3.smallbutton2_over" fore="L2UI_ch3.smallbutton2"></td>
+</tr>
+</table>
+<br1>
+<font color="333333" align="center">_______________________________________</font>
+<br1>
+<button value="Back" action="bypass -h admin_show_skills" width=40 height=15 back="sek.cbui94" fore="sek.cbui92">
+<br1>
+<table>
+	<tr>
+		<td width=140>Confusion (5-19):</td>
+		<td><combobox width=40 height=15 var=level list=5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;></td>
+		<td><button value="Add Skill" action="bypass -h admin_add_skill 2 $level" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	</tr>
+	<tr>
+		<td width=140>Trick (1-12):</td>
+		<td><combobox width=40 height=15 var=level list=1;2;3;4;5;6;7;8;9;10;11;12;></td>
+		<td><button value="Add Skill" action="bypass -h admin_add_skill 2 $level" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	</tr>
+	<tr>
+		<td width=140>Unlock (6-14):</td>
+		<td><combobox width=40 height=15 var=level list=6;7;8;9;10;11;12;13;14;></td>
+		<td><button value="Add Skill" action="bypass -h admin_add_skill 2 $level" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	</tr>
+	<tr>
+		<td width=140>Backstab (1-20):</td>
+		<td><combobox width=40 height=15 var=level list=1;2;3;4;5;6;7;8;9;10;11;12;13;14;15;16;17;18;19;20;></td>
+		<td><button value="Add Skill" action="bypass -h admin_add_skill 2 $level" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	</tr>
+	<tr>
+		<td width=140>Backstab (21-37):</td>
+		<td><combobox width=40 height=15 var=level list=21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;></td>
+		<td><button value="Add Skill" action="bypass -h admin_add_skill 2 $level" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	</tr>
+	<tr>
+		<td width=140>Drain Health (17-38):</td>
+		<td><combobox width=40 height=15 var=level list=17;18;19;20;21;22;23;24;25;26;27;28;29;30;31;32;33;34;35;36;37;38;></td>
+		<td><button value="Add Skill" action="bypass -h admin_add_skill 2 $level" width=60 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	</tr>
+</table>
+<br>
+<table>
+	<tr>
+		<td><button value="Page2" action="bypass -h admin_skill_index darkelf/de_abysswalker2" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+		<td><button value="Page3" action="bypass -h admin_skill_index darkelf/de_abysswalker3" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+		<td><button value="Page4" action="bypass -h admin_skill_index darkelf/de_abysswalker4" width=40 height=15 back="sek.cbui94" fore="sek.cbui92"></td>
+	</tr>
+</table>
+<br>
+<font color="333333" align="center">_______________________________________</font>
+<br1>
+<font color="3399ff">Server Software created by L2Dream.</font>
+<br>
+</center>
+</body>
+</html>

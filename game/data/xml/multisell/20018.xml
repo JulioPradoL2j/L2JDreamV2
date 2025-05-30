@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Warlord Classe -->
+<list>
+  <!-- Mark of Challenger -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="2627" count="1"/>
+  </item>
+ 
+  <!-- Mark of Trust -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="2734" count="1"/>
+  </item>
+
+  <!-- Mark of Champion -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="3276" count="1"/>
+  </item>
+</list>

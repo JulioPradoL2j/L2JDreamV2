@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Phantom Ranger Classe -->
+<list>
+  <!-- Mark of Seeker -->
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="2673" count="1"/>
+  </item>
+  
+  <!-- Mark of Fate -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="3172" count="1"/>
+  </item>
+
+  <!-- Mark of Sagitarius -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="3293" count="1"/>
+  </item>
+</list>

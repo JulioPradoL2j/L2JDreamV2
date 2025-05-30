@@ -1,0 +1,132 @@
+<html><title>Server Control Panel</title><body>
+<center>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=270>
+<tr>
+<td width=45><a action="bypass -h admin_admin" width=54 height=19><font color="FFD306">Main</font></a></td>
+<td width=180><center><font color="LEVEL">Player: %name%</font></center></td>
+<td width=45><a action="bypass -h admin_gamemenu" width=54 height=19><font color="FFD306">Back</font></a></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+
+<table bgcolor=000000 width="300" height="15">
+<tr>
+<td><button value="Go To" action="bypass -h admin_teleportto %name%" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="Kick" action="bypass -h admin_kick %name%" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="Ban Acc" action="bypass -h admin_ban %name%" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="Ban Chr" action="bypass -h admin_banchar %name%" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+</tr>
+<tr>
+<td><button value="Recall" action="bypass -h admin_recall %name%" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="Skills" action="bypass -h admin_show_skills" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="Edit" action="bypass -h admin_edit_char" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="Class" action="bypass -h admin_setclass" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+</tr>
+<tr>
+<td></td>
+<td><button value="Exp/Sp" action="bypass -h admin_add_exp_sp_to_character" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td><button value="Refresh" action="bypass -h admin_current_player" width=50 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+<td></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+
+<table bgcolor=000000 width="210" height="15">
+<tr>
+<td width=135><center><font color="LEVEL">Account name</font></center></td>
+<td width=135><center><font color="LEVEL">Network address</font></center></td>
+</tr>
+<tr>
+<td><button value="%account%" action="bypass -h admin_find_account %name%" width=100 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+<td><button value="%ip%" action="bypass -h admin_find_ip %ip%" width=100 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+
+<font color="LEVEL">Character's basic information</font>
+
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+
+<table bgcolor=000000 width="270" height="15">
+<tr>
+	<td width=135><font color="87CEFA">Name:</font> %name%</td>
+	<td width=135><font color="87CEFA">Cp:</font> %currentcp% / %maxcp%</td>
+</tr>
+<tr>
+	<td width=135><font color="87CEFA">Clan:</font> %clan%</td>
+	<td width=135><font color="87CEFA">Hp:</font> %currenthp% / %maxhp%</td>
+</tr>
+<tr>
+	<td width=135><font color="87CEFA">Class:</font> %class%</td>
+	<td width=135><font color="87CEFA">Mp:</font> %currentmp% / %maxmp%</td>
+</tr>
+<tr>
+	<td width=135><font color="87CEFA">Level:</font> %level%</td>
+	<td width=135><font color="87CEFA">Pk:</font> %pkkills%</td>
+</tr>
+<tr>
+	<td width=135><font color="87CEFA">Karma:</font> %karma%</td>
+	<td width=135><font color="87CEFA">PvP:</font> %pvpkills%</td>
+</tr>
+<tr>
+	<td width=135><font color="87CEFA">Exp:</font>   %xp%</td>
+	<td width=135><font color="87CEFA">Sp:</font> %sp%</td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+
+<font color="LEVEL">Main characteristics of the character</font>
+
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+
+<table bgcolor=000000 width="270" height="15">
+<tr>
+	<td width=135><font color="87CEFA">P.Atk:</font> %patk%</td>
+	<td width=135><font color="87CEFA">Acc:</font> %accuracy%</td>
+</tr>
+<tr>
+	<td width=135><font color="87CEFA">M.Atk:</font> %matk%</td>
+	<td width=135><font color="87CEFA">Evs:</font> %evasion%</td>
+</tr>
+<tr>
+	<td width=135><font color="87CEFA">P.Def:</font> %pdef%</td>
+	<td width=135><font color="87CEFA">Crt:</font> %critical%</td>
+</tr>
+<tr>
+	<td width=135><font color="87CEFA">M.Def:</font> %mdef%</td>
+	<td width=135><font color="87CEFA">Spd:</font> %runspeed%</td>
+</tr>
+<tr>
+	<td width=135><font color="87CEFA">A.Spd:</font> %patkspd%</td>
+	<td width=135><font color="87CEFA">C.Spd:</font> %matkspd%</td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+</center></body></html>

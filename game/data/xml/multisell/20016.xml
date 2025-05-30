@@ -1,0 +1,116 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Medallion of Warrior -->  
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="1145" count="1"/>
+  </item>
+
+  <!-- Sword of Ritual-->  
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="1161" count="1"/>
+  </item>
+
+   <!-- Bezique's Recomendation --> 
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="1190" count="1"/>
+  </item>
+
+  <!-- Bead of Season -->  
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="1292" count="1"/>
+  </item>
+
+  <!-- Mark of Faith -->  
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="1201" count="1"/>
+  </item>
+  
+   <!-- Elven Knight Broch --> 
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="1204" count="1"/>
+  </item>
+
+  <!-- Reisa's Recomendation -->  
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="1217" count="1"/>
+  </item>  
+  
+  <!-- Eternity Diamond -->  
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="1230" count="1"/>
+  </item>
+
+  <!-- Leaf of Oracle -->  
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="1235" count="1"/>
+  </item>
+
+  <!-- Gaze of Abyss -->  
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="1244" count="1"/>
+  </item>
+  
+  <!-- Iron Heart -->  
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="1252" count="1"/>
+  </item>  
+
+  <!-- Jewel of Darkness -->  
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="1261" count="1"/>
+  </item>
+
+  <!-- Orb of Abyss -->  
+  <item id="13">
+    <ingredient id="57" count="1"/>
+    <production id="1270" count="1"/>
+  </item>
+ 
+  <!-- Khavatari Totem -->  
+  <item id="14">
+    <ingredient id="57" count="1"/>
+    <production id="1615" count="1"/>
+  </item>
+
+   <!-- Mark of Raider --> 
+  <item id="15">
+    <ingredient id="57" count="1"/>
+    <production id="1592" count="1"/>
+  </item>
+  
+  <!-- Mask of Medium -->  
+  <item id="16">
+    <ingredient id="57" count="1"/>
+    <production id="1631" count="1"/>
+  </item>  
+  
+  <!-- Final Pass Certificate --> 
+  <item id="17">
+    <ingredient id="57" count="1"/>
+    <production id="1635" count="1"/>
+  </item>
+
+   <!-- Ring of Raven --> 
+  <item id="18">
+    <ingredient id="57" count="1"/>
+    <production id="1642" count="1"/>
+  </item>  
+
+</list>

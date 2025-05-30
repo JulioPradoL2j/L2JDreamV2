@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Elemental Sumonner Classe -->
+<list>
+  <!-- Mark of Scholar -->
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="2674" count="1"/>
+  </item>
+  
+  <!-- Mark of Life -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="3140" count="1"/>
+  </item>
+
+  <!-- Mark of Summoner -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="3336" count="1"/>
+  </item>
+</list>

@@ -1,0 +1,223 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Raccoon Ears -->
+  <item id="1">
+    <ingredient id="57" count="20"/>
+    <production id="7680" count="1"/>
+  </item>
+
+  <!-- Feathered Hat -->
+  <item id="2">
+    <ingredient id="57" count="20"/>
+    <production id="8185" count="1"/>
+  </item>
+  
+  <!-- Artisan's Goggles -->
+  <item id="3">
+    <ingredient id="57" count="20"/>
+    <production id="8186" count="1"/>
+  </item>
+  
+  <!-- Demon Horns -->
+  <item id="4">
+    <ingredient id="57" count="20"/>
+    <production id="8187" count="1"/>
+  </item>
+
+  <!-- Little Angel Wings -->
+  <item id="5">
+    <ingredient id="57" count="20"/>
+    <production id="8188" count="1"/>
+  </item>
+
+  <!-- Fairy Antennae -->
+  <item id="6">
+    <ingredient id="57" count="20"/>
+    <production id="8189" count="1"/>
+  </item>
+
+  <!-- Cat Ear -->
+  <item id="7">
+    <ingredient id="57" count="20"/>
+    <production id="6843" count="1"/>
+  </item>
+
+  <!-- Rabbit Ears -->
+  <item id="8">
+    <ingredient id="57" count="20"/>
+    <production id="7683" count="1"/>
+  </item>
+
+  <!-- Pirate's Eye Patch -->
+  <item id="9">
+    <ingredient id="57" count="20"/>
+    <production id="6845" count="1"/>
+  </item>
+
+  <!-- Outlaw's Eyepatch -->
+  <item id="10">
+    <ingredient id="57" count="20"/>
+    <production id="7681" count="1"/>
+  </item>
+
+  <!-- Maiden's Hairpin -->
+  <item id="11">
+    <ingredient id="57" count="20"/>
+    <production id="7682" count="1"/>
+  </item>
+
+  <!-- Sayha's white Mask -->
+  <item id="12">
+    <ingredient id="57" count="20"/>
+    <production id="7837" count="1"/>
+  </item>
+
+  <!-- Gold-Line Mask -->
+  <item id="13">
+    <ingredient id="57" count="20"/>
+    <production id="7839" count="1"/>
+  </item>
+
+  <!-- Saint Hat -->
+  <item id="14">
+    <ingredient id="57" count="20"/>
+    <production id="7836" count="1"/>
+  </item>
+
+  <!-- Party Hat Red  -->
+  <item id="15">
+    <ingredient id="57" count="20"/>
+    <production id="8184" count="1"/>
+  </item>
+
+  <!-- Party Hat Blue  -->
+  <item id="16">
+    <ingredient id="57" count="20"/>
+    <production id="8557" count="1"/>
+  </item>
+  
+  <!-- Firts Mate Hat -->
+  <item id="17">
+    <ingredient id="57" count="20"/>
+    <production id="8919" count="1"/>
+  </item>
+
+  <!-- Jester Hat -->
+  <item id="18">
+    <ingredient id="57" count="20"/>
+    <production id="8562" count="1"/>
+  </item>  
+
+  <!-- Pig Hat -->
+  <item id="19">
+    <ingredient id="57" count="20"/>
+    <production id="8561" count="1"/>
+  </item>  
+
+  <!-- Pirate Hat -->
+  <item id="20">
+    <ingredient id="57" count="20"/>
+    <production id="8922" count="1"/>
+  </item>
+
+  <!-- Teddy Bear Hat -->
+  <item id="21">
+    <ingredient id="57" count="20"/>
+    <production id="8560" count="1"/>
+  </item>
+
+  <!-- Wizard Hat -->
+  <item id="22">
+    <ingredient id="57" count="20"/>
+    <production id="8563" count="1"/>
+  </item>  
+
+  <!-- Spirit's Mask -->
+  <item id="23">
+    <ingredient id="57" count="20"/>
+    <production id="8552" count="1"/>
+  </item>  
+
+  <!-- Black Party Mask -->
+  <item id="24">
+    <ingredient id="57" count="20"/>
+    <production id="5808" count="1"/>
+  </item>  
+
+  <!-- Pink Party Mask -->
+  <item id="25">
+    <ingredient id="57" count="20"/>
+    <production id="6394" count="1"/>
+  </item>    
+ 
+  <!-- Tateossian Hairband -->
+  <item id="26">
+    <ingredient id="57" count="20"/>
+    <production id="7060" count="1"/>
+  </item>    
+
+  <!-- Golden Mask -->
+  <item id="27">
+    <ingredient id="57" count="20"/>
+    <production id="7059" count="1"/>
+  </item>  
+ 
+  <!-- Antharas Slayer Circlet -->
+  <item id="28">
+    <ingredient id="57" count="20"/>
+    <production id="8568" count="1"/>
+  </item>  
+
+  <!-- Valakas Slayer Circlet -->
+  <item id="29">
+    <ingredient id="57" count="20"/>
+    <production id="8567" count="1"/>
+  </item>  
+
+  <!-- Iron Circlet -->
+  <item id="30">
+    <ingredient id="57" count="20"/>
+    <production id="8566" count="1"/>
+  </item>    
+
+  <!-- Dapper Cap -->
+  <item id="31">
+    <ingredient id="57" count="20"/>
+    <production id="8564" count="1"/>
+  </item>    
+
+  <!-- Leather Cap -->
+  <item id="32">
+    <ingredient id="57" count="20"/>
+    <production id="8918" count="1"/>
+  </item>    
+
+  <!-- Demon Circlet -->
+  <item id="33">
+    <ingredient id="57" count="20"/>
+    <production id="8921" count="1"/>
+  </item>    
+
+  <!-- Luxurious Gold Circlet -->
+  <item id="34">
+    <ingredient id="57" count="20"/>
+    <production id="8914" count="1"/>
+  </item>    
+
+  <!-- Luxurious Silver Circlet -->
+  <item id="35">
+    <ingredient id="57" count="20"/>
+    <production id="8915" count="1"/>
+  </item>     
+
+  <!-- Santa's Antlers -->
+  <item id="36">
+    <ingredient id="57" count="20"/>
+    <production id="8936" count="1"/>
+  </item>      
+</list>

@@ -1,0 +1,314 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+<!-- Majestic Heavy -->
+  <item id="1">
+    <ingredient id="57" count="20300000"/>
+    <production id="2383" count="1"/>
+  </item>
+
+<!-- Majestic Heavy -->
+  <item id="2">
+    <ingredient id="57" count="9640000"/>
+    <production id="2419" count="1"/>
+  </item>
+
+<!-- Majestic Heavy -->
+  <item id="3">
+    <ingredient id="57" count="8760000"/>
+    <production id="5774" count="1"/>
+  </item>
+
+<!-- Majestic Heavy -->
+  <item id="4">
+    <ingredient id="57" count="8760000"/>
+    <production id="5786" count="1"/>
+  </item>
+
+<!-- Majestic Leather -->
+  <item id="5">
+    <ingredient id="57" count="17730000"/>
+    <production id="2395" count="1"/>
+  </item>
+
+<!-- Majestic Leather -->
+  <item id="6">
+    <ingredient id="57" count="8760000"/>
+    <production id="5775" count="1"/>
+  </item>
+
+<!-- Majestic Leather -->
+  <item id="7">
+    <ingredient id="57" count="8760000"/>
+    <production id="5787" count="1"/>
+  </item>
+
+<!-- Majestic Robe -->
+  <item id="8">
+    <ingredient id="57" count="16730000"/>
+    <production id="2409" count="1"/>
+  </item>
+
+<!-- Majestic Robe -->
+  <item id="9">
+    <ingredient id="57" count="8760000"/>
+    <production id="5776" count="1"/>
+  </item>
+
+<!-- Majestic Robe -->
+  <item id="10">
+    <ingredient id="57" count="8760000"/>
+    <production id="5788" count="1"/>
+  </item>
+
+<!-- Tallum Helm -->
+  <item id="11">
+    <ingredient id="57" count="9640000"/>
+    <production id="547" count="1"/>
+  </item>
+
+<!-- Tallum Heavy Armor -->
+  <item id="12">
+    <ingredient id="57" count="20300000"/>
+    <production id="2382" count="1"/>
+  </item>
+
+<!-- Tallum Heavy Armor -->
+  <item id="13">
+    <ingredient id="57" count="8760000"/>
+    <production id="5768" count="1"/>
+  </item>
+
+<!-- Tallum Heavy Armor -->
+  <item id="14">
+    <ingredient id="57" count="8760000"/>
+    <production id="5780" count="1"/>
+  </item>
+
+<!-- Tallum Leather -->
+  <item id="15">
+    <ingredient id="57" count="17730000"/>
+    <production id="2393" count="1"/>
+  </item>
+
+<!-- Tallum Leather -->
+  <item id="16">
+    <ingredient id="57" count="8760000"/>
+    <production id="5769" count="1"/>
+  </item>
+
+<!-- Tallum Leather -->
+  <item id="17">
+    <ingredient id="57" count="8760000"/>
+    <production id="5781" count="1"/>
+  </item>
+
+<!-- Tallum Robe -->
+  <item id="18">
+    <ingredient id="57" count="8365000"/>
+    <production id="2400" count="1"/>
+  </item>
+
+<!-- Tallum Robe -->
+  <item id="19">
+    <ingredient id="57" count="8365000"/>
+    <production id="2405" count="1"/>
+  </item>
+
+<!-- Tallum Robe -->
+  <item id="20">
+    <ingredient id="57" count="8760000"/>
+    <production id="5770" count="1"/>
+  </item>
+
+<!-- Tallum Robe -->
+  <item id="21">
+    <ingredient id="57" count="8760000"/>
+    <production id="5782" count="1"/>
+  </item>
+
+<!-- Dark Crystal Helm  -->
+  <item id="22">
+    <ingredient id="57" count="9640000"/>
+    <production id="512" count="1"/>
+  </item>
+
+<!-- Dark Crystal Heavy -->
+  <item id="23">
+    <ingredient id="57" count="10200000"/>
+    <production id="365" count="1"/>
+  </item>
+
+<!-- Dark Crystal Heavy -->
+  <item id="24">
+    <ingredient id="57" count="10200000"/>
+    <production id="388" count="1"/>
+  </item>
+
+<!-- Dark Crystal Heavy -->
+  <item id="25">
+    <ingredient id="57" count="8760000"/>
+    <production id="5765" count="1"/>
+  </item>
+
+<!-- Dark Crystal Heavy -->
+  <item id="26">
+    <ingredient id="57" count="8760000"/>
+    <production id="5777" count="1"/>
+  </item>
+
+<!-- Dark Crystal Shield -->
+  <item id="27">
+    <ingredient id="57" count="8760000"/>
+    <production id="641" count="1"/>
+  </item>
+
+<!-- Dark Crystal Light -->
+  <item id="28">
+    <ingredient id="57" count="8865000"/>
+    <production id="2385" count="1"/>
+  </item>
+
+<!-- Dark Crystal Light -->
+  <item id="29">
+    <ingredient id="57" count="8865000"/>
+    <production id="2389" count="1"/>
+  </item>
+
+<!-- Dark Crystal Light -->
+  <item id="30">
+    <ingredient id="57" count="8760000"/>
+    <production id="5766" count="1"/>
+  </item>
+
+<!-- Dark Crystal Light -->
+  <item id="31">
+    <ingredient id="57" count="8760000"/>
+    <production id="5778" count="1"/>
+  </item>
+
+<!-- Dark Crystal Robe Armor -->
+  <item id="32">
+    <ingredient id="57" count="16730000"/>
+    <production id="2407" count="1"/>
+  </item>
+
+<!-- Dark Crystal Robe Armor -->
+  <item id="33">
+    <ingredient id="57" count="8760000"/>
+    <production id="5767" count="1"/>
+  </item>
+
+<!-- Dark Crystal Robe Armor -->
+  <item id="34">
+    <ingredient id="57" count="8760000"/>
+    <production id="5779" count="1"/>
+  </item>
+
+<!-- Nightmare Helmet -->
+  <item id="35">
+    <ingredient id="57" count="9640000"/>
+    <production id="2418" count="1"/>
+  </item>
+
+<!-- Nightmare Heavy Armor -->
+  <item id="36">
+    <ingredient id="57" count="20300000"/>
+    <production id="374" count="1"/>
+  </item>
+
+<!-- Nightmare Heavy Armor -->
+  <item id="37">
+    <ingredient id="57" count="8760000"/>
+    <production id="5771" count="1"/>
+  </item>
+
+<!-- Nightmare Heavy Armor -->
+  <item id="38">
+    <ingredient id="57" count="8760000"/>
+    <production id="5783" count="1"/>
+  </item>
+
+<!-- Nightmare Shield -->
+  <item id="39">
+    <ingredient id="57" count="8760000"/>
+    <production id="2498" count="1"/>
+  </item>
+
+<!-- Nightmare Leather Armor -->
+  <item id="40">
+    <ingredient id="57" count="17730000"/>
+    <production id="2394" count="1"/>
+  </item>
+
+<!-- Nightmare Leather Armor -->
+  <item id="41">
+    <ingredient id="57" count="8760000"/>
+    <production id="5772" count="1"/>
+  </item>
+
+<!-- Nightmare Leather Armor -->
+  <item id="42">
+    <ingredient id="57" count="8760000"/>
+    <production id="5784" count="1"/>
+  </item>
+
+<!-- Nightmare Robe Armor -->
+  <item id="43">
+    <ingredient id="57" count="16730000"/>
+    <production id="2408" count="1"/>
+  </item>
+
+<!-- Nightmare Robe Armor -->
+  <item id="44">
+    <ingredient id="57" count="8760000"/>
+    <production id="5773" count="1"/>
+  </item>
+
+<!-- Nightmare Robe Armor -->
+  <item id="45">
+    <ingredient id="57" count="8760000"/>
+    <production id="5785" count="1"/>
+  </item>
+
+<!-- Phoenix Ring-->
+  <item id="46">
+    <ingredient id="57" count="5860000"/>
+    <production id="902" count="1"/>
+  </item>
+
+  <!-- Phoenix  Earring-->
+  <item id="47">
+    <ingredient id="57" count="6860000"/>
+    <production id="871" count="1"/>
+  </item>
+  
+  <!-- Phoenix Necklace -->
+  <item id="48">
+    <ingredient id="57" count="8760000"/>
+    <production id="933" count="1"/>
+  </item>
+
+  <!-- Majestic Ring-->
+  <item id="49">
+    <ingredient id="57" count="6530000"/>
+    <production id="893" count="1"/>
+  </item>
+
+  <!-- Majestic Earring-->
+  <item id="50">
+    <ingredient id="57" count="7760000"/>
+    <production id="862" count="1"/>
+  </item>
+  
+  <!-- Majestic Necklace -->
+  <item id="51">
+    <ingredient id="57" count="9930000"/>
+    <production id="924" count="1"/>
+  </item>
+
+</list>

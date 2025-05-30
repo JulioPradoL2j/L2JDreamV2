@@ -1,0 +1,505 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Braided Hemp -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="2135" count="1"/>
+  </item>
+
+  <!-- Recipe: Coarse Bone Powder -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="2138" count="1"/>
+  </item>
+
+  <!-- Recipe: Cokes -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="2136" count="1"/>
+  </item>
+
+  <!-- Recipe: Compound Braid -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="2144" count="1"/>
+  </item>
+
+  <!-- Recipe: Cord -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="1817" count="1"/>
+  </item>
+
+  <!-- Recipe: High Grade Suede -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="2140" count="1"/>
+  </item>
+
+  <!-- Recipe: Leather -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="1814" count="1"/>
+  </item>
+
+  <!-- Recipe: Silver Mold -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="2141" count="1"/>
+  </item>
+
+  <!-- Recipe: Steel -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="2137" count="1"/>
+  </item>
+
+  <!-- Recipe: Steel Mold -->
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="2139" count="1"/>
+  </item>
+
+  <!-- Recipe: Synthetic Cokes -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="2143" count="1"/>
+  </item>
+
+  <!-- Recipe: Varnish of Purity -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="2142" count="1"/>
+  </item>
+
+  <!-- Recipe: Wooden Arrow -->
+  <item id="13">
+    <ingredient id="57" count="1"/>
+    <production id="1666" count="1"/>
+  </item>
+
+  <!-- Recipe: Amber Bead -->
+  <item id="14">
+    <ingredient id="57" count="1"/>
+    <production id="3025" count="1"/>
+  </item>
+
+  <!-- Recipe: Artisan's frame -->
+  <item id="15">
+    <ingredient id="57" count="1"/>
+    <production id="2146" count="1"/>
+  </item>
+
+  <!-- Recipe: Blacksmith's frame -->
+  <item id="16">
+    <ingredient id="57" count="1"/>
+    <production id="2147" count="1"/>
+  </item>
+
+  <!-- Recipe: Blessed Spiritshot (D) Compressed Package (100%) -->
+  <item id="17">
+    <ingredient id="57" count="1"/>
+    <production id="5163" count="1"/>
+  </item>
+
+  <!-- Recipe: Blessed Spiritshot D -->
+  <item id="18">
+    <ingredient id="57" count="1"/>
+    <production id="3953" count="1"/>
+  </item>
+
+  <!-- Recipe: Bone Arrow -->
+  <item id="19">
+    <ingredient id="57" count="1"/>
+    <production id="2250" count="1"/>
+  </item>
+
+  <!-- Recipe: Crafted Leather -->
+  <item id="20">
+    <ingredient id="57" count="1"/>
+    <production id="2148" count="1"/>
+  </item>
+
+  <!-- Recipe: Durable Metal Plate(100%) -->
+  <item id="21">
+    <ingredient id="57" count="1"/>
+    <production id="5473" count="1"/>
+  </item>
+
+  <!--  Recipe: Greater Blessed Spiritshot (D) Compressed Package(100%) -->
+   <item id="22">
+    <ingredient id="57" count="1"/>
+    <production id="5278" count="1"/>
+  </item>
+
+  <!-- Recipe: Greater Soulshot (D) Compressed Package (100%) -->
+  <item id="23">
+    <ingredient id="57" count="1"/>
+    <production id="5268" count="1"/>
+  </item>
+
+  <!-- Recipe: Greater Spiritshot (D) Compressed Package(100%) -->
+  <item id="24">
+    <ingredient id="57" count="1"/>
+    <production id="5273" count="1"/>
+  </item>
+  
+  <!-- Recipe: Metal Hardener (100%) -->
+  <item id="25">
+    <ingredient id="57" count="1"/>
+    <production id="5231" count="1"/>
+  </item>
+
+  <!-- Recipe: Metallic Fiber -->
+  <item id="26">
+    <ingredient id="57" count="1"/>
+    <production id="2149" count="1"/>
+  </item>
+
+  <!-- Recipe: Metallic Thread(100%) -->
+  <item id="27">
+    <ingredient id="57" count="1"/>
+    <production id="5472" count="1"/>
+  </item>
+
+  <!-- Recipe: Mithril Alloy -->
+  <item id="28">
+    <ingredient id="57" count="1"/>
+    <production id="2145" count="1"/>
+  </item>
+
+  <!-- Recipe: Oriharukon -->
+  <item id="29">
+    <ingredient id="57" count="1"/>
+    <production id="1825" count="1"/>
+  </item>
+
+  <!-- Recipe: Soulshot (D) Compressed Package (100%) -->
+  <item id="30">
+    <ingredient id="57" count="1"/>
+    <production id="5153" count="1"/>
+  </item>
+
+  <!-- Recipe: Soulshot: D-Grade -->
+  <item id="31">
+    <ingredient id="57" count="1"/>
+    <production id="1804" count="1"/>
+  </item>
+
+  <!-- Recipe: Spiritshot (D) Compressed Package (100%) -->
+  <item id="32">
+    <ingredient id="57" count="1"/>
+    <production id="5158" count="1"/>
+  </item>
+
+  <!-- Recipe: Spiritshot D -->
+  <item id="33">
+    <ingredient id="57" count="1"/>
+    <production id="3032" count="1"/>
+  </item>
+
+  <!--  Recipe: Titan Key -->
+  <item id="34">
+    <ingredient id="57" count="1"/>
+    <production id="3023" count="1"/>
+  </item>
+
+  <!-- Recipe: Titan's Powerstone -->
+  <item id="35">
+    <ingredient id="57" count="1"/>
+    <production id="3838" count="1"/>
+  </item>
+
+  <!-- Recipe: Blessed Spiritshot (C) Compressed Package (100%) -->
+  <item id="36">
+    <ingredient id="57" count="1"/>
+    <production id="5164" count="1"/>
+  </item>
+
+  <!-- Recipe: Blessed Spiritshot C -->
+  <item id="37">
+    <ingredient id="57" count="1"/>
+    <production id="3954" count="1"/>
+  </item>
+
+  <!-- Recipe: Craftsman Mold -->
+  <item id="38">
+    <ingredient id="57" count="1"/>
+    <production id="4124" count="1"/>
+  </item>
+
+  <!-- Recipe: Greater Blessed Spiritshot (C) Compressed Package(100%) -->
+  <item id="39">
+    <ingredient id="57" count="1"/>
+    <production id="5279" count="1"/>
+  </item>
+
+  <!-- Recipe: Greater Soulshot (C) Compressed Package(100%) -->
+  <item id="40">
+    <ingredient id="57" count="1"/>
+    <production id="5269" count="1"/>
+  </item>
+
+  <!-- Recipe: Greater Spiritshot (C) Compressed Package(100%) -->
+  <item id="41">
+    <ingredient id="57" count="1"/>
+    <production id="5274" count="1"/>
+  </item>
+
+  <!-- Recipe: Maestro Anvil Lock -->
+  <item id="42">
+    <ingredient id="57" count="1"/>
+    <production id="4123" count="1"/>
+  </item>
+
+  <!-- Recipe: Maestro Holder -->
+  <item id="43">
+    <ingredient id="57" count="1"/>
+    <production id="4122" count="1"/>
+  </item>
+
+  <!--  Recipe: Maestro Mold -->
+  <item id="44">
+    <ingredient id="57" count="1"/>
+    <production id="4125" count="1"/>
+  </item>
+
+  <!-- Recipe: Reorin's Mold(100%) -->
+  <item id="45">
+    <ingredient id="57" count="1"/>
+    <production id="5474" count="1"/>
+  </item>
+
+  <!-- Recipe: Soulshot (C) Compressed Package (100%) -->
+  <item id="46">
+    <ingredient id="57" count="1"/>
+    <production id="5154" count="1"/>
+  </item>
+
+  <!-- Recipe: Soulshot: C-Grade -->
+  <item id="47">
+    <ingredient id="57" count="1"/>
+    <production id="1805" count="1"/>
+  </item>
+  
+  <!-- Recipe: Spiritshot (C) Compressed Package (100%) -->
+  <item id="48">
+    <ingredient id="57" count="1"/>
+    <production id="5159" count="1"/>
+  </item>
+
+  <!-- Recipe: Spiritshot C -->
+  <item id="49">
+    <ingredient id="57" count="1"/>
+    <production id="3033" count="1"/>
+  </item>
+
+  <!-- Recipe: Steel Arrow -->
+  <item id="50">
+    <ingredient id="57" count="1"/>
+    <production id="2251" count="1"/>
+  </item>
+
+  <!-- Recipe: Blessed Spiritshot (B) Compressed Package (100%) -->
+  <item id="51">
+    <ingredient id="57" count="1"/>
+    <production id="5165" count="1"/>
+  </item>
+
+  <!-- Recipe: Blessed Spiritshot B -->
+  <item id="52">
+    <ingredient id="57" count="1"/>
+    <production id="3955" count="1"/>
+  </item>
+
+  <!-- Recipe: Greater Blessed Spiritshot (B) Compressed Package(100%) -->
+  <item id="53">
+    <ingredient id="57" count="1"/>
+    <production id="5280" count="1"/>
+  </item>  
+
+  <!-- Recipe: Greater Soulshot (B) Compressed Package(100%) -->
+  <item id="54">
+    <ingredient id="57" count="1"/>
+    <production id="5270" count="1"/>
+  </item>  
+
+  <!-- Recipe: Greater Spiritshot (B) Compressed Package(100%) -->
+  <item id="55">
+    <ingredient id="57" count="1"/>
+    <production id="5275" count="1"/>
+  </item>  
+
+  <!-- Recipe: Silver Arrow -->
+  <item id="56">
+    <ingredient id="57" count="1"/>
+    <production id="4180" count="1"/>
+  </item>  
+
+  <!-- Recipe: Soulshot (B) Compressed Package (100%) -->
+  <item id="57">
+    <ingredient id="57" count="1"/>
+    <production id="5155" count="1"/>
+  </item>  
+
+  <!-- Recipe: Soulshot: B-Grade -->
+  <item id="58">
+    <ingredient id="57" count="1"/>
+    <production id="1806" count="1"/>
+  </item>  
+
+  <!-- Recipe: Spiritshot (B) Compressed Package (100%) -->
+  <item id="59">
+    <ingredient id="57" count="1"/>
+    <production id="5160" count="1"/>
+  </item>  
+
+  <!-- Recipe: Spiritshot B -->
+  <item id="60">
+    <ingredient id="57" count="1"/>
+    <production id="3034" count="1"/>
+  </item>  
+
+  <!-- Recipe: Arcsmith's Anvil (100%) -->
+  <item id="61">
+    <ingredient id="57" count="1"/>
+    <production id="5476" count="1"/>
+  </item>  
+
+  <!-- Recipe: Blessed Spiritshot (A) Compressed Package (100%) -->
+  <item id="62">
+    <ingredient id="57" count="1"/>
+    <production id="5166" count="1"/>
+  </item>  
+
+  <!-- Recipe: Blessed Spiritshot A -->
+  <item id="63">
+    <ingredient id="57" count="1"/>
+    <production id="3956" count="1"/>
+  </item>  
+
+  <!-- Recipe: Greater Blessed Spiritshot (A) Compressed Package(100%) -->
+  <item id="64">
+    <ingredient id="57" count="1"/>
+    <production id="5281" count="1"/>
+  </item>  
+
+  <!-- Recipe: Greater Soulshot (A) Compressed Package(100%) -->
+  <item id="65">
+    <ingredient id="57" count="1"/>
+    <production id="5271" count="1"/>
+  </item>  
+
+  <!-- Recipe: Greater Spiritshot (A) Compressed Package(100%) -->
+  <item id="66">
+    <ingredient id="57" count="1"/>
+    <production id="5276" count="1"/>
+  </item>    
+  
+  <!-- Recipe: Mithril Arrow (100%) -->
+  <item id="67">
+    <ingredient id="57" count="1"/>
+    <production id="5230" count="1"/>
+  </item>  
+
+  <!-- Recipe: Soulshot (A) Compressed Package (100%) -->
+  <item id="68">
+    <ingredient id="57" count="1"/>
+    <production id="5156" count="1"/>
+  </item>  
+
+  <!-- Recipe: Soulshot: A-Grade -->
+  <item id="69">
+    <ingredient id="57" count="1"/>
+    <production id="1807" count="1"/>
+  </item>    
+
+  <!-- Recipe: Spiritshot (A) Compressed Package (100%) -->
+  <item id="70">
+    <ingredient id="57" count="1"/>
+    <production id="5161" count="1"/>
+  </item> 
+
+  <!-- Recipe: Spiritshot A -->
+  <item id="71">
+    <ingredient id="57" count="1"/>
+    <production id="3035" count="1"/>
+  </item> 
+
+  <!-- Recipe: Warsmith's Holder(100%) -->
+  <item id="72">
+    <ingredient id="57" count="1"/>
+    <production id="5477" count="1"/>
+  </item> 
+
+  <!-- Recipe: Warsmith's Mold(100%) -->
+  <item id="73">
+    <ingredient id="57" count="1"/>
+    <production id="5475" count="1"/>
+  </item> 
+
+  <!-- Recipe: Blessed Spiritshot (S) Compressed Package (100%) -->
+  <item id="74">
+    <ingredient id="57" count="1"/>
+    <production id="5167" count="1"/>
+  </item> 
+  
+  <!-- Recipe: Blessed Spiritshot S -->
+  <item id="75">
+    <ingredient id="57" count="1"/>
+    <production id="3957" count="1"/>
+  </item> 
+
+  <!--  Recipe: Greater Blessed Spiritshot (S) Compressed Package(100%) -->
+  <item id="76">
+    <ingredient id="57" count="1"/>
+    <production id="5282" count="1"/>
+  </item> 
+
+  <!-- Recipe: Greater Soulshot (S) Compressed Package(100%) -->
+  <item id="77">
+    <ingredient id="57" count="1"/>
+    <production id="5272" count="1"/>
+  </item> 
+
+  <!-- Recipe: Greater Spiritshot (S) Compressed Package(100%) -->
+  <item id="78">
+    <ingredient id="57" count="1"/>
+    <production id="5277" count="1"/>
+  </item> 
+
+  <!-- Recipe: Shining Arrow (100%) -->
+  <item id="79">
+    <ingredient id="57" count="1"/>
+    <production id="6901" count="1"/>
+  </item> 
+
+  <!-- Recipe: Soulshot (S) Compressed Package (100%) -->
+  <item id="80">
+    <ingredient id="57" count="1"/>
+    <production id="5157" count="1"/>
+  </item> 
+
+  <!-- Recipe: Soulshot: S Grade -->
+  <item id="81">
+    <ingredient id="57" count="1"/>
+    <production id="1808" count="1"/>
+  </item> 
+
+  <!-- Recipe: Spiritshot (S) Compressed Package (100%) -->
+  <item id="82">
+    <ingredient id="57" count="1"/>
+    <production id="5162" count="1"/>
+  </item>   
+  
+  <!-- Recipe: Spiritshot S -->
+  <item id="83">
+    <ingredient id="57" count="1"/>
+    <production id="3036" count="1"/>
+  </item>     
+</list>

@@ -1,0 +1,60 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  
+  <item id="1">
+    <ingredient id="57" count="10"/>
+    <production id="4673" count="1"/>
+  </item>
+
+ <item id="2">
+    <ingredient id="57" count="10"/>
+    <production id="4667" count="1"/>
+  </item>
+
+ <item id="3">
+    <ingredient id="57" count="10"/>
+    <production id="4668" count="1"/>
+  </item>
+
+ <item id="4">
+    <ingredient id="57" count="10"/>
+    <production id="4669" count="1"/>
+  </item>
+
+ <item id="5">
+     <ingredient id="6029" count="1"/>
+     <ingredient id="6019" count="1"/>
+    <production id="6320" count="1"/>
+  </item>
+
+ <item id="6">
+    <ingredient id="57" count="10"/>
+    <production id="4666" count="1"/>
+  </item>
+
+ <item id="7">
+    <ingredient id="6013" count="100"/>
+    <ingredient id="6018" count="10"/>
+    <ingredient id="6019" count="1"/>
+    <production id="6029" count="1"/>
+  </item>
+
+ <item id="8">
+   <ingredient id="6012" count="100"/> 
+   <ingredient id="6018" count="10"/>
+   <ingredient id="6020" count="2"/>
+   <ingredient id="6015" count="100"/>
+   <ingredient id="6017" count="10"/>
+    <production id="6033" count="1"/>
+  </item>
+
+ 
+
+ 
+
+</list>

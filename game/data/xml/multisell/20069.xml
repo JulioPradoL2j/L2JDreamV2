@@ -1,0 +1,110 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Sealed Draconic Leather Armor (60%) -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="6865" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Draconic Leather Boots (60%) -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="6869" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Draconic Leather Gloves (60%) -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="6867" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Draconic Leather Helmet (60%) -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="6871" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Imperial Crusader Boots (60%) -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="6859" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Imperial Crusader Breastplate (60%) -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="6853" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Imperial Crusader Gaiters (60%) -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="6855" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Imperial Crusader Gauntlets (60%) -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="6857" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Imperial Crusader Helmet (60%) -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="6863" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Imperial Crusader Shield (60%) -->
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="6861" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Major Arcana Boots (60%) -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="6877" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Major Arcana Circlet (60%) -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="6879" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Major Arcana Gloves (60%) -->
+  <item id="13">
+    <ingredient id="57" count="1"/>
+    <production id="6875" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Major Arcana Robe (60%) -->
+  <item id="14">
+    <ingredient id="57" count="1"/>
+    <production id="6873" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Tateossian Necklace (70%) -->
+  <item id="15">
+    <ingredient id="57" count="1"/>
+    <production id="6851" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Tateossian Earring (70%) -->
+  <item id="16">
+    <ingredient id="57" count="1"/>
+    <production id="6847" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Tateossian Ring (70%) -->
+  <item id="17">
+    <ingredient id="57" count="1"/>
+    <production id="6849" count="1"/>
+  </item>
+
+</list>

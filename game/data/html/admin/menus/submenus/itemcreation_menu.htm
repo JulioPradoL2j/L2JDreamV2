@@ -1,0 +1,101 @@
+﻿<html><title>Server Control Panel</title><body>
+<center>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=270>
+<tr>
+<td width=45><a action="bypass -h admin_admin" width=54 height=19><font color="FFD306">Main</font></a></td>
+<td width=180><center><font color="LEVEL">Creating Items</font></center></td>
+<td width=45><a action="bypass -h admin_admin" width=54 height=19><font color="FFD306">Back</font></a></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<font color="LEVEL">
+Item Creation
+</font>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width="300">
+	<tr>
+		<td>
+			Fill the ID number in item-id to create the item that you want, 
+			use amount if you need more than one. 
+			<font color="LEVEL">
+				Caution: Do not use amount with non-stackable items
+			</font>
+		</td>
+	</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<center>
+<table bgcolor="000000" width="300">
+	<tr>
+		<td>Item-ID:</td>
+		<td>Amount:</td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><edit var="itemid" width=50></td>
+		<td><edit var="itemnum" width=70 type=number></td>
+		<td><button value="Create Item" action="bypass -h admin_create_item $itemid $itemnum" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td><button value="Give To Target" action="bypass -h admin_give_item_target $itemid $itemnum" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td><button value="Give To All Online" action="bypass -h admin_give_item_to_all $itemid $itemnum" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td></td>
+		<td><button value="Clean Inventory" action="bypass -h admin_clean_inventory" width=95 height=21 back="L2UI_CH3.bigbutton_over" fore="L2UI_CH3.bigbutton"></td>
+	</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+
+		<table bgcolor="000000" width="300">
+		<tr>
+		<td>
+		<center>Presets: <edit var="asset" width=95 height=11 type=number></center></td></tr>
+		</table>
+	<br>
+	<table>
+		<tr>
+		<td>
+			<button value="Adena" action="bypass -h admin_create_item 57 $asset" width=95 height=21 back="bigbutton_over" fore="bigbutton">
+			<button value="Ancient Adena" action="bypass -h admin_create_item 5575 $asset" width=95 height=21 back="bigbutton_over" fore="bigbutton">
+			<button value="Blue Seal Stones" action="bypass -h admin_create_item 6360 $asset" width=95 height=21 back="bigbutton_over" fore="bigbutton">
+			<button value="Green Seal Stones" action="bypass -h admin_create_item 6361 $asset" width=95 height=21 back="bigbutton_over" fore="bigbutton">
+			<button value="Red Seal Stones" action="bypass -h admin_create_item 6362 $asset" width=95 height=21 back="bigbutton_over" fore="bigbutton">
+		</td>
+		</tr>
+	</table>
+
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+
+<font color="00ccf0">L2JDream - V2:</font><font color="ae9987"> www.l2jdream.org</font>
+</center>
+</body>
+</html>

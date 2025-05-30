@@ -1,0 +1,254 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+<list>
+	<item id="1">
+		<production id="28" count="1"/>
+		<ingredient id="57" count="105" />
+	</item>
+  
+	<item id="2">	
+	<production id="21" count="1"/>
+    <ingredient id="57" count="169" />
+	</item>
+  
+	<item id="3">	
+		<production id="29" count="1"/>
+		<ingredient id="57" count="1748" />
+	</item>
+  
+	<item id="4">
+		<production id="22" count="1"/> 
+		<ingredient id="57" count="2794" />
+	</item>
+  
+	<item id="5">	
+		<production id="30" count="1"/>
+		<ingredient id="57" count="5715" />
+	</item>
+  
+	<item id="6">	
+		<production id="2386" count="1"/>
+		<ingredient id="57" count="5715" />
+	</item>
+  
+	<item id="7">	
+		<production id="23" count="1"/>
+		<ingredient id="57" count="9154" />
+	</item>
+  
+	<item id="8">	
+		<production id="412" count="1"/>
+		<ingredient id="57" count="14605" />
+	</item>
+  
+	<item id="9">	
+		<production id="390" count="1"/>
+		<ingredient id="57" count="23345" />
+	</item>
+  
+	<item id="10">	
+		<production id="24" count="1"/>
+		<ingredient id="57" count="23345" />
+	</item>
+  
+	<item id="11">	
+		<production id="31" count="1"/> 
+		<ingredient id="57" count="14605" />
+	</item>
+
+	<item id="12">	
+		<production id="462" count="1"/>
+		<ingredient id="57" count="105" />
+	</item>
+  
+	<item id="13">	
+		<production id="426" count="1"/>
+		<ingredient id="57" count="169" />
+	</item>
+  
+	<item id="14">	
+		<production id="1103" count="1"/> 
+		<ingredient id="57" count="1748" />
+	</item>
+  
+	<item id="15">		
+		<production id="1100" count="1"/>
+		<ingredient id="57" count="2794" />
+	</item>
+  
+	<item id="16">	
+		<production id="463" count="1"/>
+		<ingredient id="57" count="1748" />
+	</item>
+	
+	<item id="17">	
+		<production id="428" count="1"/>
+		<ingredient id="57" count="2794" />
+	</item>
+  
+	<item id="18">	
+		<production id="464" count="1"/> 
+		<ingredient id="57" count="5715" />
+	</item>
+  
+	<item id="19">	
+		<production id="429" count="1"/> 
+		<ingredient id="57" count="9154" />
+	</item>
+  
+	<item id="20">	
+		<production id="1104" count="1"/>
+		<ingredient id="57" count="14605" />
+	</item>
+  
+	<item id="21">	
+		<production id="1101" count="1"/>
+		<ingredient id="57" count="23345" />
+	</item>
+
+
+	<item id="22">
+		<ingredient id="57" count="223190"/>
+		<production id="1102" count="1"/>
+	</item>
+ 
+	<item id="23"> 
+		<ingredient id="57" count="223190"/>
+		<production id="1105" count="1"/>
+	</item>
+
+	<item id="24"> 
+		<production id="1121" count="1"/>
+		<ingredient id="57" count="8" />
+	</item>
+ 
+	<item id="25"> 	
+		<production id="35" count="1"/>
+		<ingredient id="57" count="42" />
+	</item>
+ 
+	<item id="26"> 	
+		<production id="36" count="1"/>
+		<ingredient id="57" count="42" />
+	</item>
+ 
+	<item id="27"> 	
+		<production id="1129" count="1"/>
+		<ingredient id="57" count="698" />
+	</item>
+ 
+	<item id="28"> 	
+		<production id="1122" count="1"/>
+		<ingredient id="57" count="698" />
+	</item>
+ 
+	<item id="29"> 	
+		<production id="37" count="1"/>
+		<ingredient id="57" count="3047" />
+	</item>
+ 
+	<item id="30"> 	
+		<production id="38" count="1"/>
+		<ingredient id="57" count="7785" />
+	</item>
+ 
+	<item id="31"> 	
+		<production id="41" count="1"/>
+		<ingredient id="57" count="63" />
+	</item>
+ 
+	<item id="32"> 	
+		<production id="42" count="1"/>
+		<ingredient id="57" count="1047" />
+	</item>
+ 
+	<item id="33"> 	
+		<production id="43" count="1"/>
+		<ingredient id="57" count="4577" />
+	</item>
+ 
+	<item id="34"> 	
+		<production id="44" count="1"/>
+		<ingredient id="57" count="11730" />
+	</item>
+
+	<item id="35"> 
+		<production id="48" count="1"/>
+		<ingredient id="57" count="42" />
+	</item>
+ 
+	<item id="36"> 	
+		<production id="1119" count="1"/>
+		<ingredient id="57" count="698" />
+	</item>
+ 
+	<item id="37"> 	
+		<production id="49" count="1"/>
+		<ingredient id="57" count="3047" />
+	</item>
+ 
+	<item id="38"> 	
+		<production id="50" count="1"/>
+		<ingredient id="57" count="7785" />
+	</item>
+	
+  <!-- Leather Shield -->  
+  <item id="39">
+    <ingredient id="57" count="80000"/>
+    <production id="18" count="1"/>
+  </item>
+
+  <!-- Small Shield -->  
+  <item id="40">
+    <ingredient id="57" count="912"/>
+    <production id="19" count="1"/>
+  </item>
+
+  <!-- Buckler Shield -->  
+  <item id="41">
+    <ingredient id="57" count="3975"/>
+    <production id="20" count="1"/>
+  </item>
+
+  <!-- Round Shield -->  
+  <item id="42">
+    <ingredient id="57" count="7821"/>
+    <production id="102" count="1"/>
+  </item>
+
+  <!-- Bone Shield -->  
+  <item id="43">
+    <ingredient id="57" count="14190"/>
+    <production id="625" count="1"/>
+  </item>
+
+  <!-- Obiquitous Shield -->  
+  <item id="44">
+    <ingredient id="57" count="18447"/>
+    <production id="4223" count="1"/>
+  </item>
+  
+  <!-- Skeleton Buckler Shield -->  
+  <item id="45">
+    <ingredient id="57" count="4919"/>
+    <production id="945" count="1"/>
+  </item>  	
+  
+<!-- Necklace of Wisdom -->    
+  <item id="56">
+    <ingredient id="57" count="5000"/>
+    <production id="908" count="1"/>
+  </item>
+<!-- Earring of Wisdom -->    
+  <item id="6">
+    <ingredient id="57" count="3000"/>
+    <production id="115" count="1"/>
+  </item>
+<!-- Ring of Wisdom -->    
+  <item id="7">
+    <ingredient id="57" count="3000"/>
+    <production id="877" count="1"/>
+  </item>  
+</list>

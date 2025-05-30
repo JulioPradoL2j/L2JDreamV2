@@ -1,0 +1,26 @@
+<html>
+<title>Personal Password Manager</title>
+<body>
+<center>
+<img src="L2Font.mini_logo-k" width=250 height=90><br>
+<img src="L2UI_CH3.herotower_deco" width=256 height=32><br>
+</center>
+<br>
+Hello, stranger! You forgot your password? Okay, I'll help you recover it!<br>
+But you have to type the answer to the question, that you've set during registration.<br>
+
+<center><font color="LEVEL">%question%</font></center>
+<br>
+<center>
+<table>
+<tr><td><font color="732cde">Enter the answer: </font></td><td><edit var="answer" width=70 height=10></td></tr><br>
+<tr><td><font color="732cde">Enter the new password: </font></td><td><edit var="pass1" width=70 height=10></td></tr><br>
+<tr><td><font color="732cde">Confirm new password: </font></td><td><edit var="pass2" width=70 height=10></td></tr><br>
+</table>
+<br>
+<button value="Confirm" action="bypass -h pkrec $answer $pass1 $pass2" width=75 height=21 back="L2UI_ch3.Btn1_normalOn" fore="L2UI_ch3.Btn1_normal">        
+<br>
+<img src="L2UI_CH3.herotower_deco" width=256 height=32>
+</center>
+</body>
+</html>

@@ -1,0 +1,284 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Assassin Knife -->
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="2256" count="1"/>
+  </item>
+
+  <!--  Recipe: Atuba Hammer -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="2287" count="1"/>
+  </item>
+
+  <!--  Recipe: Atuba Mace -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="2296" count="1"/>
+  </item>
+
+  <!--  Recipe: Bich'hwa -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="2277" count="1"/>
+  </item>
+
+  <!--  Recipe: Bonebreaker -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="2286" count="1"/>
+  </item>
+
+  <!--  Recipe: Claymore -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="2285" count="1"/>
+  </item>
+
+  <!-- Recipe: Conjuror's Staff -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="2261" count="1"/>
+  </item>
+
+  <!-- Recipe: Crucifix of Blood -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="2280" count="1"/>
+  </item>
+
+  <!--  Recipe: Cursed Maingauche -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="2282" count="1"/>
+  </item>
+
+  <!--  Recipe: Demon Fangs -->
+   <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="2284" count="1"/>
+  </item>
+
+  <!-- Recipe: Dwarven Trident -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="2263" count="1"/>
+  </item>
+
+  <!-- Recipe: Elven Bow -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="2262" count="1"/>
+  </item>
+  
+  <!-- Recipe: Elven Long Sword -->
+  <item id="13">
+    <ingredient id="57" count="1"/>
+    <production id="3020" count="1"/>
+  </item>
+
+  <!-- Recipe: Gastraphetes -->
+  <item id="14">
+    <ingredient id="57" count="1"/>
+    <production id="2267" count="1"/>
+  </item>
+
+  <!-- Recipe: Ghost Staff -->
+  <item id="15">
+    <ingredient id="57" count="1"/>
+    <production id="2288" count="1"/>
+  </item>
+
+  <!-- Recipe: Glaive -->
+  <item id="16">
+    <ingredient id="57" count="1"/>
+    <production id="2293" count="1"/>
+  </item>
+
+  <!-- Recipe: Goat Head Staff -->
+  <item id="17">
+    <ingredient id="57" count="1"/>
+    <production id="2270" count="1"/>
+  </item>
+
+  <!-- Recipe: Heavy Bone Club -->
+  <item id="18">
+    <ingredient id="57" count="1"/>
+    <production id="2275" count="1"/>
+  </item>
+
+  <!-- Recipe: Heavy Sword(100%) -->
+  <item id="19">
+    <ingredient id="57" count="1"/>
+    <production id="5437" count="1"/>
+  </item>
+
+  <!--  Recipe: Light Crossbow -->
+  <item id="20">
+    <ingredient id="57" count="1"/>
+    <production id="2292" count="1"/>
+  </item>
+
+  <!-- Recipe: Mace of Judgment -->
+  <item id="21">
+    <ingredient id="57" count="1"/>
+    <production id="2260" count="1"/>
+  </item>
+
+  <!--  Recipe: Maingauche -->
+  <item id="22">
+    <ingredient id="57" count="1"/>
+    <production id="2276" count="1"/>
+  </item>
+
+  <!-- Recipe: Mithril Dagger -->
+  <item id="23">
+    <ingredient id="57" count="1"/>
+    <production id="2290" count="1"/>
+  </item>
+
+  <!--  Recipe: Morning Star -->
+  <item id="24">
+    <ingredient id="57" count="1"/>
+    <production id="2269" count="1"/>
+  </item>
+
+  <!-- Recipe: Priest Mace (100%) -->
+  <item id="25">
+    <ingredient id="57" count="1"/>
+    <production id="8307" count="1"/>
+  </item>
+
+  <!--  Recipe: Priest Sword (100%) -->
+  <item id="26">
+    <ingredient id="57" count="1"/>
+    <production id="8301" count="1"/>
+  </item>
+
+  <!-- Recipe: Saber -->
+  <item id="27">
+    <ingredient id="57" count="1"/>
+    <production id="2255" count="1"/>
+  </item>
+
+  <!-- Recipe: Scallop Jamadhr -->
+  <item id="28">
+    <ingredient id="57" count="1"/>
+    <production id="2291" count="1"/>
+  </item>
+
+  <!-- Recipe: Shilen Knife -->
+  <item id="29">
+    <ingredient id="57" count="1"/>
+    <production id="2266" count="1"/>
+  </item>
+
+  <!-- Recipe: Skull Breaker -->
+  <item id="30">
+    <ingredient id="57" count="1"/>
+    <production id="2274" count="1"/>
+  </item>
+
+  <!-- Recipe: Spiked Club -->
+  <item id="31">
+    <ingredient id="57" count="1"/>
+    <production id="2265" count="1"/>
+  </item>
+
+  <!--  Recipe: Spinebone Sword -->
+  <item id="32">
+    <ingredient id="57" count="1"/>
+    <production id="2259" count="1"/>
+  </item>
+
+  <!--  Recipe: Staff of Life -->
+  <item id="33">
+    <ingredient id="57" count="1"/>
+    <production id="2289" count="1"/>
+  </item>
+
+  <!-- Recipe: Steel Sword (100%) -->
+  <item id="34">
+    <ingredient id="57" count="1"/>
+    <production id="8294" count="1"/>
+  </item>
+
+  <!-- Recipe: Strengthened Long Bow -->
+  <item id="35">
+    <ingredient id="57" count="1"/>
+    <production id="2278" count="1"/>
+  </item>
+  
+  <!-- Recipe: Sword of Magic Fog (100%) -->
+  <item id="36">
+    <ingredient id="57" count="1"/>
+    <production id="8302" count="1"/>
+  </item>
+
+  <!-- Recipe: Sword of Revolution -->
+  <item id="37">
+    <ingredient id="57" count="1"/>
+    <production id="2272" count="1"/>
+  </item>
+
+  <!-- Recipe: Tarbar -->
+  <item id="38">
+    <ingredient id="57" count="1"/>
+    <production id="2273" count="1"/>
+  </item>
+
+  <!--  Recipe: Temptation of Abyss -->
+  <item id="39">
+    <ingredient id="57" count="1"/>
+    <production id="2258" count="1"/>
+  </item>
+
+  <!-- Recipe: Titan Hammer (100%) -->
+  <item id="40">
+    <ingredient id="57" count="1"/>
+    <production id="8317" count="1"/>
+  </item>
+
+  <!--  Recipe: Titan Sword (100%) -->
+  <item id="41">
+    <ingredient id="57" count="1"/>
+    <production id="8295" count="1"/>
+  </item>  
+
+  <!-- Recipe: Tome of Blood -->
+  <item id="42">
+    <ingredient id="57" count="1"/>
+    <production id="2268" count="1"/>
+  </item>  
+
+  <!-- Recipe: Trident -->
+  <item id="43">
+    <ingredient id="57" count="1"/>
+    <production id="2257" count="1"/>
+  </item>  
+
+  <!-- Recipe: Two-handed Sword -->
+  <item id="44">
+    <ingredient id="57" count="1"/>
+    <production id="2264" count="1"/>
+  </item>  
+
+  <!-- Recipe: War Pick -->
+  <item id="45">
+    <ingredient id="57" count="1"/>
+    <production id="2279" count="1"/>
+  </item>  
+
+  <!-- Recipe: Winged Spear -->
+  <item id="46">
+    <ingredient id="57" count="1"/>
+    <production id="2271" count="1"/>
+  </item>  
+
+</list>

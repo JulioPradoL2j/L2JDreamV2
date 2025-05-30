@@ -1,0 +1,212 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Created with Lineage II - Multisell Manager -->
+<!-- © 2007 by tReXpert -->
+
+<list>
+
+  <!-- Recipe: Sealed Armor of Nightmare(60%) -->    
+  <item id="1">
+    <ingredient id="57" count="1"/>
+    <production id="5420" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Dark Crystal Boots (60%) -->
+  <item id="2">
+    <ingredient id="57" count="1"/>
+    <production id="5368" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Dark Crystal Breastplate (60%) -->
+  <item id="3">
+    <ingredient id="57" count="1"/>
+    <production id="5416" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Dark Crystal Gaiters (60%) -->
+  <item id="4">
+    <ingredient id="57" count="1"/>
+    <production id="5424" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Dark Crystal Gloves (60%) -->
+  <item id="5">
+    <ingredient id="57" count="1"/>
+    <production id="5392" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Dark Crystal Helmet (60%) -->
+  <item id="6">
+    <ingredient id="57" count="1"/>
+    <production id="5426" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Dark Crystal Leather Armor (60%) -->
+  <item id="7">
+    <ingredient id="57" count="1"/>
+    <production id="5332" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Dark Crystal Leggings (60%) -->
+  <item id="8">
+    <ingredient id="57" count="1"/>
+    <production id="5340" count="1"/>
+  </item>
+
+  <!--  Recipe: Sealed Dark Crystal Robe (60%) -->
+  <item id="9">
+    <ingredient id="57" count="1"/>
+    <production id="5348" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Dark Crystal Shield (60%) -->
+  <item id="10">
+    <ingredient id="57" count="1"/>
+    <production id="5364" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Gauntlets of Nightmare (60%) -->
+  <item id="11">
+    <ingredient id="57" count="1"/>
+    <production id="5404" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Helm of Nightmare (60%) -->
+  <item id="12">
+    <ingredient id="57" count="1"/>
+    <production id="5430" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Leather Armor of Nightmare (60%) -->
+  <item id="13">
+    <ingredient id="57" count="1"/>
+    <production id="5336" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Majestic Boots (60%) -->
+  <item id="14">
+    <ingredient id="57" count="1"/>
+    <production id="5382" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Majestic Circlet (60%) -->
+  <item id="15">
+    <ingredient id="57" count="1"/>
+    <production id="5432" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Majestic Gauntlets (60%) -->
+  <item id="16">
+    <ingredient id="57" count="1"/>
+    <production id="5406" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Majestic Leather Armor (60%) -->
+  <item id="17">
+    <ingredient id="57" count="1"/>
+    <production id="5338" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Majestic Plate Armor (60%) -->
+  <item id="18">
+    <ingredient id="57" count="1"/>
+    <production id="5422" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Majestic Robe (60%) -->
+  <item id="19">
+    <ingredient id="57" count="1"/>
+    <production id="5352" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Nightmare Robe (60%) -->
+  <item id="20">
+    <ingredient id="57" count="1"/>
+    <production id="5350" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Shield of Nightmare (60%) -->
+  <item id="21">
+    <ingredient id="57" count="1"/>
+    <production id="5366" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Tallum Boots (60%) -->
+   <item id="22">
+    <ingredient id="57" count="1"/>
+    <production id="5370" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Tallum Gloves (60%) -->
+  <item id="23">
+    <ingredient id="57" count="1"/>
+    <production id="5394" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Tallum Helmet(60%) -->
+  <item id="24">
+    <ingredient id="57" count="1"/>
+    <production id="5428" count="1"/>
+  </item>
+  
+  <!-- Recipe: Sealed Tallum Leather Armor (60%) -->
+  <item id="25">
+    <ingredient id="57" count="1"/>
+    <production id="5334" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Tallum Plate Armor (60%) -->
+  <item id="26">
+    <ingredient id="57" count="1"/>
+    <production id="5418" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Tallum Stockings (60%) -->
+  <item id="27">
+    <ingredient id="57" count="1"/>
+    <production id="5354" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Tallum Tunic (60%) -->
+  <item id="28">
+    <ingredient id="57" count="1"/>
+    <production id="5346" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Majestic Earring (70%) -->
+  <item id="29">
+    <ingredient id="57" count="1"/>
+    <production id="6337" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Majestic Necklace (70%) -->
+  <item id="30">
+    <ingredient id="57" count="1"/>
+    <production id="6335" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Majestic Ring (70%) -->
+  <item id="31">
+    <ingredient id="57" count="1"/>
+    <production id="6339" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Phoenix Earring (70%) -->
+  <item id="32">
+    <ingredient id="57" count="1"/>
+    <production id="6331" count="1"/>
+  </item>
+
+  <!-- Recipe: Sealed Phoenix Necklace (70%) -->
+  <item id="33">
+    <ingredient id="57" count="1"/>
+    <production id="6329" count="1"/>
+  </item>
+
+  <!--  Recipe: Sealed Phoenix Ring(70%) -->
+  <item id="34">
+    <ingredient id="57" count="1"/>
+    <production id="6333" count="1"/>
+  </item>
+  
+</list>

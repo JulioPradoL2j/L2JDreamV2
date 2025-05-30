@@ -1,0 +1,22 @@
+package com.dream.game.model.entity.events.archievements;
+
+import com.dream.game.model.actor.instance.L2PcInstance;
+
+public class Hero extends Condition
+{
+  public Hero(Object value)
+  {
+    super(value);
+    setName("Hero");
+  }
+
+  @Override
+public boolean meetConditionRequirements(L2PcInstance player)
+  {
+    if (getValue() == null) {
+      return false;
+    }
+
+    return player.isHero();
+  }
+}

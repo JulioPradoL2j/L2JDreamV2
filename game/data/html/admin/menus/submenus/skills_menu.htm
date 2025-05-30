@@ -1,0 +1,126 @@
+﻿<html><title>Main Control Panel</title><body>
+<center>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor="000000" width=300>
+<tr>
+<td width=45> <td><a action="bypass -h admin_admin" width=54 height=19><font color="FFD306">Main</font></a></td>
+<td width=180><center><font color="LEVEL">List of Russ</font></center></td>
+<td width=45><td><a action="bypass -h admin_current_player" width=54 height=19><font color="FFD306">Back</font></a></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<td><font color="LEVEL">Class Skills:</font></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+
+<table bgcolor=000000 width="270">
+<tr>
+<td width="150">Skills Humans</td>
+<td align="center"><a action="bypass -h admin_help skills/human/human.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+
+<table width="270">
+<tr>
+<td width="150">Skills Elves</td>
+<td align="center"><a action="bypass -h admin_help skills/elf/elf.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+
+<table bgcolor=000000 width="270">
+<tr>
+<td width="150">Skills Dark Elf</td>
+<td align="center"><a action="bypass -h admin_help skills/darkelf/delf.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+
+<table width="270">
+<tr>
+<td width="150">Skills Orcs</td>
+<td align="center"><a action="bypass -h admin_help skills/orc/orc.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+
+<table bgcolor=000000 width="270">
+<tr>
+<td width="150">Skills Dwarfs</td>
+<td align="center"><a action="bypass -h admin_help skills/dwarf/dwarf.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<br>
+<td><font color="LEVEL">Other Skills:</font></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+
+<table bgcolor=000000 width="270">
+<tr>
+<td width="150">Heroes Skills</td>
+<td align="center"><a action="bypass -h admin_help skills/specials/hero_skills.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+
+<table width="270">
+<tr>
+<td width="150">Nobless Skills</td>
+<td align="center"><a action="bypass -h admin_help skills/specials/noblesse_skills.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+
+<table bgcolor=000000 width="270">
+<tr>
+<td width="150">Clan Skills</td>
+<td align="center"><a action="bypass -h admin_help skills/specials/clan_skills.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+
+<table width="270">
+<tr>
+<td width="150">Game Master Skills</td>
+<td align="center"><a action="bypass -h admin_help skills/specials/gm_skills.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+
+<table bgcolor=000000 width="270">
+<tr>
+<td width="150">General Skills</td>
+<td align="center"><a action="bypass -h admin_help skills/specials/common_skills.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+
+<table width="270">
+<tr>
+<td width="150">Fisher Skills</td>
+<td align="center"><a action="bypass -h admin_help skills/fishing/Fishing_Skills.htm"><font color="FFD306">Select !</font></a></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<font color="LEVEL">Add Skill by ID:</font>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<table bgcolor=000000 width=300>
+<tr>
+<td width=5>Id:</td><td><edit var="id" width=42></td>
+<td width=5>Level</td><td><edit var="char_cord_y" width=42></td>
+<td><button value="Add" action="bypass -h admin_add_skill $id $level" width=60 height=21 back="L2UI_CH3.smallbutton1_over" fore="L2UI_CH3.smallbutton1"></td>
+</tr>
+</table>
+<center><img src="L2UI.SquareGray" width=300 height=1></center>
+<td><img src="L2UI.SquareBlank" width=40 height=2></td>
+<center><img src=L2UI.SquareGray width=250 height=1></center>
+</center>
+</body>
+</html>
