@@ -1,14 +1,6 @@
-# L2JDreamV2 Interlude - Servidor Privado Lineage II
+# 📦 L2JDream Project - Instalação e Execução
 
-Bem-vindo ao repositório do projeto ** Interlude **. Aqui você encontra todos os arquivos e instruções necessárias para rodar seu servidor de Lineage II com base na crônica Interlude.
-
----
-
-## 🔧 Requisitos
-
-- Java 14
-- MariaDB (banco de dados)
-- Cliente Interlude com patch customizado
+Se você baixou o pacote do servidor e está com dúvidas de como executar, siga este passo a passo simples:
 
 ---
 
@@ -20,35 +12,6 @@ Bem-vindo ao repositório do projeto ** Interlude **. Aqui você encontra todos 
 | ☕ Java 14 | [Download Java 14](https://mega.nz/file/xzdl0BrA#unjVTTUYbTK7-Q8wkX6Ps4b43Q5K6yOzuFGKdce3vHc) |
 | 🛢️ MariaDB | [Download MariaDB](https://mega.nz/file/E6FG1LyI#uMzj3r2X1NpL9z7cINfd41Q0IRXNLgUnkcUNCd_BDtQ) |
 
----
-
-## 🧪 Instalação
-
-### 1. Instalar o Java 14
-
-- Execute o instalador do Java baixado.
-- Confirme se o `java -version` retorna algo como `14.0.x`.
-
-### 2. Instalar o MariaDB
-
-- Execute o instalador.
-- Crie um usuário com:
-  - **Usuário**: `root`
-  - **Senha**: `root`
-- Finalize a instalação com o serviço ativo.
-
----
-
-## 🧰 Configuração do Banco de Dados
-
-- Navegue até a pasta `tools/`
-- Execute o script correspondente ao seu sistema operacional:
-
----
-
-# 📦 L2JDream Project - Instalação e Execução
-
-Se você baixou o pacote do servidor e está com dúvidas de como executar, siga este passo a passo simples:
 
 ---
 
