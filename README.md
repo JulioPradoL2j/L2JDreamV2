@@ -106,3 +106,27 @@ Se quiser compilar o projeto fora do Eclipse:
 
 - O projeto requer Java 14 especificamente — versões superiores podem gerar incompatibilidades.
 - Certifique-se de que o MariaDB está com o serviço ativo antes de rodar o script.
+
+---
+
+## ❓ Problemas comuns / Common Issues
+
+- ERRO: "mysql: command not found"
+  ➤ Solução: Verifique se o MySQL/MariaDB está instalado e adicionado ao PATH.
+
+- ERRO: Acesso negado para 'root'
+  ➤ Solução: Altere a senha no script ou use um usuário com permissão.
+
+- Nenhuma tabela é criada
+  ➤ Solução: Verifique se os arquivos .sql estão realmente dentro da pasta /sql.
+
+---
+
+## 📬 Suporte
+
+Caso tenha dificuldades, poste sua dúvida no fórum ou envie uma mensagem com:
+- Print do erro
+- Sistema operacional
+- O que tentou fazer
+- juliopradrol2j@gmail.com
+Obrigado por usar o projeto L2JDream!
