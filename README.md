@@ -1,49 +1,54 @@
-📢 [L2J] Pacote baseado no Wallaz L2JDream - Atualizado para Java 14 + Correções
-Salve comunidade,
+# L2JEder Interlude - Servidor Privado Lineage II
 
-Venho compartilhar um pacote baseado no projeto Wallaz L2JDream, que revisei e corrigi extensivamente para facilitar a vida de quem deseja iniciar ou evoluir seu servidor L2J.
+Bem-vindo ao repositório do projeto ** Interlude **. Aqui você encontra todos os arquivos e instruções necessárias para rodar seu servidor de Lineage II com base na crônica Interlude.
 
-✅ O que foi feito:
-🔄 Migrado e reorganizado o projeto para o Java 14 (compatível com os tempos atuais e mais desempenho).
+---
 
-🛠️ Corrigido problema de Spawns que estavam ausentes no pacote original.
+## 🔧 Requisitos
 
-🧬 Passivas de itens faltando foram identificadas e devidamente adicionadas.
+- Java 14
+- MariaDB (banco de dados)
+- Cliente Interlude com patch customizado
 
-🧹 Banco de dados limpo e organizado, entregue como arquivo .sql dentro da pasta tools.
+---
 
-🟡 Todos os erros de "sinal amarelo" (warnings) foram resolvidos no código.
+## 📦 Downloads Necessários
 
-🖥️ Adicionado painel com interface gráfica usando WScript.Shell para facilitar a execução, evitando o uso de .bat no CMD.
+| Componente   | Download |
+|--------------|----------|
+| 🔧 Patch Files (System, Animations, SysTextures) | [Download Patch](https://mega.nz/file/lq8UnKhT#mO4BLffqoSEqgjF6nA34wvm67eHTkJU8Zwq9s_N9TJI) |
+| ☕ Java 14 | [Download Java 14](https://mega.nz/file/xzdl0BrA#unjVTTUYbTK7-Q8wkX6Ps4b43Q5K6yOzuFGKdce3vHc) |
+| 🛢️ MariaDB | [Download MariaDB](https://mega.nz/file/E6FG1LyI#uMzj3r2X1NpL9z7cINfd41Q0IRXNLgUnkcUNCd_BDtQ) |
 
-🧩 Projeto já pronto para ser importado direto na IDE Eclipse (você pode ver na imagem abaixo o pacote carregado com sucesso).
+---
 
-📸 Imagens de apresentação:
-🟢 Auth Login Server
+## 🧪 Instalação
 
-image.png.8507949303710a4394b4100d0a5f9670.png
+### 1. Instalar o Java 14
 
-🔵 Game Server (World)
+- Execute o instalador do Java baixado.
+- Confirme se o `java -version` retorna algo como `14.0.x`.
 
-image.png.4b9b65b760ca0d887ad5a07e9f2541dc.png
+### 2. Instalar o MariaDB
 
-💻 Projeto importado no Eclipse
+- Execute o instalador.
+- Crie um usuário com:
+  - **Usuário**: `root`
+  - **Senha**: `root`
+- Finalize a instalação com o serviço ativo.
 
-image.png.58a19687e5a0430a73af4cb02ed53bee.png
+---
 
-📥 Links para download:
-📁 Source completa (core + datapack):
-🔗 https://mega.nz/file/Er8zWBaT#phYWH0Vl2fq3itWmFLnuxu-ODmBShbnpiCInRXJ-ung
+## 🧰 Configuração do Banco de Dados
 
-☕ Java 14 (compatível):
-🔗 https://mega.nz/file/xzdl0BrA#unjVTTUYbTK7-Q8wkX6Ps4b43Q5K6yOzuFGKdce3vHc
+- Navegue até a pasta `tools/`
+- Execute o script correspondente ao seu sistema operacional:
 
-🗃️ MariDB (banco de dados):
-🔗 https://mega.nz/file/E6FG1LyI#uMzj3r2X1NpL9z7cINfd41Q0IRXNLgUnkcUNCd_BDtQ
-📁 GEODATA TY SAIMON:
-🔗 https://www.mediafire.com/file/eb2uc9ns2piy7mt/geodata_%2B_pahnode_dream_v2.rar/file
+### No Windows:
 
-📝 Considerações finais:
-Esse pacote é ideal para quem quer iniciar um projeto L2J de forma rápida e com menos dores de cabeça. Caso encontre algum erro ou tenha sugestões, fique à vontade para comentar aqui no post.
+```bat
+install_db.bat
 
-Boa sorte no seu projeto! 🚀
+### No Linux:
+chmod +x database_installer.sh
+./install_db.sh
