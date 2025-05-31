@@ -82,39 +82,37 @@ public class AuthConfig extends L2Config
 	
 	public static void loadLoginConfig()
 	{
-		try
+		
+		Properties serverSettings = new Properties();
+		try (InputStream is = new FileInputStream(new File(LOGIN_FILE)))
 		{
-			Properties serverSettings = new Properties();
-			try (InputStream is = new FileInputStream(new File(LOGIN_FILE)))
+			serverSettings.load(is);
+			is.close();
+			ACCEPT_NEW_GAMESERVER = Boolean.parseBoolean(serverSettings.getProperty("AcceptNewGameServer", "false"));
+			GM_MIN = Integer.parseInt(serverSettings.getProperty("GMMinLevel", "1"));
+			SHOW_LICENCE = Boolean.parseBoolean(serverSettings.getProperty("ShowLicence", "true"));
+			AUTO_CREATE_ACCOUNTS = Boolean.parseBoolean(serverSettings.getProperty("AutoCreateAccounts", "false"));
+			BRUT_PROTECTION_ENABLED = Boolean.parseBoolean(serverSettings.getProperty("BrutProtection", "true"));
+			DDOS_PROTECTION_ENABLED = Boolean.parseBoolean(serverSettings.getProperty("DDoSProtection", "true"));
+			SESSION_TTL = Long.parseLong(serverSettings.getProperty("SessionTTL", "10")) * 1000;
+			MAX_SESSIONS = Integer.parseInt(serverSettings.getProperty("MaxSessions", "100"));
+			ON_SUCCESS_LOGIN_ACTION = OnSuccessLoginAction.valueOf(serverSettings.getProperty("OnSelectServer", "NOTIFY").toUpperCase());
+			ON_SUCCESS_LOGIN_COMMAND = serverSettings.getProperty("OnSelectServerCommand", "");
+			BRUTE_ACCOUNT_NAME = serverSettings.getProperty("BruteAccountName", "");
+			
+			LOGIN_TRY_BEFORE_BAN = Integer.parseInt(serverSettings.getProperty("LoginTryBeforeBan", "3"));
+			LOGIN_BLOCK_AFTER_BAN = Integer.parseInt(serverSettings.getProperty("LoginBlockAfterBan", "600"));
+			LOGIN_MAX_ACC_REG = Integer.parseInt(serverSettings.getProperty("MaxAccountRegistration", "30"));
+			
+			FLOOD_PROTECTION = Boolean.parseBoolean(serverSettings.getProperty("EnableFloodProtection", "true"));
+			FAST_CONNECTION_LIMIT = Integer.parseInt(serverSettings.getProperty("FastConnectionLimit", "15"));
+			NORMAL_CONNECTION_TIME = Integer.parseInt(serverSettings.getProperty("NormalConnectionTime", "700"));
+			FAST_CONNECTION_TIME = Integer.parseInt(serverSettings.getProperty("FastConnectionTime", "350"));
+			MAX_CONNECTION_PER_IP = Integer.parseInt(serverSettings.getProperty("MaxConnectionPerIP", "50"));
+			INACTIVE_TIMEOUT = Integer.parseInt(serverSettings.getProperty("InactiveTimeOut", "3"));
+			if (serverSettings.containsKey("Debug"))
 			{
-				
-				ACCEPT_NEW_GAMESERVER = Boolean.parseBoolean(serverSettings.getProperty("AcceptNewGameServer", "false"));
-				GM_MIN = Integer.parseInt(serverSettings.getProperty("GMMinLevel", "1"));
-				SHOW_LICENCE = Boolean.parseBoolean(serverSettings.getProperty("ShowLicence", "true"));
-				AUTO_CREATE_ACCOUNTS = Boolean.parseBoolean(serverSettings.getProperty("AutoCreateAccounts", "false"));
-				BRUT_PROTECTION_ENABLED = Boolean.parseBoolean(serverSettings.getProperty("BrutProtection", "true"));
-				DDOS_PROTECTION_ENABLED = Boolean.parseBoolean(serverSettings.getProperty("DDoSProtection", "true"));
-				SESSION_TTL = Long.parseLong(serverSettings.getProperty("SessionTTL", "10")) * 1000;
-				MAX_SESSIONS = Integer.parseInt(serverSettings.getProperty("MaxSessions", "100"));
-				ON_SUCCESS_LOGIN_ACTION = OnSuccessLoginAction.valueOf(serverSettings.getProperty("OnSelectServer", "NOTIFY").toUpperCase());
-				ON_SUCCESS_LOGIN_COMMAND = serverSettings.getProperty("OnSelectServerCommand", "");
-				BRUTE_ACCOUNT_NAME = serverSettings.getProperty("BruteAccountName", "");
-				
-				LOGIN_TRY_BEFORE_BAN = Integer.parseInt(serverSettings.getProperty("LoginTryBeforeBan", "3"));
-				LOGIN_BLOCK_AFTER_BAN = Integer.parseInt(serverSettings.getProperty("LoginBlockAfterBan", "600"));
-				LOGIN_MAX_ACC_REG = Integer.parseInt(serverSettings.getProperty("MaxAccountRegistration", "30"));
-				
-				FLOOD_PROTECTION = Boolean.parseBoolean(serverSettings.getProperty("EnableFloodProtection", "true"));
-				FAST_CONNECTION_LIMIT = Integer.parseInt(serverSettings.getProperty("FastConnectionLimit", "15"));
-				NORMAL_CONNECTION_TIME = Integer.parseInt(serverSettings.getProperty("NormalConnectionTime", "700"));
-				FAST_CONNECTION_TIME = Integer.parseInt(serverSettings.getProperty("FastConnectionTime", "350"));
-				MAX_CONNECTION_PER_IP = Integer.parseInt(serverSettings.getProperty("MaxConnectionPerIP", "50"));
-				INACTIVE_TIMEOUT = Integer.parseInt(serverSettings.getProperty("InactiveTimeOut", "3"));
-				if (serverSettings.containsKey("Debug"))
-				{
-					DEBUG = Boolean.parseBoolean(serverSettings.getProperty("Debug"));
-				}
-				
+				DEBUG = Boolean.parseBoolean(serverSettings.getProperty("Debug"));
 			}
 			
 		}
@@ -123,7 +121,9 @@ public class AuthConfig extends L2Config
 			e.printStackTrace();
 			throw new Error("Failed to Load " + LOGIN_FILE + " File.");
 		}
+		
 	}
+	
 	
 	public static void loadNetworkConfig()
 	{
