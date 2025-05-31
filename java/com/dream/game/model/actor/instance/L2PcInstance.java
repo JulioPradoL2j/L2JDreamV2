@@ -51,7 +51,6 @@ import com.dream.game.manager.RecipeController;
 import com.dream.game.manager.SiegeManager;
 import com.dream.game.model.BlockList;
 import com.dream.game.model.CursedWeapon;
-import com.dream.game.model.DressMeData;
 import com.dream.game.model.FishData;
 import com.dream.game.model.L2Clan;
 import com.dream.game.model.L2ClanMember;
@@ -13322,30 +13321,6 @@ public class L2PcInstance extends L2Playable
 	public long getAioEndTime()
 	{
 		return _aio_endTime;
-	}
-
-	private DressMeData _dressmedata = null;
-
-	public DressMeData getDressMeData()
-	{
-		return _dressmedata;
-	}
-
-	public void setDressMeData(DressMeData val)
-	{
-		_dressmedata = val;
-	}
-
-	public boolean _dressed = false;
-
-	public boolean isDressMeEnabled()
-	{
-		return _dressed;
-	}
-
-	public void setDressMeEnabled(boolean val)
-	{
-		_dressed = val;
 	}
 
 

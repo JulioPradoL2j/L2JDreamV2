@@ -1,10 +1,5 @@
 package com.dream.game.handler;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import org.apache.log4j.Logger;
-
 import com.dream.Config;
 import com.dream.game.handler.voiced.AioMenu;
 import com.dream.game.handler.voiced.Bank;
@@ -12,8 +7,12 @@ import com.dream.game.handler.voiced.ClassMaster;
 import com.dream.game.handler.voiced.Configurator;
 import com.dream.game.handler.voiced.Help;
 import com.dream.game.handler.voiced.Offline;
-import com.dream.game.handler.voiced.Skins;
 import com.dream.game.handler.voiced.Wedding;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.apache.log4j.Logger;
 
 public class VoicedCommandHandler
 {
@@ -60,7 +59,6 @@ public class VoicedCommandHandler
 			registerVoicedCommandHandler(new ClassMaster());
 		}
 		registerVoicedCommandHandler(new AioMenu());
-		registerVoicedCommandHandler(new Skins());
 		if (_datatable.size() > 0)
 		{
 			_log.info("Voiced Handler: Loaded " + _datatable.size() + " handler(s).");
