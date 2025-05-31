@@ -32,6 +32,7 @@ import com.dream.game.datatables.xml.HennaTable;
 import com.dream.game.datatables.xml.LevelUpData;
 import com.dream.game.datatables.xml.MapRegionTable;
 import com.dream.game.datatables.xml.MerchantPriceConfigTable;
+import com.dream.game.datatables.xml.PartyFarmData;
 import com.dream.game.datatables.xml.PetDataTable;
 import com.dream.game.datatables.xml.SkillSpellbookTable;
 import com.dream.game.datatables.xml.SkillTable;
@@ -560,6 +561,9 @@ public class L2GameServer
 		
 		Console.printSection("Event Engine");
 		GameEventManager.getInstance();
+		
+		Console.printSection("Event Party Farm");
+		PartyFarmData.getInstance();
 		
 		Console.printSection("Oficial Event's");
 		Cristmas.startEvent();

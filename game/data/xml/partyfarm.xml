@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Configuração do evento Party Farm
+  Este evento ocorre em determinados dias e horários configurados abaixo.
+  Quando o horário for atingido, uma mensagem será enviada aos jogadores,
+  e os monstros serão invocados após o tempo de preparação definido.
+-->
+
+<partyfarm>
+    <event name="partyfarm">
+        <!-- Ativa ou desativa este evento -->
+        <enabled>true</enabled>
+
+        <!-- Duração total do evento em minutos (após o tempo de preparação) -->
+        <duration>30</duration>
+
+        <!-- Tempo de preparação em minutos após o aviso antes de iniciar o evento -->
+        <preparation>5</preparation>
+
+        <!-- Dias da semana em que o evento pode ocorrer:
+             0 = Domingo, 1 = Segunda, ..., 6 = Sábado.
+             Neste exemplo: Segunda (1), Quarta (3) e Sexta-feira (5) -->
+        <days>1,3,5</days>
+
+        <!-- Horários do dia em que o evento pode iniciar (formato 24h: HH:mm).
+             O sistema verifica a cada segundo se um desses horários foi atingido. -->
+        <times>
+            <time>10:30</time>
+            <time>15:00</time>
+            <time>17:20</time>
+            <time>21:15</time>
+        </times>
+        
+        <!-- Lista de spawns que serão invocados na zona durante o evento.
+             Cada spawn define o npcId, a quantidade e as coordenadas (x, y, z). -->
+        <spawns>
+            <!-- 5 monstros do npcId 1186 serão invocados nessas coordenadas -->
+            <spawn npcId="1186" count="5" x="-82408" y="246784" z="-3644" />
+
+            <!-- 3 monstros do npcId 1186 serão invocados nessas coordenadas -->
+            <spawn npcId="1186" count="3" x="-82762" y="247279" z="-3573" />
+        </spawns>
+    </event>
+</partyfarm>

@@ -8,6 +8,7 @@ import com.dream.game.cache.HtmCache;
 import com.dream.game.communitybbs.Manager.RegionBBSManager;
 import com.dream.game.datatables.GmListTable;
 import com.dream.game.datatables.xml.MapRegionTable;
+import com.dream.game.datatables.xml.PartyFarmData;
 import com.dream.game.datatables.xml.SkillTable;
 import com.dream.game.handler.IVoicedCommandHandler;
 import com.dream.game.handler.VoicedCommandHandler;
@@ -29,6 +30,7 @@ import com.dream.game.model.L2Clan.SubPledge;
 import com.dream.game.model.L2Effect;
 import com.dream.game.model.L2FriendList;
 import com.dream.game.model.L2Object;
+import com.dream.game.model.L2PartyFarmEvent;
 import com.dream.game.model.L2ShortCut;
 import com.dream.game.model.L2SiegeStatus;
 import com.dream.game.model.L2Skill;
@@ -75,6 +77,9 @@ import com.dream.game.templates.skills.L2EffectType;
 import com.dream.game.util.FloodProtector;
 
 import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 
 import org.apache.log4j.Logger;
@@ -579,7 +584,31 @@ public class EnterWorld extends L2GameClientPacket
 				}
 			}
 		}
-		
+		if (L2PartyFarmEvent.isRunning())
+		{
+			
+			String lastStart = L2PartyFarmEvent.lastEvent();
+			LocalTime startTime = LocalTime.parse(lastStart, DateTimeFormatter.ofPattern("HH:mm"));
+			
+			LocalTime now = LocalTime.now();
+			
+			int durationMinutes = PartyFarmData.getInstance().getConfig().getDuration();
+			
+			LocalTime endTime = startTime.plusMinutes(durationMinutes);
+			
+			Duration remaining = Duration.between(now, endTime);
+			long minutes = remaining.toMinutes();
+			
+			if (minutes > 0)
+			{
+				activeChar.sendMessage("Party Farm is live! Started at " + lastStart + "h. Remaining time: " + minutes + " minute(s).");
+			}
+			else
+			{
+				activeChar.sendMessage("Party Farm is live! Started ons " + lastStart + "h.");
+			}
+			
+		}
 		notifyFriends(activeChar);
 		activeChar.onPlayerEnter();
 		sendPacket(new SkillCoolTime(activeChar));
@@ -667,7 +696,7 @@ public class EnterWorld extends L2GameClientPacket
 			{
 				activeChar.sendPacket(SystemMessageId.NO_RESTART_HERE);
 				activeChar.teleToLocation(MapRegionTable.TeleportWhereType.Town);
-				activeChar.sendMessage("SVR: Teleportado para cidade mais proxima por ficar muito tempo offline em uma area restrita.");
+				activeChar.sendMessage("SVR: Teleported to the nearest city for being offline for too long in a restricted area.");
 			}
 			
 		}
@@ -803,7 +832,6 @@ public class EnterWorld extends L2GameClientPacket
 			activeChar.broadcastUserInfo();
 			activeChar.decayMe();
 			activeChar.spawnMe();
-			// active start system
 			sendPacket(new SpecialCamera(activeChar.getObjectId(), 30, 200, 20, 999999999, 999999999, 0, 0, 1, 0));
 			StartupSystem.startSetup(activeChar);
 		}
