@@ -21,6 +21,10 @@
 
 <log4j:configuration>
 
+<logger name="com.mchange">
+    <level value="WARN"/>
+</logger>
+
     <!-- This appender prints information to console -->
     	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
         	<layout class="org.apache.log4j.EnhancedPatternLayout">
