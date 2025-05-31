@@ -493,34 +493,49 @@ public class AuthManager
 	{
 		if (AuthConfig.AUTO_CREATE_ACCOUNTS)
 		{
+			
 			if (user.length() >= 2 && user.length() <= 14)
 			{
-				int numTryes = 0;
-				if (_registredAccounts.containsKey(address.getHostAddress()))
-				{
-					numTryes = _registredAccounts.get(address.getHostAddress());
-				}
+				String ip = address.getHostAddress();
+				int numTryes = _registredAccounts.getOrDefault(ip, 0);
 				numTryes++;
+				
 				if (numTryes > AuthConfig.LOGIN_MAX_ACC_REG)
 				{
-					_logLogin.info("Address " + address.getHostAddress() + " banned");
+					_logLogin.info("Address " + ip + " banned (too many account creations)");
 					BanManager.getInstance().addBanForAddress(address, AuthConfig.LOGIN_BLOCK_AFTER_BAN * 1000);
 					return false;
 				}
-				_registredAccounts.put(address.getHostAddress(), numTryes);
-				addOrUpdateAccount(new Account(user, Base64.encodeBytes(hash), System.currentTimeMillis() / 1000, 0, 0, address.getHostAddress()));
+				
+				_registredAccounts.put(ip, numTryes);
+				addOrUpdateAccount(new Account(user, Base64.encodeBytes(hash), System.currentTimeMillis() / 1000, 0, 0, ip));
 				_logLogin.info("New account has been created for " + user);
 				return true;
 			}
-			_logLogin.warn("Invalid username creation/use attempt: " + user);
+			
+			_logLogin.warn("Invalid username creation attempt: " + user);
 			return false;
 		}
+		
 		_logLogin.warn("Account missing for user " + user);
 		return false;
 	}
-
+	
 	private void handleGoodLogin(String user, InetAddress address)
 	{
+	    String ip = address.getHostAddress();
+	    
+
+	    _registredAccounts.remove(ip);
+
+
+	    Account acc = getAccount(user);
+	    if (acc != null)
+	    {
+	        acc.setLastactive(System.currentTimeMillis() / 1000);
+	        acc.setLastIp(ip);
+	        addOrUpdateAccount(acc); 
+	    }
 
 	}
 
