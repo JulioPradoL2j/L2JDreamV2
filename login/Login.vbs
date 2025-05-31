@@ -18,7 +18,7 @@ End If
 
 ' Generate command.
 Dim command
-command = path & "java -Xmx128m -cp ./libs/*; com.dream.auth.L2AuthServer"
+command = path & "java -Xmx128m -cp ../libs/*; com.dream.auth.L2AuthServer"
 
 ' Run the server.
 Dim exitcode

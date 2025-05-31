@@ -4,7 +4,7 @@ Color 0E
 :start
 REM -------------------------------------
 REM Default parameters for a basic server.
-java -Xmx500m -cp ./libs/*; com.dream.game.L2GameServer
+java -Xmx500m -cp ../libs/*; com.dream.game.L2GameServer
 REM
 REM If you have a big server and lots of memory, you could experiment for example with
 REM java -server -Xmx1536m -Xms1024m -Xmn512m -XX:PermSize=256m -XX:SurvivorRatio=8 -Xnoclassgc -XX:+AggressiveOpts

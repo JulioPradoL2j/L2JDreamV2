@@ -2,7 +2,7 @@
 title LOGIN SERVER
 @Color 0E
 :start
-java -Xmx128m -cp ./libs/*; com.dream.auth.L2AuthServer
+java -Xmx128m -cp ../libs/*; com.dream.auth.L2AuthServer
 if ERRORLEVEL 2 goto restart
 if ERRORLEVEL 1 goto error
 goto end
