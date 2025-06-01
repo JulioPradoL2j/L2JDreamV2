@@ -123,6 +123,7 @@ public class AuthConfig extends L2Config
 		
 	}
 	
+	
 	public static void loadNetworkConfig()
 	{
 		
