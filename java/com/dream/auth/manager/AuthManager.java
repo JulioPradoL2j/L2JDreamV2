@@ -55,7 +55,7 @@ public class AuthManager
 		SYSTEM_ERROR,
 		TCARD_REQUIRED
 	}
-
+	
 	public class ConnectionCheck extends Thread
 	{
 		@Override
@@ -84,47 +84,47 @@ public class AuthManager
 			}
 		}
 	}
-
+	
 	private static final Logger _log = Logger.getLogger(AuthManager.class);
-
+	
 	private static final Logger _logLogin = Logger.getLogger("auth");
-
+	
 	private static final Logger _logLoginFailed = Logger.getLogger("fail");
-
+	
 	private static AuthManager _instance;
-
+	
 	private static final int BLOWFISH_KEYS = 20;
-
+	
 	private static Map<String, Integer> _registredAccounts = new HashMap<>();
-
+	
 	private static void checkPassword(byte[] hash, Account acc) throws AccountWrongPasswordException
 	{
 		byte[] expected = Base64.decode(acc.getPassword());
-
+		
 		for (int i = 0; i < expected.length; i++)
 			if (hash[i] != expected[i])
 				throw new AccountWrongPasswordException(acc.getLogin());
 	}
-
+	
 	public static AuthManager getInstance()
 	{
 		return _instance;
 	}
-
+	
 	private static void handleBadLogin(String user, String password, InetAddress address)
 	{
 		_logLoginFailed.info("Auth failed for user : '" + user + "' " + (address == null ? "null" : address.getHostAddress()));
 	}
-
+	
 	public static boolean isValidLogin(String text)
 	{
 		return isValidPattern(text, "^[A-Za-z0-9]{1,16}$");
 	}
-
+	
 	public static boolean isValidPattern(String text, String regex)
 	{
 		Pattern pattern;
-
+		
 		try
 		{
 			pattern = Pattern.compile(regex);
@@ -136,7 +136,7 @@ public class AuthManager
 		Matcher regexp = pattern.matcher(text);
 		return regexp.matches();
 	}
-
+	
 	public static void load()
 	{
 		if (_instance == null)
@@ -146,37 +146,37 @@ public class AuthManager
 		else
 			throw new IllegalStateException("AuthManager can only be loaded a single time.");
 	}
-
+	
 	private static void testCipher(RSAPrivateKey key) throws GeneralSecurityException
 	{
 		Cipher rsaCipher = Cipher.getInstance("RSA/ECB/nopadding");
 		rsaCipher.init(Cipher.DECRYPT_MODE, key);
 	}
-
+	
 	protected Map<String, L2AuthClient> _loginServerClients = new HashMap<>();
-
+	
 	protected Set<L2AuthClient> _clients = new FastSet<>();
-
+	
 	private ScrambledKeyPair[] _keyPairs;
-
+	
 	protected byte[][] _blowfishKeys;
-
+	
 	public Connection con;
-
+	
 	private KeyPairGenerator keygen;
-
+	
 	private AuthManager()
 	{
 		try
 		{
 			_log.info("AuthManager initiating");
-
+			
 			con = L2AuthDatabaseFactory.getInstance().getConnection();
 			new ConnectionCheck().start();
 			_keyPairs = new ScrambledKeyPair[10];
-
+			
 			keygen = null;
-
+			
 			try
 			{
 				keygen = KeyPairGenerator.getInstance("RSA");
@@ -189,16 +189,16 @@ public class AuthManager
 				_log.info("Server shutting down now");
 				System.exit(1);
 			}
-
+			
 			for (int i = 0; i < 10; i++)
 			{
 				_keyPairs[i] = new ScrambledKeyPair(keygen.generateKeyPair());
 			}
-
+			
 			_log.info("Cached 10 KeyPairs for RSA communication");
-
+			
 			testCipher((RSAPrivateKey) _keyPairs[0].getPair().getPrivate());
-
+			
 			generateBlowFishKeys();
 		}
 		catch (Exception e)
@@ -206,9 +206,9 @@ public class AuthManager
 			_log.fatal("FATAL: Failed initializing LoginManager. Reason: " + e.getMessage(), e);
 			System.exit(1);
 		}
-
+		
 	}
-
+	
 	public synchronized void addOrUpdateAccount(Account acc)
 	{
 		PreparedStatement stm = null;
@@ -247,12 +247,12 @@ public class AuthManager
 			}
 			catch (SQLException e)
 			{
-
+				
 			}
-
+			
 		}
 	}
-
+	
 	public void addOrUpdateAccount(String _uname, String _pass, int _level) throws AccountModificationException
 	{
 		Account acc = getAccount(_uname);
@@ -274,17 +274,17 @@ public class AuthManager
 			{
 				throw new AccountModificationException("Unsupported encoding.", e1);
 			}
-
+			
 			acc = new Account(_uname, Base64.encodeBytes(newpass), _level);
 			acc.setAccessLevel(_level);
 		}
 		addOrUpdateAccount(acc);
 	}
-
+	
 	public synchronized SessionKey assignSessionKeyToClient(String account, L2AuthClient client)
 	{
 		SessionKey key;
-
+		
 		key = new SessionKey(Rnd.nextInt(Integer.MAX_VALUE), Rnd.nextInt(Integer.MAX_VALUE), Rnd.nextInt(Integer.MAX_VALUE), Rnd.nextInt(Integer.MAX_VALUE));
 		try
 		{
@@ -304,16 +304,16 @@ public class AuthManager
 		}
 		return key;
 	}
-
+	
 	public SessionKey assignSessionKeyToLogin(String account, L2AuthClient client)
 	{
 		SessionKey key;
-
+		
 		key = new SessionKey(Rnd.nextInt(Integer.MAX_VALUE), Rnd.nextInt(Integer.MAX_VALUE), Rnd.nextInt(Integer.MAX_VALUE), Rnd.nextInt(Integer.MAX_VALUE));
 		_loginServerClients.put(account, client);
 		return key;
 	}
-
+	
 	public void changeAccountLevel(String _uname, int _level) throws AccountModificationException
 	{
 		Account acc = getAccount(_uname);
@@ -322,8 +322,7 @@ public class AuthManager
 		acc.setAccessLevel(_level);
 		addOrUpdateAccount(acc);
 	}
-
-
+	
 	public void changeAllowedIP(String login, String host)
 	{
 		try
@@ -339,7 +338,7 @@ public class AuthManager
 			_log.warn("ChangeAllowedIP: Could not write data. Reason: " + e);
 		}
 	}
-
+	
 	public void deleteAccount(String _uname) throws AccountModificationException
 	{
 		PreparedStatement stm = null;
@@ -365,15 +364,15 @@ public class AuthManager
 			}
 			catch (SQLException e)
 			{
-
+				
 			}
 		}
 	}
-
+	
 	private void generateBlowFishKeys()
 	{
 		_blowfishKeys = new byte[BLOWFISH_KEYS][16];
-
+		
 		for (int i = 0; i < BLOWFISH_KEYS; i++)
 		{
 			for (int j = 0; j < _blowfishKeys[i].length; j++)
@@ -383,12 +382,11 @@ public class AuthManager
 		}
 		_log.info("Stored " + _blowfishKeys.length + " keys for Blowfish communication");
 	}
-
-
+	
 	public Account getAccount(String user)
 	{
 		Account result = null;
-
+		
 		synchronized (con)
 		{
 			try
@@ -407,11 +405,11 @@ public class AuthManager
 			{
 				_log.warn("LoginManager: Unable to retrive account", e);
 			}
-
+			
 		}
 		return result;
 	}
-
+	
 	public GameServerInfo getAccountOnGameServer(String account)
 	{
 		Collection<GameServerInfo> serverList = GameServerManager.getInstance().getRegisteredGameServers().values();
@@ -423,7 +421,6 @@ public class AuthManager
 		}
 		return null;
 	}
-
 	
 	public List<Account> getAccountsInfo()
 	{
@@ -445,85 +442,100 @@ public class AuthManager
 		}
 		return result;
 	}
-
+	
 	public L2AuthClient getAuthedClient(String account)
 	{
 		return _loginServerClients.get(account);
 	}
-
+	
 	public byte[] getBlowfishKey()
 	{
 		return _blowfishKeys[(int) (Math.random() * BLOWFISH_KEYS)];
 	}
-
+	
 	public SessionKey getKeyForAccount(String account)
 	{
 		L2AuthClient client = _loginServerClients.get(account);
 		if (client != null)
 			return client.getSessionKey();
-
+		
 		return null;
 	}
-
+	
 	public int getMaxAllowedOnlinePlayers(int id)
 	{
 		GameServerInfo gsi = GameServerManager.getInstance().getRegisteredGameServerById(id);
 		if (gsi != null)
 			return gsi.getMaxPlayers();
-
+		
 		return 0;
 	}
-
+	
 	public int getOnlinePlayerCount(int serverId)
 	{
 		GameServerInfo gsi = GameServerManager.getInstance().getRegisteredGameServerById(serverId);
 		if (gsi != null && gsi.isAuthed())
 			return gsi.getCurrentPlayerCount();
-
+		
 		return 0;
 	}
-
+	
 	public ScrambledKeyPair getScrambledRSAKeyPair()
 	{
 		return _keyPairs[Rnd.nextInt(10)];
 	}
-
-
+	
 	private boolean handleAccountNotFound(String user, InetAddress address, byte[] hash)
 	{
 		if (AuthConfig.AUTO_CREATE_ACCOUNTS)
 		{
+			
 			if (user.length() >= 2 && user.length() <= 14)
 			{
-				int numTryes = 0;
-				if (_registredAccounts.containsKey(address.getHostAddress()))
-				{
-					numTryes = _registredAccounts.get(address.getHostAddress());
-				}
+				String ip = address.getHostAddress();
+				int numTryes = _registredAccounts.getOrDefault(ip, 0);
 				numTryes++;
+				
 				if (numTryes > AuthConfig.LOGIN_MAX_ACC_REG)
 				{
-					_logLogin.info("Address " + address.getHostAddress() + " banned");
+					_logLogin.info("Address " + ip + " banned (too many account creations)");
 					BanManager.getInstance().addBanForAddress(address, AuthConfig.LOGIN_BLOCK_AFTER_BAN * 1000);
 					return false;
 				}
-				_registredAccounts.put(address.getHostAddress(), numTryes);
-				addOrUpdateAccount(new Account(user, Base64.encodeBytes(hash), System.currentTimeMillis() / 1000, 0, 0, address.getHostAddress()));
+				
+				_registredAccounts.put(ip, numTryes);
+				addOrUpdateAccount(new Account(user, Base64.encodeBytes(hash), System.currentTimeMillis() / 1000, 0, 0, ip));
 				_logLogin.info("New account has been created for " + user);
 				return true;
 			}
-			_logLogin.warn("Invalid username creation/use attempt: " + user);
+			
+			_logLogin.warn("Invalid username creation attempt: " + user);
 			return false;
 		}
+		
 		_logLogin.warn("Account missing for user " + user);
 		return false;
 	}
-
+	
 	private void handleGoodLogin(String user, InetAddress address)
 	{
+	    String ip = address.getHostAddress();
+	    
+
+	    _registredAccounts.remove(ip);
+
+
+	    Account acc = getAccount(user);
+	    if (acc != null)
+	    {
+	        acc.setLastactive(System.currentTimeMillis() / 1000);
+	        acc.setLastIp(ip);
+	        addOrUpdateAccount(acc); 
+	    }
 
 	}
 
+	
 	public boolean isAccountInAnyGameServer(String account)
 	{
 		Collection<GameServerInfo> serverList = GameServerManager.getInstance().getRegisteredGameServers().values();
@@ -535,39 +547,39 @@ public class AuthManager
 		}
 		return false;
 	}
-
+	
 	public boolean isAccountInLoginServer(String account)
 	{
 		return _loginServerClients.containsKey(account);
 	}
-
+	
 	public boolean isGM(Account acc)
 	{
 		if (acc != null)
 			return acc.getAccessLevel() >= AuthConfig.GM_MIN;
 		return false;
 	}
-
+	
 	public boolean isLoginPossible(int access, int serverId)
 	{
 		GameServerInfo gsi = GameServerManager.getInstance().getRegisteredGameServerById(serverId);
 		if (gsi != null && gsi.isAuthed())
 			return gsi.getCurrentPlayerCount() < gsi.getMaxPlayers() && gsi.getStatus() != ServerStatus.STATUS_GM_ONLY || access >= AuthConfig.GM_MIN;
-
+		
 		return false;
 	}
-
+	
 	public boolean loginValid(String user, String password, InetAddress address) throws NoSuchAlgorithmException, UnsupportedEncodingException, AccountBannedException
 	{
 		MessageDigest md = MessageDigest.getInstance("SHA");
 		byte[] raw = password.getBytes("UTF-8");
 		byte[] hash = md.digest(raw);
-
+		
 		Account acc = getAccount(user);
-
+		
 		if (!isValidLogin(user))
 			return false;
-
+		
 		if (acc == null)
 			return handleAccountNotFound(user, address, hash);
 		if (acc.getAccessLevel() < 0)
@@ -585,21 +597,21 @@ public class AuthManager
 		_logLogin.info("User " + user + " connected from " + address.getHostAddress());
 		return true;
 	}
-
+	
 	public boolean loginValid(String user, String password, L2AuthClient client) throws NoSuchAlgorithmException, UnsupportedEncodingException, AccountBannedException
 	{
 		InetAddress address = client.getConnection().getInetAddress();
 		if (address == null || user == null)
 			return false;
-
+		
 		return loginValid(user, password, address);
 	}
-
+	
 	public void removeAuthedLoginClient(String account)
 	{
 		_loginServerClients.remove(account);
 	}
-
+	
 	public void setAccountLastServerId(String account, int lastServerId)
 	{
 		Account acc = getAccount(account);
@@ -609,22 +621,22 @@ public class AuthManager
 			addOrUpdateAccount(acc);
 		}
 	}
-
+	
 	public AuthLoginResult tryAuthLogin(String account, String password, L2AuthClient client) throws AccountBannedException
 	{
 		AuthLoginResult ret = AuthLoginResult.INVALID_PASSWORD;
-
+		
 		try
 		{
 			if (loginValid(account, password, client))
 			{
 				ret = AuthLoginResult.ALREADY_ON_GS;
-
+				
 				if (!isAccountInAnyGameServer(account))
 				{
 					ret = AuthLoginResult.ALREADY_ON_LS;
 					AuthConfig.debug(account + " Already on GS");
-
+					
 					synchronized (_loginServerClients)
 					{
 						if (!_loginServerClients.containsKey(account))
@@ -634,13 +646,13 @@ public class AuthManager
 						}
 					}
 					Account acc = getAccount(account);
-
+					
 					client.setAccessLevel(acc.getAccessLevel());
 					client.setLastServerId(acc.getLastServerId());
 				}
 				else
 				{
-
+					
 				}
 			}
 		}

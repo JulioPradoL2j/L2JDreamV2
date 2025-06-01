@@ -153,7 +153,7 @@ public class L2InterfaceLS
 				
 			}
 			
-			L2AuthServer._log.info("Status changed to enabled.");
+			
 		});
 		chckbxmntmEnabled.setSelected(true);
 		mnStatus.add(chckbxmntmEnabled);
@@ -175,7 +175,7 @@ public class L2InterfaceLS
 				
 			}
 			
-			L2AuthServer._log.info("Status changed to disabled.");
+			
 		});
 		mnStatus.add(chckbxmntmDisabled);
 		
@@ -195,7 +195,7 @@ public class L2InterfaceLS
 				
 			}
 			
-			L2AuthServer._log.info("Status changed to GM only.");
+			
 		});
 		mnStatus.add(chckbxmntmGmOnly);
 		

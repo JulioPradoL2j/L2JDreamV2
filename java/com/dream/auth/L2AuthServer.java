@@ -16,174 +16,188 @@ import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import java.sql.SQLException;
 
 import org.apache.log4j.Logger;
 import org.apache.log4j.xml.DOMConfigurator;
 
 public class L2AuthServer
 {
+	
 	public static final int PROTOCOL_REV = 0x102;
+	private static final Logger LOGGER = Logger.getLogger(L2AuthServer.class);
 	
-	public static Logger _log = Logger.getLogger(L2AuthServer.class);
+	private static L2AuthServer instance;
+	private static long startupTime;
 	
-	private static double _intialTime = 0;
+	private SelectorThread<L2AuthClient> selectorThread;
+	private GameServerListener gameServerListener;
 	
-	private static L2AuthServer _instance;
-	
-	public static long getFreeMemory()
-	{
-		return (Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory() + Runtime.getRuntime().freeMemory()) / 1048576;
-	}
-	
-	public static L2AuthServer getInstance()
-	{
-		return _instance;
-	}
-	
-	public static long getTotalMemory()
-	{
-		return Runtime.getRuntime().maxMemory() / 1048576;
-	}
-	
-	public static long getUsedMemory()
-	{
-		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
-	}
-	
-	public static void main(String[] args) throws Throwable
+	public static void main(String[] args) throws SQLException
 	{
 		if (!GraphicsEnvironment.isHeadless())
 		{
 			new L2InterfaceLS();
 		}
 		
+		parseArguments(args);
+		instance = new L2AuthServer();
+	}
+	
+	private static void parseArguments(String[] args)
+	{
 		for (String arg : args)
+		{
 			if (arg.startsWith("--config-dir"))
 			{
 				try
 				{
-					String cdir = arg.split("=")[1];
-					File f = new File(cdir);
-					if (f.exists() && f.isDirectory())
+					String configDir = arg.split("=")[1];
+					File configFolder = new File(configDir);
+					if (configFolder.isDirectory())
 					{
-						System.out.println("Using configuration folder " + cdir);
-						L2Properties.CONFIG_DIR = cdir;
+						System.out.println("Using configuration folder: " + configDir);
+						L2Properties.CONFIG_DIR = configDir;
 					}
 				}
 				catch (Exception e)
 				{
-					
+					LOGGER.debug("Failed to parse config-dir argument", e);
 				}
 			}
-		
-		
-		_instance = new L2AuthServer();
+		}
 	}
 	
-	private static void printInfo()
+	public L2AuthServer() throws SQLException
 	{
-		double finalTime = System.currentTimeMillis();
+		startupTime = System.currentTimeMillis();
 		
-		_log.info("Memory: Free " + getFreeMemory() + " MB of " + getTotalMemory() + " MB. Used " + getUsedMemory() + " MB.");
-		_log.info("Ready on IP: " + AuthConfig.LOGIN_SERVER_HOSTNAME + ":" + AuthConfig.LOGIN_SERVER_PORT + ".");
-		_log.info("Load time: " + (int) ((finalTime - _intialTime) / 1000) + " Seconds.");
-		Util.printSection("Live");
-		_log.info("Auth Server successfully started.");
+		setupLogging();
+		loadConfiguration();
+		registerShutdownHook();
+		
+		initializeNetwork();
+		startGameServerListener();
+		bindAndStartSelector();
+		
+		printServerInfo();
 	}
 	
-	private GameServerListener _gameServerListener;
-	
-	private SelectorThread<L2AuthClient> _selectorThread;
-	
-	public L2AuthServer() throws Throwable
+	public void setupLogging()
 	{
-		
 		new File("log").mkdirs();
 		DOMConfigurator.configure("./config/log4j.xml");
-		
-		_intialTime = System.currentTimeMillis();
-		
+	}
+	
+	public void loadConfiguration() throws SQLException
+	{
 		AuthConfig.load();
 		L2AuthDatabaseFactory.getInstance();
-		
 		GameServerManager.getInstance();
 		ClientManager.getInstance();
 		AuthManager.load();
-		
 		BanManager.getInstance();
-		Runtime.getRuntime().addShutdownHook(new Thread()
+	}
+	
+	public void registerShutdownHook()
+	{
+		Runtime.getRuntime().addShutdownHook(new Thread(() -> LOGGER.info("Auth server shutting down")));
+	}
+	
+	private void initializeNetwork()
+	{
+		SelectorConfig config = new SelectorConfig();
+		config.MAX_READ_PER_PASS = AuthConfig.MMO_MAX_READ_PER_PASS;
+		config.MAX_SEND_PER_PASS = AuthConfig.MMO_MAX_SEND_PER_PASS;
+		config.SLEEP_TIME = AuthConfig.MMO_SELECTOR_SLEEP_TIME;
+		config.HELPER_BUFFER_COUNT = AuthConfig.MMO_HELPER_BUFFER_COUNT;
+		
+		try
 		{
-			@Override
-			public void run()
+			SelectorHelper helper = new SelectorHelper();
+			selectorThread = new SelectorThread<>(config, helper, new L2AuthPacketHandler(), helper, helper);
+		}
+		catch (IOException e)
+		{
+			LOGGER.fatal("Failed to initialize network selector", e);
+			throw new RuntimeException("Failed to start selector thread", e);
+		}
+	}
+	
+	private void startGameServerListener()
+	{
+		gameServerListener = new GameServerListener();
+		gameServerListener.start();
+		LOGGER.info("Listening for GameServers on " + AuthConfig.LOGIN_HOSTNAME + ":" + AuthConfig.LOGIN_PORT);
+	}
+	
+	private void bindAndStartSelector()
+	{
+		InetAddress bindAddress = null;
+		
+		if (!"*".equals(AuthConfig.LOGIN_SERVER_HOSTNAME))
+		{
+			try
 			{
-				_log.info("Auth server shutting down");
+				bindAddress = InetAddress.getByName(AuthConfig.LOGIN_SERVER_HOSTNAME);
 			}
-		});
-		initNetworkLayer();
-		initGSListener();
-		startServer();
+			catch (UnknownHostException e)
+			{
+				LOGGER.warn("Invalid bind address, defaulting to all interfaces: " + e.getMessage());
+			}
+		}
+		
+		try
+		{
+			selectorThread.openServerSocket(bindAddress, AuthConfig.LOGIN_SERVER_PORT);
+			selectorThread.start();
+		}
+		catch (IOException e)
+		{
+			LOGGER.fatal("Failed to open server socket.", e);
+			throw new RuntimeException("Failed to bind server socket", e);
+		}
+		
+		
+	}
+	
+	private static void printServerInfo()
+	{
+		long loadTime = (System.currentTimeMillis() - startupTime) / 1000;
 		
 		Util.printSection("Server Info");
-		printInfo();
+		LOGGER.info("Memory: Free " + getFreeMemory() + " MB of " + getTotalMemory() + " MB. Used " + getUsedMemory() + " MB.");
+		LOGGER.info("Ready on IP: " + AuthConfig.LOGIN_SERVER_HOSTNAME + ":" + AuthConfig.LOGIN_SERVER_PORT);
+		LOGGER.info("Load time: " + loadTime + " seconds.");
+		Util.printSection("Live");
+		LOGGER.info("Auth Server successfully started.");
+	}
+	
+	public static L2AuthServer getInstance()
+	{
+		return instance;
 	}
 	
 	public GameServerListener getGameServerListener()
 	{
-		return _gameServerListener;
+		return gameServerListener;
 	}
 	
-	private void initGSListener()
+	/** @return Free memory in MB */
+	public static long getFreeMemory()
 	{
-		_gameServerListener = new GameServerListener();
-		_gameServerListener.start();
-		_log.info("Listening for GameServers on " + AuthConfig.LOGIN_HOSTNAME + ":" + AuthConfig.LOGIN_PORT);
+		return (Runtime.getRuntime().maxMemory() - Runtime.getRuntime().totalMemory() + Runtime.getRuntime().freeMemory()) / 1048576;
 	}
 	
-	private void initNetworkLayer()
+	/** @return Used memory in MB */
+	public static long getUsedMemory()
 	{
-		final SelectorConfig sc = new SelectorConfig();
-		sc.MAX_READ_PER_PASS = AuthConfig.MMO_MAX_READ_PER_PASS;
-		sc.MAX_SEND_PER_PASS = AuthConfig.MMO_MAX_SEND_PER_PASS;
-		sc.SLEEP_TIME = AuthConfig.MMO_SELECTOR_SLEEP_TIME;
-		sc.HELPER_BUFFER_COUNT = AuthConfig.MMO_HELPER_BUFFER_COUNT;
-		
-		final L2AuthPacketHandler lph = new L2AuthPacketHandler();
-		final SelectorHelper sh = new SelectorHelper();
-		try
-		{
-			_selectorThread = new SelectorThread<>(sc, sh, lph, sh, sh);
-		}
-		catch (IOException e)
-		{
-			_log.fatal("FATAL: Failed to open Selector. Reason: " + e.getMessage(), e);
-			System.exit(1);
-		}
+		return (Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory()) / 1048576;
 	}
 	
-	private void startServer()
+	/** @return Total max memory available to the JVM in MB */
+	public static long getTotalMemory()
 	{
-		InetAddress bindAddress = null;
-		if (!AuthConfig.LOGIN_HOSTNAME.equals("*"))
-		{
-			try
-			{
-				bindAddress = InetAddress.getByName(AuthConfig.LOGIN_HOSTNAME);
-			}
-			catch (UnknownHostException e1)
-			{
-				_log.fatal("WARNING: The Autherver bind address is invalid, using all available IPs. Reason: " + e1.getMessage());
-			}
-		}
-		
-		try
-		{
-			_selectorThread.openServerSocket(bindAddress, AuthConfig.LOGIN_SERVER_PORT);
-		}
-		catch (IOException e)
-		{
-			_log.fatal("FATAL: Failed to open server socket. Reason: " + e.getMessage(), e);
-			System.exit(1);
-		}
-		_selectorThread.start();
+		return Runtime.getRuntime().maxMemory() / 1048576;
 	}
 }
