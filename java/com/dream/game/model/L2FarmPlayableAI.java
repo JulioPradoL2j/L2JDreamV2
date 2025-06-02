@@ -64,7 +64,9 @@ public class L2FarmPlayableAI
 			if (newTarget != null)
 			{
 				if (!(player.getCurrentMp() < (player.getMaxMp() * 0.1)))
+				{
 					attackTarget(player, newTarget);
+				}
 			}
 		}
 	}
@@ -81,6 +83,12 @@ public class L2FarmPlayableAI
 			return;
 		
 		L2ShortCut[] shortcuts = player.getAllShortCuts();
+		
+		if (target.getAutoFarmOwner() == null || target.getAutoFarmOwner() == player)
+		{
+			target.setAutoFarmOwner(player);
+		}
+		
 		
 		for (L2ShortCut sc : shortcuts)
 		{
@@ -155,17 +163,11 @@ public class L2FarmPlayableAI
 	private L2MonsterInstance selectTarget(L2PcInstance player)
 	{
 		L2MonsterInstance monster = findCreature(player);
-
-
+		
 		if (!(player.getCurrentMp() < (player.getMaxMp() * 0.1)))
 		{
 			if (monster != null)
 			{
-				if (monster.getAutoFarmOwner() == null || monster.getAutoFarmOwner() == player)
-				{
-
-					monster.setAutoFarmOwner(player);
-				}
 				
 				player.setTarget(monster);
 				
