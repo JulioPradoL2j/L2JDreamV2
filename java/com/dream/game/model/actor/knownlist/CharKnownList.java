@@ -14,11 +14,6 @@
  */
 package com.dream.game.model.actor.knownlist;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-
 import com.dream.game.model.L2Object;
 import com.dream.game.model.actor.L2Character;
 import com.dream.game.model.actor.L2Npc;
@@ -29,6 +24,11 @@ import com.dream.game.model.world.L2WorldRegion;
 import com.dream.game.util.Util;
 import com.dream.util.L2Collections;
 import com.dream.util.SingletonMap;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
 
 import javolution.util.FastMap;
 
@@ -143,6 +143,24 @@ public class CharKnownList extends ObjectKnownList
 		});
 	}
 
+	@SuppressWarnings("unchecked")
+	public final <A> Collection<A> getKnownType(Class<A> type, int radius)
+	{
+		List<A> result = new ArrayList<>();
+		L2Object activeChar = getActiveChar();
+
+		for (L2Object obj : _knownObjects.values())
+		{
+			if (type.isAssignableFrom(obj.getClass()) && Util.checkIfInRange(radius, activeChar, obj, true))
+			{
+				result.add((A) obj);
+			}
+		}
+
+		return result;
+	}
+
+	
 	@SuppressWarnings("unchecked")
 	public final <A> Collection<A> getKnownType(Class<A> type)
 	{

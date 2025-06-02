@@ -14,17 +14,11 @@
  */
 package com.dream.game.model.world;
 
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
-import org.apache.log4j.Logger;
-
 import com.dream.game.datatables.GmListTable;
 import com.dream.game.model.L2Object;
 import com.dream.game.model.actor.L2Character;
 import com.dream.game.model.actor.L2Playable;
+import com.dream.game.model.actor.instance.L2MonsterInstance;
 import com.dream.game.model.actor.instance.L2PcInstance;
 import com.dream.game.model.actor.instance.L2PetInstance;
 import com.dream.game.network.Disconnection;
@@ -32,6 +26,14 @@ import com.dream.tools.geometry.Point3D;
 import com.dream.util.LinkedBunch;
 import com.dream.util.concurrent.L2Collection;
 import com.dream.util.concurrent.L2ReadWriteCollection;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
+import org.apache.log4j.Logger;
 
 public final class L2World
 {
@@ -526,4 +528,34 @@ public final class L2World
 
 		_objects.add(object);
 	}
+
+
+	public static L2MonsterInstance[] getAroundMonsters(L2PcInstance player, int radius, int maxCount)
+	{
+		if (player == null || !player.isVisible())
+			return new L2MonsterInstance[0];
+
+		L2Object[] objects = getVisibleObjects3D(player, radius);
+
+		List<L2MonsterInstance> monsters = new ArrayList<>();
+
+		for (L2Object obj : objects)
+		{
+			if (obj instanceof L2MonsterInstance)
+			{
+				L2MonsterInstance monster = (L2MonsterInstance) obj;
+
+				if (!monster.isDead())
+				{
+					monsters.add(monster);
+
+					if (maxCount > 0 && monsters.size() >= maxCount)
+						break;
+				}
+			}
+		}
+
+		return monsters.toArray(new L2MonsterInstance[0]);
+	}
+
 }

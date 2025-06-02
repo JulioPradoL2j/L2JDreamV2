@@ -24,6 +24,7 @@ import com.dream.game.model.world.L2World;
 import com.dream.game.network.serverpackets.ActionFailed;
 import com.dream.game.network.serverpackets.GMViewPledgeInfo;
 import com.dream.game.network.serverpackets.NpcHtmlMessage;
+import com.dream.game.tokenizer.CommandTokenizer;
 import com.dream.tools.security.Base64;
 
 import java.security.MessageDigest;
@@ -48,15 +49,15 @@ public class RequestBypassToServer extends L2GameClientPacket
 			temp.getAI().setIntention(CtrlIntention.MOVE_TO, new L2CharPosition(activeChar.getX(), activeChar.getY(), activeChar.getZ(), 0));
 		}
 	}
-
+	
 	private static void playerHelp(L2PcInstance activeChar, String path)
 	{
 		if (path.indexOf("..") != -1)
 			return;
-
+		
 		final StringTokenizer st = new StringTokenizer(path);
 		final String[] cmd = st.nextToken().split("#");
-
+		
 		NpcHtmlMessage html = new NpcHtmlMessage(0);
 		html.setFile("data/html/help/" + cmd[0]);
 		if (cmd.length > 1)
@@ -66,22 +67,21 @@ public class RequestBypassToServer extends L2GameClientPacket
 		html.disableValidation();
 		activeChar.sendPacket(html);
 	}
-
+	
 	private String _command = null;
 	private static Connection con;
-
+	
 	@Override
 	protected void readImpl()
 	{
 		_command = readS();
 	}
-
 	
 	@Override
 	protected void runImpl()
 	{
 		L2PcInstance activeChar = getClient().getActiveChar();
-
+		
 		if (activeChar == null)
 			return;
 		if (activeChar.isDead())
@@ -102,7 +102,31 @@ public class RequestBypassToServer extends L2GameClientPacket
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			}
-
+			
+		}
+		else if (_command.startsWith("farm"))
+		{
+			final CommandTokenizer tokenizer = new CommandTokenizer(_command);
+			final String param = tokenizer.getToken(1);
+			switch (param.toLowerCase())
+			{
+				case "on":
+					
+					if (!activeChar.isAutoFarm())
+					{
+						activeChar.setAutoFarm(true);
+						activeChar.sendMessage("Autofarm active.");
+					}
+					break;
+				
+				case "off":
+					if (activeChar.isAutoFarm())
+					{
+						activeChar.setAutoFarm(false);
+						activeChar.sendMessage("Autofarm stop.");
+					}
+					break;
+			}
 		}
 		else if (_command.startsWith("item_"))
 		{
@@ -143,7 +167,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 		{
 			String command;
 			String params = "";
-
+			
 			if (_command.indexOf(" ") != -1)
 			{
 				command = _command.substring(6, _command.indexOf(" "));
@@ -153,12 +177,12 @@ public class RequestBypassToServer extends L2GameClientPacket
 			{
 				command = _command.substring(6);
 			}
-
+			
 			IVoicedCommandHandler vc = VoicedCommandHandler.getInstance().getVoicedCommandHandler(command);
-
+			
 			if (vc == null)
 				return;
-
+			
 			vc.useVoicedCommand(command, activeChar, params);
 			return;
 		}
@@ -210,7 +234,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 		else if (_command.startsWith("pkset"))
 		{
 			StringTokenizer st = new StringTokenizer(_command, "]");
-
+			
 			if (st.countTokens() != 5)
 			{
 				activeChar.sendMessage("You have not entered all the data!");
@@ -222,7 +246,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				html = null;
 				return;
 			}
-
+			
 			@SuppressWarnings("unused")
 			String newCommand = st.nextToken();
 			String pass1 = st.nextToken();
@@ -233,7 +257,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 			question = question.substring(1, question.length() - 1);
 			String answer = st.nextToken();
 			answer = answer.substring(1, answer.length());
-
+			
 			if (pass1 == null || pass2 == null || question == null || answer == null)
 			{
 				activeChar.sendMessage("Input error");
@@ -245,7 +269,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				html = null;
 				return;
 			}
-
+			
 			if (!pass1.equals(pass2))
 			{
 				activeChar.sendMessage("You entered different passwords");
@@ -253,7 +277,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				activeChar.sendMessage("pass2 = " + pass2);
 				activeChar.sendMessage("Question = " + question);
 				activeChar.sendMessage("answer = " + answer);
-
+				
 				String htmContent = HtmCache.getInstance().getHtm("data/html/mods/passkey/setup.htm");
 				NpcHtmlMessage html = new NpcHtmlMessage(1);
 				html.setHtml(htmContent);
@@ -263,7 +287,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				return;
 			}
 			insertPassKeyInformation(activeChar, pass1, question, answer);
-
+			
 			String htmContent = HtmCache.getInstance().getHtm("data/html/mods/passkey/login.htm");
 			NpcHtmlMessage html = new NpcHtmlMessage(1);
 			html.setHtml(htmContent);
@@ -288,7 +312,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 			@SuppressWarnings("unused")
 			String newCommand = st.nextToken();
 			String pass = st.nextToken();
-
+			
 			con = null;
 			String query = "SELECT passkey FROM passkey WHERE charId = ?";
 			String pwdindb = "error";
@@ -298,10 +322,10 @@ public class RequestBypassToServer extends L2GameClientPacket
 				PreparedStatement ps = con.prepareStatement(query);
 				ps.setInt(1, activeChar.getObjectId());
 				ResultSet rs = ps.executeQuery();
-
+				
 				while (rs.next())
 					pwdindb = rs.getString(1);
-
+				
 				rs.close();
 				ps.close();
 				ps = null;
@@ -323,7 +347,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				}
 				con = null;
 			}
-
+			
 			if (pwdindb.equals(encodePass(pass)))
 			{
 				activeChar.setTradeRefusal(false);
@@ -359,13 +383,13 @@ public class RequestBypassToServer extends L2GameClientPacket
 				html = null;
 				return;
 			}
-
+			
 			@SuppressWarnings("unused")
 			String newCommand = st.nextToken();
 			String answer = st.nextToken();
 			String pass1 = st.nextToken();
 			String pass2 = st.nextToken();
-
+			
 			if (!pass1.equals(pass2))
 			{
 				activeChar.sendMessage("You entered different passwords.");
@@ -378,7 +402,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				html = null;
 				return;
 			}
-
+			
 			con = null;
 			String query = "SELECT answer FROM passkey WHERE charId = ?";
 			String anwindb = "error";
@@ -388,10 +412,10 @@ public class RequestBypassToServer extends L2GameClientPacket
 				PreparedStatement ps = con.prepareStatement(query);
 				ps.setInt(1, activeChar.getObjectId());
 				ResultSet rs = ps.executeQuery();
-
+				
 				while (rs.next())
 					anwindb = rs.getString(1);
-
+				
 				rs.close();
 				ps.close();
 				ps = null;
@@ -413,7 +437,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				}
 				con = null;
 			}
-
+			
 			if (anwindb.equals(answer))
 			{
 				updPassKey(activeChar, pass1);
@@ -437,13 +461,13 @@ public class RequestBypassToServer extends L2GameClientPacket
 				html = null;
 				return;
 			}
-
+			
 		}
 		else if (_command.startsWith("npc_"))
 		{
 			if (!activeChar.validateBypass(_command))
 				return;
-
+			
 			int endOfId = _command.indexOf('_', 5);
 			String id;
 			if (endOfId > 0)
@@ -454,12 +478,12 @@ public class RequestBypassToServer extends L2GameClientPacket
 			{
 				id = _command.substring(4);
 			}
-
+			
 			try
 			{
 				L2Object object = null;
 				int objectId = Integer.parseInt(id);
-
+				
 				if (activeChar.getTargetId() == objectId)
 				{
 					object = activeChar.getTarget();
@@ -468,7 +492,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				{
 					object = L2World.getInstance().findObject(objectId);
 				}
-
+				
 				if (object instanceof L2Npc && endOfId > 0 && activeChar.isInsideRadius(object, L2Npc.INTERACTION_DISTANCE, false, false))
 				{
 					try
@@ -477,7 +501,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 					}
 					catch (NoSuchElementException nsee)
 					{
-
+						
 					}
 				}
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
@@ -486,10 +510,10 @@ public class RequestBypassToServer extends L2GameClientPacket
 			{
 			}
 		}
-
+		
 		else if (_command.equals("menu_select?ask=-16&reply=1"))
 		{
-
+			
 			L2Object object = activeChar.getTarget();
 			if (object instanceof L2Npc)
 			{
@@ -504,7 +528,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 				((L2Npc) object).onBypassFeedback(activeChar, _command);
 			}
 		}
-
+		
 		else if (_command.startsWith("manor_menu_select?"))
 		{
 			L2Object object = activeChar.getTarget();
@@ -525,7 +549,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 		{
 			if (!activeChar.validateBypass(_command))
 				return;
-
+			
 			String p = _command.substring(6).trim();
 			int idx = p.indexOf(' ');
 			if (idx < 0)
@@ -541,13 +565,12 @@ public class RequestBypassToServer extends L2GameClientPacket
 		{
 			Olympiad.bypassChangeArena(_command, activeChar);
 		}
-
+		
 		else if (_command.startsWith("report"))
 		{
 			BotsPreventionManager.getInstance().AnalyseBypass(_command, activeChar);
 		}
 	}
-
 	
 	private static void updPassKey(L2PcInstance player, String pass)
 	{
@@ -580,7 +603,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 			con = null;
 		}
 	}
-
+	
 	private static String encodePass(String password)
 	{
 		String pass = "error";
@@ -597,7 +620,6 @@ public class RequestBypassToServer extends L2GameClientPacket
 		}
 		return pass;
 	}
-
 	
 	private static void insertPassKeyInformation(L2PcInstance player, String pass, String question, String answer)
 	{
@@ -632,7 +654,6 @@ public class RequestBypassToServer extends L2GameClientPacket
 			con = null;
 		}
 	}
-
 	
 	private static String getPassKeyQuestion(L2PcInstance player)
 	{
@@ -645,10 +666,10 @@ public class RequestBypassToServer extends L2GameClientPacket
 			PreparedStatement st = con.prepareStatement(query);
 			st.setInt(1, player.getObjectId());
 			ResultSet rs = st.executeQuery();
-
+			
 			while (rs.next())
 				question = rs.getString(1);
-
+			
 			rs.close();
 			st.close();
 			st = null;
@@ -670,27 +691,26 @@ public class RequestBypassToServer extends L2GameClientPacket
 			}
 			con = null;
 		}
-
+		
 		return question;
 	}
-
 	
 	public static boolean getPassKeyEnable(L2PcInstance player)
 	{
 		con = null;
 		String query = "SELECT COUNT(*) FROM passkey WHERE charId = ?";
 		int count = 0;
-
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection();
 			PreparedStatement st = con.prepareStatement(query);
 			st.setInt(1, player.getObjectId());
 			ResultSet rs = st.executeQuery();
-
+			
 			while (rs.next())
 				count = rs.getInt(1);
-
+			
 			rs.close();
 			st.close();
 			st = null;
@@ -712,7 +732,7 @@ public class RequestBypassToServer extends L2GameClientPacket
 			}
 			con = null;
 		}
-
+		
 		if (count == 1)
 			return true;
 		return false;

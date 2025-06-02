@@ -488,8 +488,8 @@ public class Config extends L2Config
 	public static int REQUEST_ID;
 	public static int MAX_CHARACTERS_NUMBER_PER_ACCOUNT;
 	public static int MAXIMUM_ONLINE_USERS;
-	public static int MIN_PROTOCOL_REVISION = 737;
-	public static int MAX_PROTOCOL_REVISION = 746;
+	public static int MIN_PROTOCOL_REVISION;
+	public static int MAX_PROTOCOL_REVISION;
 	public static boolean ACCEPT_ALTERNATE_ID;
 	public static boolean SERVER_LIST_BRACKET;
 	public static boolean SERVER_LIST_CLOCK;
@@ -1205,6 +1205,8 @@ public class Config extends L2Config
 	public static boolean VOICED_BANK;
 	public static boolean VOICED_CONFIGURATOR;
 	public static boolean VOICED_CLASS_MASTER;
+	public static boolean VOICED_AIOX_COMMAND;
+	public static boolean VOICED_AUTOFARM_COMMAND;
 	/** Server version */
 	public static String SERVER_VERSION;
 	/** Date of server build */
@@ -2203,6 +2205,8 @@ public class Config extends L2Config
 			VOICED_BANK = Boolean.parseBoolean(p.getProperty("LoadVoicedBank", "False"));
 			VOICED_CONFIGURATOR = Boolean.parseBoolean(p.getProperty("LoadVoicedConfigurator", "False"));
 			VOICED_CLASS_MASTER = Boolean.parseBoolean(p.getProperty("LoadVoicedClassMaster", "False"));
+			VOICED_AIOX_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedAioxCommand", "False"));
+			VOICED_AUTOFARM_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedAutofarmCommand", "False"));
 			
 			ENABLE_EVENT_MANAGER = Boolean.parseBoolean(p.getProperty("EnableEventManager", "false"));
 			EVENT_MANAGER_ID = Integer.parseInt(p.getProperty("EventManagerNpcId", "50004"));
@@ -2484,6 +2488,10 @@ public class Config extends L2Config
 			
 			GAME_SERVER_LOGIN_PORT = Integer.parseInt(p.getProperty("LoginPort", "9014"));
 			GAME_SERVER_LOGIN_HOST = p.getProperty("LoginHost", "127.0.0.1");
+			
+			MIN_PROTOCOL_REVISION =  Integer.parseInt(p.getProperty("MinProtocolVersion", "730"));
+			MAX_PROTOCOL_REVISION =  Integer.parseInt(p.getProperty("MaxProtocolVersion", "746"));
+			
 			
 			DATABASE_DRIVER = p.getProperty("Driver", "com.mysql.jdbc.Driver");
 			DATABASE_URL = p.getProperty("URL", "jdbc:mysql://localhost/");

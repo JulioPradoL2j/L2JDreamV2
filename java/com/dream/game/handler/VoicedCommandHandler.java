@@ -2,6 +2,7 @@ package com.dream.game.handler;
 
 import com.dream.Config;
 import com.dream.game.handler.voiced.AioMenu;
+import com.dream.game.handler.voiced.AutoFarm;
 import com.dream.game.handler.voiced.Bank;
 import com.dream.game.handler.voiced.ClassMaster;
 import com.dream.game.handler.voiced.Configurator;
@@ -17,9 +18,9 @@ import org.apache.log4j.Logger;
 public class VoicedCommandHandler
 {
 	private final static Logger _log = Logger.getLogger(VoicedCommandHandler.class.getName());
-
+	
 	private static VoicedCommandHandler _instance;
-
+	
 	public static VoicedCommandHandler getInstance()
 	{
 		if (_instance == null)
@@ -28,9 +29,9 @@ public class VoicedCommandHandler
 		}
 		return _instance;
 	}
-
+	
 	private final Map<String, IVoicedCommandHandler> _datatable;
-
+	
 	private VoicedCommandHandler()
 	{
 		_datatable = new HashMap<>();
@@ -58,13 +59,22 @@ public class VoicedCommandHandler
 		{
 			registerVoicedCommandHandler(new ClassMaster());
 		}
-		registerVoicedCommandHandler(new AioMenu());
+		if (Config.VOICED_AIOX_COMMAND)
+		{
+			registerVoicedCommandHandler(new AioMenu());
+		}
+		
+		if (Config.VOICED_AUTOFARM_COMMAND)
+		{
+			registerVoicedCommandHandler(new AutoFarm());
+		}
+		
 		if (_datatable.size() > 0)
 		{
 			_log.info("Voiced Handler: Loaded " + _datatable.size() + " handler(s).");
 		}
 	}
-
+	
 	public IVoicedCommandHandler getVoicedCommandHandler(String voicedCommand)
 	{
 		String command = voicedCommand;
@@ -74,12 +84,12 @@ public class VoicedCommandHandler
 		}
 		return _datatable.get(command);
 	}
-
+	
 	public Map<String, IVoicedCommandHandler> getVoicedCommandHandlers()
 	{
 		return _datatable;
 	}
-
+	
 	public void registerVoicedCommandHandler(IVoicedCommandHandler handler)
 	{
 		String[] ids = handler.getVoicedCommandList();
@@ -88,5 +98,5 @@ public class VoicedCommandHandler
 			_datatable.put(element, handler);
 		}
 	}
-
+	
 }

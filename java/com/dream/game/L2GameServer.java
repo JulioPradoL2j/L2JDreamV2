@@ -101,6 +101,7 @@ import com.dream.game.manager.grandbosses.VanHalterManager;
 import com.dream.game.manager.grandbosses.ZakenManager;
 import com.dream.game.manager.lastimperialtomb.LastImperialTombManager;
 import com.dream.game.model.AutoChatHandler;
+import com.dream.game.model.L2FarmPlayableAI;
 import com.dream.game.model.L2Manor;
 import com.dream.game.model.L2PcOffline;
 import com.dream.game.model.L2SiegeStatus;
@@ -564,6 +565,9 @@ public class L2GameServer
 		
 		Console.printSection("Event Party Farm");
 		PartyFarmData.getInstance();
+		
+		Console.printSection("Auto Farm Task");
+		L2FarmPlayableAI.getInstance().start();
 		
 		Console.printSection("Oficial Event's");
 		Cristmas.startEvent();

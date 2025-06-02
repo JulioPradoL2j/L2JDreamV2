@@ -13814,4 +13814,15 @@ public class L2PcInstance extends L2Playable
 	{
 		return _allowed;
 	}
+	private boolean _isAutoFarm;
+	
+	public void setAutoFarm(boolean val)
+	{
+		_isAutoFarm = val;
+	}
+
+	public boolean isAutoFarm()
+	{
+		return _isAutoFarm;
+	}
 }
