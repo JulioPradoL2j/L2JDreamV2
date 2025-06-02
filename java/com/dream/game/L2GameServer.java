@@ -29,11 +29,13 @@ import com.dream.game.datatables.xml.ExtractableItemsData;
 import com.dream.game.datatables.xml.FishTable;
 import com.dream.game.datatables.xml.HelperBuffTable;
 import com.dream.game.datatables.xml.HennaTable;
+import com.dream.game.datatables.xml.IconTable;
 import com.dream.game.datatables.xml.LevelUpData;
 import com.dream.game.datatables.xml.MapRegionTable;
 import com.dream.game.datatables.xml.MerchantPriceConfigTable;
 import com.dream.game.datatables.xml.PartyFarmData;
 import com.dream.game.datatables.xml.PetDataTable;
+import com.dream.game.datatables.xml.RoletaData;
 import com.dream.game.datatables.xml.SkillSpellbookTable;
 import com.dream.game.datatables.xml.SkillTable;
 import com.dream.game.datatables.xml.SkillTreeTable;
@@ -309,6 +311,8 @@ public class L2GameServer
 		Console.printSection("Items");
 		ItemTable.getInstance();
 		ArmorSetsTable.getInstance();
+		IconTable.getInstance();
+		RoletaData.getInstance();
 		
 		if (Config.BUFFSHOP_ENABLE)
 		{

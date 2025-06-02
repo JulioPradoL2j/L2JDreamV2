@@ -1207,6 +1207,7 @@ public class Config extends L2Config
 	public static boolean VOICED_CLASS_MASTER;
 	public static boolean VOICED_AIOX_COMMAND;
 	public static boolean VOICED_AUTOFARM_COMMAND;
+	public static boolean  VOICED_ROULETTE_COMMAND;
 	/** Server version */
 	public static String SERVER_VERSION;
 	/** Date of server build */
@@ -2207,6 +2208,7 @@ public class Config extends L2Config
 			VOICED_CLASS_MASTER = Boolean.parseBoolean(p.getProperty("LoadVoicedClassMaster", "False"));
 			VOICED_AIOX_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedAioxCommand", "False"));
 			VOICED_AUTOFARM_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedAutofarmCommand", "False"));
+			VOICED_ROULETTE_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedRouletteCommand", "False"));
 			
 			ENABLE_EVENT_MANAGER = Boolean.parseBoolean(p.getProperty("EnableEventManager", "false"));
 			EVENT_MANAGER_ID = Integer.parseInt(p.getProperty("EventManagerNpcId", "50004"));

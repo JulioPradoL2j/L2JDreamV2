@@ -1,8 +1,7 @@
 package com.dream.game.templates.item;
 
-import java.util.Arrays;
-
 import com.dream.Config;
+import com.dream.game.datatables.xml.IconTable;
 import com.dream.game.model.L2Object;
 import com.dream.game.model.L2Skill;
 import com.dream.game.model.actor.L2Character;
@@ -18,6 +17,10 @@ import com.dream.game.skills.funcs.FuncTemplate;
 import com.dream.util.ArrayUtils;
 import com.dream.util.LinkedBunch;
 import com.dream.util.StatsSet;
+
+import java.util.Arrays;
+
+
 
 public abstract class L2Item implements FuncOwner
 {
@@ -161,6 +164,8 @@ public abstract class L2Item implements FuncOwner
 
 	private FuncTemplate[] _funcTemplates;
 	private Condition[] _preConditions = Condition.EMPTY_ARRAY;
+	private String _icon;
+	private final int _days;
 
 	protected L2Item(AbstractL2ItemType type, StatsSet set)
 	{
@@ -185,6 +190,8 @@ public abstract class L2Item implements FuncOwner
 		_destroyable = set.getBool("destroyable", true);
 		_tradeable = set.getBool("tradeable", true);
 		_isCommonItem = _name.startsWith("Common Item") || _name.startsWith("Standard Item");
+		_icon = set.getString("icon", "icon.noimage");
+		_days = set.getInteger("days", 0);
 	}
 
 	public void addFuncTemplate(FuncTemplate f)
@@ -493,6 +500,27 @@ public abstract class L2Item implements FuncOwner
 		return _tradeable;
 	}
 
+	public String getIcon()
+	{
+		if ("icon.noimage".equals(_icon))
+		{
+			
+			String alternativeIcon = IconTable.getIcon(getItemId());
+			
+			if (alternativeIcon != null && !alternativeIcon.isEmpty())
+			{
+				_icon = alternativeIcon;
+			}
+		}
+		
+		return _icon;
+	}
+	
+	public final int getDays()
+	{
+		return _days;
+	}
+	
 	@Override
 	public String toString()
 	{

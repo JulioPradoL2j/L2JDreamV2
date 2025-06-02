@@ -186,6 +186,23 @@ public class RequestBypassToServer extends L2GameClientPacket
 			vc.useVoicedCommand(command, activeChar, params);
 			return;
 		}
+		
+		else if (_command.startsWith("voiced_"))
+		{
+			String command = _command.split(" ")[0];
+			
+			IVoicedCommandHandler ach = VoicedCommandHandler.getInstance().getVoicedCommandHandler(_command.substring(7));
+			
+			if (ach == null)
+			{
+				activeChar.sendMessage("The command " + command.substring(7) + " does not exist!");
+				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
+				return;
+			}
+			
+			ach.useVoicedCommand(_command.substring(7), activeChar, null);
+		}
+		
 		else if (_command.startsWith("event"))
 		{
 			String eventName = _command.substring(6);

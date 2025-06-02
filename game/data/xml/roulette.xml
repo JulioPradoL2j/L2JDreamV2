@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list>
+
+	<config useAdena="true" adenaCost="10000" itemId="4037" itemCount="5" />
+	
+    <item id="57" count="1000000" enchant="0" chance="50000"/> <!-- 50% chance -->
+    <item id="6392" count="5" enchant="0" chance="30000"/> <!-- 30% chance -->
+    <item id="6622" count="1" enchant="0" chance="10000"/> <!-- 10% chance -->
+    <item id="3481" count="1" enchant="0" chance="10000"/> <!-- 10% chance -->
+
+	<item id="4037" count="1000" enchant="0" chance="60000"/> <!-- Adena (1kk) -->
+    <item id="57" count="5000000" enchant="0" chance="50000"/> <!-- 5kk Adena -->
+    <item id="6391" count="3" enchant="0" chance="25000"/> <!-- Life Stone lvl High -->
+    <item id="6620" count="1" enchant="5" chance="15000"/> <!-- Blessed Scroll Enchant Weapon -->
+    <item id="984" count="10" enchant="0" chance="30000"/> <!-- Greater Healing Potion -->
+
+    <item id="5126" count="1" enchant="7" chance="8000"/> <!-- Dark Crystal Helmet +7 -->
+    <item id="5127" count="1" enchant="7" chance="8000"/> <!-- Dark Crystal Breastplate +7 -->
+    <item id="5128" count="1" enchant="7" chance="8000"/> <!-- Dark Crystal Gaiters +7 -->
+    <item id="6651" count="1" enchant="0" chance="5000"/> <!-- Giant's Codex -->
+    <item id="8568" count="1" enchant="0" chance="5000"/> <!-- Ancient Tome of the Demon -->
+
+    <item id="8586" count="1" enchant="0" chance="5000"/> <!-- Blessed Scroll of Escape -->
+    <item id="8594" count="1" enchant="0" chance="5000"/> <!-- Blessed Scroll of Resurrection -->
+    <item id="1875" count="50" enchant="0" chance="20000"/> <!-- Oriharukon Ore -->
+    <item id="1874" count="50" enchant="0" chance="20000"/> <!-- Mithril Ore -->
+    <item id="3958" count="25" enchant="0" chance="20000"/> <!-- Crafted Leather -->
+
+    <item id="6389" count="5" enchant="0" chance="15000"/> <!-- Top-Grade Life Stone 76+ -->
+    <item id="960" count="1" enchant="0" chance="10000"/> <!-- Scroll of Enchant Weapon (D) -->
+    <item id="729" count="1" enchant="0" chance="8000"/> <!-- Scroll of Escape -->
+    <item id="730" count="1" enchant="0" chance="8000"/> <!-- Scroll of Resurrection -->
+    <item id="736" count="10" enchant="0" chance="15000"/> <!-- Greater Healing Potion -->
+
+    <item id="6003" count="1" enchant="0" chance="4000"/> <!-- Shadow Weapon Coupon -->
+    <item id="8542" count="1" enchant="0" chance="4000"/> <!-- Divine Inspiration Book 1 -->
+    <item id="8543" count="1" enchant="0" chance="3000"/> <!-- Divine Inspiration Book 2 -->
+    <item id="8544" count="1" enchant="0" chance="2000"/> <!-- Divine Inspiration Book 3 -->
+    <item id="8545" count="1" enchant="0" chance="1000"/> <!-- Divine Inspiration Book 4 -->
+</list>

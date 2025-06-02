@@ -8,6 +8,7 @@ import com.dream.game.handler.voiced.ClassMaster;
 import com.dream.game.handler.voiced.Configurator;
 import com.dream.game.handler.voiced.Help;
 import com.dream.game.handler.voiced.Offline;
+import com.dream.game.handler.voiced.Roulette;
 import com.dream.game.handler.voiced.Wedding;
 
 import java.util.HashMap;
@@ -67,6 +68,11 @@ public class VoicedCommandHandler
 		if (Config.VOICED_AUTOFARM_COMMAND)
 		{
 			registerVoicedCommandHandler(new AutoFarm());
+		}
+		
+		if (Config.VOICED_ROULETTE_COMMAND)
+		{
+			registerVoicedCommandHandler(new Roulette());
 		}
 		
 		if (_datatable.size() > 0)
