@@ -155,11 +155,18 @@ public class L2FarmPlayableAI
 	private L2MonsterInstance selectTarget(L2PcInstance player)
 	{
 		L2MonsterInstance monster = findCreature(player);
-		
+
+
 		if (!(player.getCurrentMp() < (player.getMaxMp() * 0.1)))
 		{
 			if (monster != null)
 			{
+				if (monster.getAutoFarmOwner() == null || monster.getAutoFarmOwner() == player)
+				{
+
+					monster.setAutoFarmOwner(player);
+				}
+				
 				player.setTarget(monster);
 				
 				if (monster.isAutoAttackable(player))
@@ -194,6 +201,9 @@ public class L2FarmPlayableAI
 		for (L2MonsterInstance toTest : L2World.getAroundMonsters(player, 1200, 5))
 		{
 			if (toTest == null || toTest.isDead() || toTest.isRaid() || toTest instanceof L2ChestInstance)
+				continue;
+			
+			if (toTest.getAutoFarmOwner() != null && toTest.getAutoFarmOwner() != player)
 				continue;
 			
 			if (!GeoEngine.getInstance().canSeeTarget(player, toTest))

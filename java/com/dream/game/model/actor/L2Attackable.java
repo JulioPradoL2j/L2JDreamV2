@@ -1364,6 +1364,7 @@ public class L2Attackable extends L2Npc
 			if (killer instanceof L2PcInstance)
 			{
 				levelSoulCrystals(killer);
+				setAutoFarmOwner(null);
 			}
 		}
 		catch (Exception e)
