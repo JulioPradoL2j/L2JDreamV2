@@ -63,7 +63,8 @@ public class L2FarmPlayableAI
 			
 			if (newTarget != null)
 			{
-				attackTarget(player, newTarget);
+				if (!(player.getCurrentMp() < (player.getMaxMp() * 0.1)))
+					attackTarget(player, newTarget);
 			}
 		}
 	}
@@ -153,31 +154,33 @@ public class L2FarmPlayableAI
 	
 	private L2MonsterInstance selectTarget(L2PcInstance player)
 	{
-		
 		L2MonsterInstance monster = findCreature(player);
 		
-		if (monster != null)
+		if (!(player.getCurrentMp() < (player.getMaxMp() * 0.1)))
 		{
-			player.setTarget(monster);
-			
-			if (monster.isAutoAttackable(player))
+			if (monster != null)
 			{
-				player.sendPacket(new MyTargetSelected(monster.getObjectId(), player.getLevel() - monster.getLevel()));
+				player.setTarget(monster);
 				
-				StatusUpdate su = new StatusUpdate(monster);
-				su.addAttribute(StatusUpdate.CUR_HP, (int) monster.getStatus().getCurrentHp());
-				su.addAttribute(StatusUpdate.MAX_HP, monster.getMaxHp());
-				player.sendPacket(su);
+				if (monster.isAutoAttackable(player))
+				{
+					player.sendPacket(new MyTargetSelected(monster.getObjectId(), player.getLevel() - monster.getLevel()));
+					
+					StatusUpdate su = new StatusUpdate(monster);
+					su.addAttribute(StatusUpdate.CUR_HP, (int) monster.getStatus().getCurrentHp());
+					su.addAttribute(StatusUpdate.MAX_HP, monster.getMaxHp());
+					player.sendPacket(su);
+				}
+				else
+				{
+					player.sendPacket(new MyTargetSelected(monster.getObjectId(), 0));
+				}
+				
+				player.sendPacket(new ValidateLocation(monster));
+				
+				player.getAI().setIntention(CtrlIntention.FOLLOW, monster);
+				
 			}
-			else
-			{
-				player.sendPacket(new MyTargetSelected(monster.getObjectId(), 0));
-			}
-			
-			player.sendPacket(new ValidateLocation(monster));
-			
-			player.getAI().setIntention(CtrlIntention.FOLLOW, monster);
-			
 		}
 		
 		return monster;
