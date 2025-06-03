@@ -38,8 +38,9 @@ public class RequestShortCutReg extends L2GameClientPacket
 			case 0x05: // recipe
 			{
 				final L2ShortCut sc = new L2ShortCut(_slot, _page, _type, _id, -1, _characterType);
-				sendPacket(new ShortCutRegister(sc));
+				
 				activeChar.registerShortCut(sc);
+				sendPacket(new ShortCutRegister(sc));
 				break;
 			}
 			case 0x02: // skill
@@ -48,8 +49,9 @@ public class RequestShortCutReg extends L2GameClientPacket
 				if (level > 0)
 				{
 					final L2ShortCut sc = new L2ShortCut(_slot, _page, _type, _id, level, _characterType);
-					sendPacket(new ShortCutRegister(sc));
+					
 					activeChar.registerShortCut(sc);
+					sendPacket(new ShortCutRegister(sc));
 				}
 				break;
 			}

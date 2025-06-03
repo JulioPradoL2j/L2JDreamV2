@@ -7,12 +7,16 @@ import com.dream.game.model.actor.instance.L2ChestInstance;
 import com.dream.game.model.actor.instance.L2MonsterInstance;
 import com.dream.game.model.actor.instance.L2PcInstance;
 import com.dream.game.model.world.L2World;
+import com.dream.game.network.SystemMessageId;
 import com.dream.game.network.ThreadPoolManager;
+import com.dream.game.network.serverpackets.ActionFailed;
 import com.dream.game.network.serverpackets.MyTargetSelected;
 import com.dream.game.network.serverpackets.StatusUpdate;
 import com.dream.game.network.serverpackets.ValidateLocation;
 import com.dream.game.util.Util;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 
 import org.apache.log4j.Logger;
@@ -33,7 +37,7 @@ public class L2FarmPlayableAI
 	{
 		if (_task == null)
 		{
-			_task = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() -> players(), 500, 250);
+			_task = ThreadPoolManager.getInstance().scheduleGeneralAtFixedRate(() -> players(), 500, 500);
 			
 		}
 	}
@@ -58,6 +62,8 @@ public class L2FarmPlayableAI
 		
 		if (!player.isDead())
 		{
+			if (player.isMoving() || player.isCastingNow() || player.isAttackingNow() || player.isFakeDeath() || player.isSitting() || player.inObserverMode())
+				return;
 			
 			L2MonsterInstance newTarget = selectTarget(player);
 			
@@ -76,20 +82,19 @@ public class L2FarmPlayableAI
 		if (player == null || target == null || player.isDead() || target.isDead())
 			return;
 		
-		if (player.isCastingNow() || player.isAttackingNow() || player.isFakeDeath() || player.isSitting() || player.inObserverMode())
+		if (player.isMoving() || player.isCastingNow() || player.isAttackingNow() || player.isFakeDeath() || player.isSitting() || player.inObserverMode())
 			return;
 		
 		if (!GeoEngine.getInstance().canSeeTarget(player, target))
 			return;
 		
-		L2ShortCut[] shortcuts = player.getAllShortCuts();
-		
 		if (target.getAutoFarmOwner() == null || target.getAutoFarmOwner() == player)
-		{
 			target.setAutoFarmOwner(player);
-		}
 		
+		L2ShortCut[] shortcuts = player.getAllShortCuts();
+		List<L2ShortCut> offensiveSkills = new ArrayList<>();
 		
+		// Buff ou auto cura se HP < 50% (F11/F12)
 		for (L2ShortCut sc : shortcuts)
 		{
 			if (sc.getPage() != 0)
@@ -98,7 +103,6 @@ public class L2FarmPlayableAI
 			int slot = sc.getSlot();
 			int type = sc.getType();
 			
-			// Auto cura/buff se HP abaixo de 50% - F11 e F12
 			if ((slot == 11 || slot == 12) && type == L2ShortCut.TYPE_SKILL && player.getCurrentHp() < (player.getMaxHp() * 0.5))
 			{
 				L2Skill skill = player.getKnownSkill(sc.getId());
@@ -109,7 +113,7 @@ public class L2FarmPlayableAI
 				}
 			}
 			
-			// Toggle skill - F8
+			// Ativa toggle (F8)
 			if (slot == 8 && type == L2ShortCut.TYPE_SKILL)
 			{
 				L2Skill skill = player.getKnownSkill(sc.getId());
@@ -120,42 +124,68 @@ public class L2FarmPlayableAI
 				}
 			}
 			
-			// Skills ofensivas - F2 a F3
-			if (slot >= 1 && slot <= 3 && type == L2ShortCut.TYPE_SKILL)
+			// Skills ofensivas (F1 a F3)
+			if (slot >= 0 && slot <= 3 && type == L2ShortCut.TYPE_SKILL)
 			{
-				L2Skill skill = player.getKnownSkill(sc.getId());
-				if (skill != null && !player.isSkillDisabled(skill.getId()) && skill.checkCondition(player, target))
-				{
-					player.useMagic(skill, true, false);
-					return;
-				}
+				offensiveSkills.add(sc);
+			}
+		}
+		
+		int currentIndex = player.getScriptValue(1000);
+		if (!offensiveSkills.isEmpty())
+		{
+			if (currentIndex >= offensiveSkills.size())
+				currentIndex = 0;
+			
+			L2ShortCut selected = offensiveSkills.get(currentIndex);
+			L2Skill skill = player.getKnownSkill(selected.getId());
+			if (skill != null && !player.isSkillDisabled(skill.getId()) && skill.checkCondition(player, target))
+			{
+				player.useMagic(skill, true, false);
+				player.setScriptValue(1000, currentIndex + 1);
+				return;
 			}
 			
-			// F1 (slot 0): skill ofensiva mágica OU ataque físico
-			if (slot == 0)
+			player.setScriptValue(1000, currentIndex + 1);
+		}
+		else
+		{
+			player.setScriptValue(1000, 0);
+		}
+		
+		for (L2ShortCut sc : shortcuts)
+		{
+			if (sc.getPage() != 0 || sc.getSlot() != 0)
+				continue;
+			
+			if (sc.getType() == L2ShortCut.TYPE_ACTION && sc.getId() == 2)
 			{
-				if (player.isMageClass())
+				if (!target.isAttackable() && !player.allowPeaceAttack())
 				{
-					// Magos só usam skill, nunca ataque físico
-					if (type == L2ShortCut.TYPE_SKILL)
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				if (player.isConfused())
+				{
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				if (!GeoEngine.getInstance().canSeeTarget(player, target))
+				{
+					player.sendPacket(SystemMessageId.CANT_SEE_TARGET);
+					player.sendPacket(ActionFailed.STATIC_PACKET);
+					return;
+				}
+				
+				if (GeoEngine.getInstance().canSeeTarget(player, target) && target.isAttackable())
+				{
+					if (!player.isAttackingNow() && !player.isCastingNow())
 					{
-						L2Skill skill = player.getKnownSkill(sc.getId());
-						if (skill != null && !player.isSkillDisabled(skill.getId()) && skill.checkCondition(player, target))
-						{
-							player.useMagic(skill, true, false);
-							return;
-						}
+						player.getAI().setIntention(CtrlIntention.ATTACK, target);
 					}
 				}
-				else
-				{
-					// Fighters atacam fisicamente se for o slot de ataque básico (action id 2)
-					if (type == L2ShortCut.TYPE_ACTION && sc.getId() == 2)
-					{
-						target.onForcedAttack(player);
-						return;
-					}
-				}
+				
+				return;
 			}
 		}
 	}

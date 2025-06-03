@@ -1,7 +1,5 @@
 package com.dream.game.network.clientpackets;
 
-import java.nio.BufferUnderflowException;
-
 import com.dream.game.ai.CtrlIntention;
 import com.dream.game.model.actor.instance.L2PcInstance;
 import com.dream.game.model.actor.position.L2CharPosition;
@@ -13,6 +11,8 @@ import com.dream.game.network.serverpackets.StopMove;
 import com.dream.game.templates.item.L2WeaponType;
 import com.dream.game.util.IllegalPlayerAction;
 import com.dream.game.util.Util;
+
+import java.nio.BufferUnderflowException;
 
 public final class MoveBackwardToLocation extends L2GameClientPacket
 {
@@ -116,6 +116,12 @@ public final class MoveBackwardToLocation extends L2GameClientPacket
 		{
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
+		}
+		
+		if (activeChar.isAutoFarm())
+		{
+			activeChar.setAutoFarm(false);
+			activeChar.sendMessage("Autofarm stop.");
 		}
 
 		if (_moveMovement == 0)
