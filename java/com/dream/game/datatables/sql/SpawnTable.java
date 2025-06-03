@@ -3,6 +3,7 @@ package com.dream.game.datatables.sql;
 import com.dream.Config;
 import com.dream.L2DatabaseFactory;
 import com.dream.Message;
+import com.dream.game.geodata.GeoEngine;
 import com.dream.game.manager.DayNightSpawnManager;
 import com.dream.game.manager.RaidBossSpawnManager;
 import com.dream.game.manager.clanhallsiege.FortResistSiegeManager;
@@ -16,6 +17,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -195,6 +198,10 @@ public class SpawnTable
 	
 	private void fillSpawnTable()
 	{
+		// Lista para armazenar os IDs dos spawns inválidos
+		List<Integer> invalidSpawnIds = new ArrayList<>();
+		
+		
 		Connection con = null;
 
 		try
@@ -233,6 +240,23 @@ public class SpawnTable
 						spawnDat.setLocx(rset.getInt("locx"));
 						spawnDat.setLocy(rset.getInt("locy"));
 						spawnDat.setLocz(rset.getInt("locz"));
+						
+						
+						int x = rset.getInt("locx");
+						int y = rset.getInt("locy");
+						int z = rset.getInt("locz");
+						int id = rset.getInt("id");
+						
+						short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 200, z + 200, id);
+
+						// Se a diferença for absurda, marcar como inválido
+						if (Math.abs(geoZ - z) > 200 || geoZ == Short.MAX_VALUE)
+						{
+							invalidSpawnIds.add(id);
+							continue;
+						}
+						
+						
 						spawnDat.setHeading(rset.getInt("heading"));
 						spawnDat.setRespawnDelay(rset.getInt("respawn_delay"));
 						if (template1.getType().equalsIgnoreCase("L2Monster") && Config.MON_RESPAWN_RANDOM_ENABLED)
@@ -291,6 +315,26 @@ public class SpawnTable
 				{
 					_log.warn("SpawnTable: Data missing or incorrect in NPC/Custom NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 				}
+				
+				// Após o loop, se houver spawns inválidos, remove-os do banco.
+				if (!invalidSpawnIds.isEmpty())
+				{
+					try (PreparedStatement delStmt = con.prepareStatement("DELETE FROM spawnlist WHERE id = ?"))
+					{
+						for (Integer id : invalidSpawnIds)
+						{
+							delStmt.setInt(1, id);
+							int deleted = delStmt.executeUpdate();
+							if (deleted > 0)
+								_log.info("SpawnTable: Deleted invalid spawn with id: " + id);
+						}
+					}
+					catch (Exception ex)
+					{
+						_log.warn("SpawnTable: Error deleting invalid spawns: " + ex);
+					}
+				}
+
 			}
 			rset.close();
 			statement.close();
@@ -304,6 +348,8 @@ public class SpawnTable
 
 		if (Config.ALLOW_CUSTOM_SPAWNLIST_TABLE)
 		{
+			List<Integer> invalidCustomSpawnIds = new ArrayList<>();
+			
 			try
 			{
 				con = L2DatabaseFactory.getInstance().getConnection(con);
@@ -338,6 +384,23 @@ public class SpawnTable
 							spawnDat.setLocx(rset.getInt("locx"));
 							spawnDat.setLocy(rset.getInt("locy"));
 							spawnDat.setLocz(rset.getInt("locz"));
+							
+							
+							int x = rset.getInt("locx");
+							int y = rset.getInt("locy");
+							int z = rset.getInt("locz");
+							int id = rset.getInt("id");
+							
+							short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 200, z + 200, id);
+
+							// Se a diferença for absurda, marcar como inválido
+							if (Math.abs(geoZ - z) > 200 || geoZ == Short.MAX_VALUE)
+							{
+								invalidCustomSpawnIds.add(id);
+								continue;
+							}
+							
+							
 							spawnDat.setHeading(rset.getInt("heading"));
 							spawnDat.setRespawnDelay(rset.getInt("respawn_delay"));
 							if (template1.getType().equalsIgnoreCase("L2Monster") && Config.MON_RESPAWN_RANDOM_ENABLED)
@@ -397,6 +460,25 @@ public class SpawnTable
 					else
 					{
 						_log.warn("SpawnTable: Data missing or incorrect in NPC/Custom NPC table for ID: " + rset.getInt("npc_templateid") + ".");
+					}
+					
+					// Remove os spawns custom inválidos
+					if (!invalidCustomSpawnIds.isEmpty())
+					{
+						try (PreparedStatement delStmt = con.prepareStatement("DELETE FROM custom_spawnlist WHERE id = ?"))
+						{
+							for (Integer id : invalidCustomSpawnIds)
+							{
+								delStmt.setInt(1, id);
+								int deleted = delStmt.executeUpdate();
+								if (deleted > 0)
+									_log.info("SpawnTable: Deleted invalid custom spawn with id: " + id);
+							}
+						}
+						catch (Exception ex)
+						{
+							_log.warn("SpawnTable: Error deleting invalid custom spawns: " + ex);
+						}
 					}
 				}
 				rset.close();
