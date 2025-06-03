@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rankings>
+    <event name="pvp_ranking_system">
+        <enabled>true</enabled>
+        <protections>
+			<protection checkHwid="true" checkIp="false" minKillInterval="10" />
+        </protections>
+        
+         <points>
+            <mode type="pvp" basePoints="10" />
+            <mode type="pk" basePoints="5" />
+            <bonus>
+                <range min="0" max="499" multiplier="1.0" />
+                <range min="500" max="999" multiplier="1.2" />
+                <range min="1000" max="1999" multiplier="1.5" />
+                <range min="2000" max="9999" multiplier="2.0" />
+            </bonus>
+        </points>
+        
+                
+        <decay>
+  			<rule minPoints="0" maxPoints="999" decayPercent="0.5" />
+ 		 	<rule minPoints="1000" maxPoints="1999" decayPercent="1.0" />
+ 			<rule minPoints="2000" maxPoints="9999" decayPercent="2.0" />
+  			<rule minPoints="10000" maxPoints="99999" decayPercent="3.0" />
+ 		 	<intervalHours>24</intervalHours>
+		</decay>
+		
+         <ranks>
+            <rank name="Newbie">
+                <tier level="1" pointsRequired="100" reward="1921-2;1867-8;1866-1" />
+                <tier level="2" pointsRequired="200" reward="1921-2;1867-8;1866-1" />
+                <tier level="3" pointsRequired="300" reward="1921-2;1867-8;1866-1" />
+            </rank>
+            <rank name="Novato">
+                <tier level="1" pointsRequired="500" reward="1921-2;1867-8;1866-1" />
+                <tier level="2" pointsRequired="1000" reward="1921-2;1867-8;1866-1" />
+                <tier level="3" pointsRequired="1500" reward="1921-2;1867-8;1866-1" />
+            </rank>
+            <rank name="Madeira">
+                <tier level="1" pointsRequired="2000" reward="1921-2;1867-8;1866-1" />
+                <tier level="2" pointsRequired="3000" reward="1921-2;1867-8;1866-1" />
+                <tier level="3" pointsRequired="4000" reward="1921-2;1867-8;1866-1" />
+            </rank>
+        </ranks>
+
+    </event>
+</rankings>

@@ -247,10 +247,10 @@ public class SpawnTable
 						int z = rset.getInt("locz");
 						int id = rset.getInt("id");
 						
-						short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 200, z + 200, id);
+						short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 50, z + 50, id);
 
 						// Se a diferença for absurda, marcar como inválido
-						if (Math.abs(geoZ - z) > 200 || geoZ == Short.MAX_VALUE)
+						if (Math.abs(geoZ - z) > 50 || geoZ == Short.MAX_VALUE)
 						{
 							invalidSpawnIds.add(id);
 							continue;
@@ -391,10 +391,10 @@ public class SpawnTable
 							int z = rset.getInt("locz");
 							int id = rset.getInt("id");
 							
-							short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 200, z + 200, id);
+							short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 50, z + 50, id);
 
 							// Se a diferença for absurda, marcar como inválido
-							if (Math.abs(geoZ - z) > 200 || geoZ == Short.MAX_VALUE)
+							if (Math.abs(geoZ - z) > 50 || geoZ == Short.MAX_VALUE)
 							{
 								invalidCustomSpawnIds.add(id);
 								continue;

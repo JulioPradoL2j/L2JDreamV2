@@ -21,10 +21,6 @@
 
 <log4j:configuration>
 
-<logger name="com.mchange">
-    <level value="WARN"/>
-</logger>
-
     <!-- This appender prints information to console -->
     	<appender name="CONSOLE" class="org.apache.log4j.ConsoleAppender">
         	<layout class="org.apache.log4j.EnhancedPatternLayout">
@@ -99,6 +95,10 @@
 		<appender-ref ref="ITEMASYNC" />
 	</logger>
 	
+	<logger name="com.mchange">
+    <level value="warn"/>
+	</logger>
+
     <!-- Root Logger -->
     <root>
         <priority value="info"/>

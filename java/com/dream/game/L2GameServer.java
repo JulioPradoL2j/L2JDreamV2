@@ -35,6 +35,7 @@ import com.dream.game.datatables.xml.MapRegionTable;
 import com.dream.game.datatables.xml.MerchantPriceConfigTable;
 import com.dream.game.datatables.xml.PartyFarmData;
 import com.dream.game.datatables.xml.PetDataTable;
+import com.dream.game.datatables.xml.PvPRankData;
 import com.dream.game.datatables.xml.RoletaData;
 import com.dream.game.datatables.xml.SkillSpellbookTable;
 import com.dream.game.datatables.xml.SkillTable;
@@ -233,8 +234,6 @@ public class L2GameServer
 	public static void main(String[] args) throws Throwable
 	{
 		prepare();
-		
-	
 		
 		if (Config.SERVER_VERSION != null)
 		{
@@ -511,7 +510,7 @@ public class L2GameServer
 		{
 			L2PcOffline.clearOffliner();
 		}
-		
+		PvPRankData.getInstance();
 		Runtime.getRuntime().addShutdownHook(Shutdown.getInstance());
 		System.gc();
 		
