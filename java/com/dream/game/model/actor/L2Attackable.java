@@ -1546,30 +1546,33 @@ public class L2Attackable extends L2Npc
 						}
 						
 						L2Item itemCheck = ItemTable.getInstance().getTemplate(item.getItemId());
+						final boolean isAdena = item.getItemId() == 57;
 						
-						final boolean isAdena = itemCheck.getItemId() == 57;
-						final boolean canReceiveAdena = isAdena && player.getAdena() + item.getCount() <= Integer.MAX_VALUE;
-						
-						boolean itemDelivered = false;
-						
-						if (isAdena && Config.AUTO_LOOT_ADENA && canReceiveAdena)
+						// Adena: respeita Config.AUTO_LOOT_ADENA
+						if (isAdena && Config.AUTO_LOOT_ADENA && (player.getAdena() + item.getCount() <= Integer.MAX_VALUE))
 						{
 							player.addAdena("Loot", item.getCount(), this, true);
-							itemDelivered = true;
 						}
-						
-						if (!itemDelivered && ((!isRaid() && player.isAutoLootEnabled()) || (isRaid() && Config.AUTO_LOOT_RAID) || Config.AUTO_LOOT_HERBS))
+						else
 						{
-							if (player.getInventory().validateCapacity(item.getItemId()))
+							
+							if ((!isRaid() && player.isAutoLootEnabled()) || (isRaid() && Config.AUTO_LOOT_RAID) || (Config.AUTO_LOOT_HERBS))
 							{
-								player.doAutoLoot(this, item);
-								itemDelivered = true;
+								boolean hasCapacity = (itemCheck.isStackable() && player.getInventory().getItemByItemId(itemCheck.getItemId()) != null) || player.getInventory().getSize() < player.getInventoryLimit();
+								
+								if (hasCapacity)
+								{
+									player.doAutoLoot(this, item);
+								}
+								else
+								{
+									dropItem(player, item);
+								}
 							}
-						}
-						
-						if (!itemDelivered)
-						{
-							dropItem(player, item);
+							else
+							{
+								dropItem(player, item);
+							}
 						}
 						
 						if (this instanceof L2Boss)
@@ -1577,6 +1580,7 @@ public class L2Attackable extends L2Npc
 							broadcastPacket(SystemMessage.getSystemMessage(SystemMessageId.S1_DIED_DROPPED_S3_S2).addCharName(this).addItemName(item.getItemId()).addNumber(item.getCount()));
 						}
 					}
+					
 				}
 			}
 		}
