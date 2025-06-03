@@ -1548,7 +1548,6 @@ public class L2Attackable extends L2Npc
 						L2Item itemCheck = ItemTable.getInstance().getTemplate(item.getItemId());
 						final boolean isAdena = item.getItemId() == 57;
 						
-						// Adena: respeita Config.AUTO_LOOT_ADENA
 						if (isAdena && Config.AUTO_LOOT_ADENA && (player.getAdena() + item.getCount() <= Integer.MAX_VALUE))
 						{
 							player.addAdena("Loot", item.getCount(), this, true);
