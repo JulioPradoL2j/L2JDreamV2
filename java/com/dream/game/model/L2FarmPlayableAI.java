@@ -10,6 +10,7 @@ import com.dream.game.model.world.L2World;
 import com.dream.game.network.SystemMessageId;
 import com.dream.game.network.ThreadPoolManager;
 import com.dream.game.network.serverpackets.ActionFailed;
+import com.dream.game.network.serverpackets.ExAutoSoulShot;
 import com.dream.game.network.serverpackets.MyTargetSelected;
 import com.dream.game.network.serverpackets.StatusUpdate;
 import com.dream.game.network.serverpackets.ValidateLocation;
@@ -109,6 +110,7 @@ public class L2FarmPlayableAI
 				if (skill != null && !player.isSkillDisabled(skill.getId()) && (skill.getTargetType() == SkillTargetType.TARGET_SELF || skill.getTargetType() == SkillTargetType.TARGET_ONE))
 				{
 					player.useMagic(skill, true, false);
+					player.sendPacket(new ExAutoSoulShot(skill.getId(), 1));
 					return;
 				}
 			}
@@ -120,6 +122,7 @@ public class L2FarmPlayableAI
 				if (skill != null && skill.isToggle() && player.getFirstEffect(skill) == null)
 				{
 					player.useMagic(skill, true, false);
+					player.sendPacket(new ExAutoSoulShot(skill.getId(), 1));
 					return;
 				}
 			}
@@ -143,6 +146,7 @@ public class L2FarmPlayableAI
 			{
 				player.useMagic(skill, true, false);
 				player.setScriptValue(1000, currentIndex + 1);
+				player.sendPacket(new ExAutoSoulShot(skill.getId(), 1));
 				return;
 			}
 			
@@ -182,6 +186,10 @@ public class L2FarmPlayableAI
 					if (!player.isAttackingNow() && !player.isCastingNow())
 					{
 						player.getAI().setIntention(CtrlIntention.ATTACK, target);
+						player.sendPacket(new ExAutoSoulShot(2, 1));
+						
+						if(player.isMageClass())
+							player.abortAttack();
 					}
 				}
 				

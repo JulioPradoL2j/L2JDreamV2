@@ -13786,6 +13786,32 @@ public class L2PcInstance extends L2Playable
 	public void setAutoFarm(boolean val)
 	{
 		_isAutoFarm = val;
+		
+		if(!val)
+		{
+			L2ShortCut[] shortcuts = getAllShortCuts();
+
+			for (L2ShortCut sc : shortcuts)
+			{
+				if (sc.getPage() != 0)
+					continue;
+				
+				int slot = sc.getSlot();
+				int type = sc.getType();
+				
+				if (slot >= 0 && slot <= 12 && type == L2ShortCut.TYPE_SKILL)
+				{
+					L2Skill skill = getKnownSkill(sc.getId());
+					
+					sendPacket(new ExAutoSoulShot(skill.getId(), 0));
+				}
+				
+				if (sc.getType() == L2ShortCut.TYPE_ACTION && sc.getId() == 2)
+				{
+					sendPacket(new ExAutoSoulShot(2, 0));
+				}
+			}
+		}
 	}
 	
 	public boolean isAutoFarm()
