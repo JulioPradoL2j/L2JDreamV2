@@ -3,14 +3,12 @@ package com.dream.game.datatables.sql;
 import com.dream.Config;
 import com.dream.L2DatabaseFactory;
 import com.dream.Message;
-import com.dream.game.geodata.GeoEngine;
 import com.dream.game.manager.DayNightSpawnManager;
 import com.dream.game.manager.RaidBossSpawnManager;
 import com.dream.game.manager.clanhallsiege.FortResistSiegeManager;
 import com.dream.game.model.L2Spawn;
 import com.dream.game.model.actor.instance.L2PcInstance;
 import com.dream.game.model.entity.sevensigns.SevenSigns;
-import com.dream.game.network.ThreadPoolManager;
 import com.dream.game.templates.chars.L2NpcTemplate;
 import com.dream.util.ArrayUtils;
 
@@ -18,11 +16,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
-import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.log4j.Logger;
@@ -197,11 +191,6 @@ public class SpawnTable
 		}
 	}
 	
-	private static List<Integer> invalidSpawnIds = new ArrayList<>();
-	private static List<Integer> invalidCustomSpawnIds = new ArrayList<>();
-	private static Set<String> uniqueSpawns = new HashSet<>();
-	private static Set<String> uniqueCustomSpawns = new HashSet<>();
-	
 	private void fillSpawnTable()
 	{
 		
@@ -295,30 +284,6 @@ public class SpawnTable
 						if (template1.getNpcId() >= 21166 && template1.getNpcId() <= 21186)
 						{
 							SevenSigns.DEMONS.add(spawnDat);
-						}
-						
-						if (template1.getType().equalsIgnoreCase("L2Monster"))
-						{
-							int id = rset.getInt("id");
-							int npcId = rset.getInt("npc_templateid");
-							int x = rset.getInt("locx");
-							int y = rset.getInt("locy");
-							int z = rset.getInt("locz");
-							
-							String key = npcId + ":" + x + ":" + y + ":" + z;
-							
-							if (!uniqueSpawns.add(key))
-							{
-								invalidSpawnIds.add(id);
-								continue;
-							}
-							
-							short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 1000, z + 1000, id);
-							if (Math.abs(geoZ - z) > 1000 || geoZ == Short.MAX_VALUE)
-							{
-								invalidSpawnIds.add(id);
-								continue;
-							}
 						}
 						
 					}
@@ -432,29 +397,6 @@ public class SpawnTable
 								SevenSigns.DEMONS.add(spawnDat);
 							}
 							
-							if (template1.getType().equalsIgnoreCase("L2Monster"))
-							{
-								int id = rset.getInt("id");
-								int npcId = rset.getInt("npc_templateid");
-								int x = rset.getInt("locx");
-								int y = rset.getInt("locy");
-								int z = rset.getInt("locz");
-								
-								String key = npcId + ":" + x + ":" + y + ":" + z;
-								
-								if (!uniqueCustomSpawns.add(key))
-								{
-									invalidCustomSpawnIds.add(id);
-									continue;
-								}
-								
-								short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 1000, z + 1000, id);
-								if (Math.abs(geoZ - z) > 1000 || geoZ == Short.MAX_VALUE)
-								{
-									invalidCustomSpawnIds.add(id);
-									continue;
-								}
-							}
 						}
 					}
 					else
@@ -491,44 +433,6 @@ public class SpawnTable
 				_log.info("SpawnTable: Loaded " + _cSpawnCount + " Custom Spawn Locations.");
 			}
 			
-		}
-		
-		if (!invalidSpawnIds.isEmpty() || !invalidCustomSpawnIds.isEmpty())
-		{
-			ThreadPoolManager.getInstance().scheduleGeneral(() -> {
-				try (Connection conn = L2DatabaseFactory.getInstance().getConnection())
-				{
-					if (!invalidSpawnIds.isEmpty())
-					{
-						try (PreparedStatement stmt = conn.prepareStatement("DELETE FROM spawnlist WHERE id = ?"))
-						{
-							for (int id : invalidSpawnIds)
-							{
-								stmt.setInt(1, id);
-								stmt.executeUpdate();
-								_log.info("SpawnTable: Deleted invalid spawn (monster) with id: " + id);
-							}
-						}
-					}
-					
-					if (!invalidCustomSpawnIds.isEmpty())
-					{
-						try (PreparedStatement stmt = conn.prepareStatement("DELETE FROM custom_spawnlist WHERE id = ?"))
-						{
-							for (int id : invalidCustomSpawnIds)
-							{
-								stmt.setInt(1, id);
-								stmt.executeUpdate();
-								_log.info("SpawnTable: Deleted invalid custom spawn (monster) with id: " + id);
-							}
-						}
-					}
-				}
-				catch (Exception ex)
-				{
-					_log.warn("SpawnTable: Error deleting invalid spawns after delay: " + ex);
-				}
-			}, 30000); // 60 segundos
 		}
 		
 	}
