@@ -10,6 +10,7 @@ import com.dream.game.manager.clanhallsiege.FortResistSiegeManager;
 import com.dream.game.model.L2Spawn;
 import com.dream.game.model.actor.instance.L2PcInstance;
 import com.dream.game.model.entity.sevensigns.SevenSigns;
+import com.dream.game.network.ThreadPoolManager;
 import com.dream.game.templates.chars.L2NpcTemplate;
 import com.dream.util.ArrayUtils;
 
@@ -18,35 +19,38 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.log4j.Logger;
 
 public class SpawnTable
 {
+	
 	private static class SingletonHolder
 	{
 		protected static final SpawnTable _instance = new SpawnTable();
 	}
-
+	
 	private final static Logger _log = Logger.getLogger(SpawnTable.class.getName());
-
+	
 	public static final SpawnTable getInstance()
 	{
 		return SingletonHolder._instance;
 	}
-
+	
 	private final Map<Integer, L2Spawn> _spawntable = new ConcurrentHashMap<>();
 	private int _npcSpawnCount = 0;
 	private int _cSpawnCount = 0;
 	private final int _cNotSpawned = 0;
-
+	
 	private int _highestDbId;
-
+	
 	private int _highestCustomDbId;
-
+	
 	public SpawnTable()
 	{
 		if (!Config.ALT_DEV_NO_SPAWNS)
@@ -58,7 +62,6 @@ public class SpawnTable
 			_log.info("Spawns Disabled Fast Load Mode Enabled.");
 		}
 	}
-
 	
 	public void addNewSpawn(L2Spawn spawn, boolean storeInDb)
 	{
@@ -73,9 +76,9 @@ public class SpawnTable
 			_highestDbId++;
 			spawn.setDbId(_highestDbId);
 		}
-
+		
 		spawn.setId(_npcSpawnCount);
-
+		
 		_spawntable.put(spawn.getId(), spawn);
 		if (spawn.getNpcId() >= 21187 && spawn.getNpcId() <= 21207)
 		{
@@ -85,11 +88,11 @@ public class SpawnTable
 		{
 			SevenSigns.DEMONS.add(spawn);
 		}
-
+		
 		if (storeInDb)
 		{
 			Connection con = null;
-
+			
 			try
 			{
 				con = L2DatabaseFactory.getInstance().getConnection(con);
@@ -126,7 +129,7 @@ public class SpawnTable
 			}
 		}
 	}
-
+	
 	private void cleanUp()
 	{
 		for (L2Spawn spawn : _spawntable.values())
@@ -148,7 +151,6 @@ public class SpawnTable
 		SevenSigns.ANGELS.clear();
 		SevenSigns.DEMONS.clear();
 	}
-
 	
 	public void deleteSpawn(L2Spawn spawn, boolean updateDb)
 	{
@@ -162,7 +164,7 @@ public class SpawnTable
 		{
 			SevenSigns.DEMONS.remove(spawn);
 		}
-
+		
 		if (updateDb)
 		{
 			Connection con = null;
@@ -194,25 +196,26 @@ public class SpawnTable
 			}
 		}
 	}
-
+	
+	private static List<Integer> invalidSpawnIds = new ArrayList<>();
+	private static List<Integer> invalidCustomSpawnIds = new ArrayList<>();
+	private static Set<String> uniqueSpawns = new HashSet<>();
+	private static Set<String> uniqueCustomSpawns = new HashSet<>();
 	
 	private void fillSpawnTable()
 	{
-		// Lista para armazenar os IDs dos spawns inválidos
-		List<Integer> invalidSpawnIds = new ArrayList<>();
-		
 		
 		Connection con = null;
-
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection(con);
 			PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, loc_id, periodOfDay, random_zone FROM spawnlist ORDER BY id");
 			ResultSet rset = statement.executeQuery();
-
+			
 			L2Spawn spawnDat;
 			L2NpcTemplate template1;
-
+			
 			while (rset.next())
 			{
 				template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
@@ -241,22 +244,6 @@ public class SpawnTable
 						spawnDat.setLocy(rset.getInt("locy"));
 						spawnDat.setLocz(rset.getInt("locz"));
 						
-						
-						int x = rset.getInt("locx");
-						int y = rset.getInt("locy");
-						int z = rset.getInt("locz");
-						int id = rset.getInt("id");
-						
-						short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 50, z + 50, id);
-
-						// Se a diferença for absurda, marcar como inválido
-						if (Math.abs(geoZ - z) > 50 || geoZ == Short.MAX_VALUE)
-						{
-							invalidSpawnIds.add(id);
-							continue;
-						}
-						
-						
 						spawnDat.setHeading(rset.getInt("heading"));
 						spawnDat.setRespawnDelay(rset.getInt("respawn_delay"));
 						if (template1.getType().equalsIgnoreCase("L2Monster") && Config.MON_RESPAWN_RANDOM_ENABLED)
@@ -281,7 +268,7 @@ public class SpawnTable
 						}
 						int loc_id = rset.getInt("loc_id");
 						spawnDat.setLocation(loc_id);
-
+						
 						switch (rset.getInt("periodOfDay"))
 						{
 							case 0:
@@ -309,6 +296,31 @@ public class SpawnTable
 						{
 							SevenSigns.DEMONS.add(spawnDat);
 						}
+						
+						if (template1.getType().equalsIgnoreCase("L2Monster"))
+						{
+							int id = rset.getInt("id");
+							int npcId = rset.getInt("npc_templateid");
+							int x = rset.getInt("locx");
+							int y = rset.getInt("locy");
+							int z = rset.getInt("locz");
+							
+							String key = npcId + ":" + x + ":" + y + ":" + z;
+							
+							if (!uniqueSpawns.add(key))
+							{
+								invalidSpawnIds.add(id);
+								continue;
+							}
+							
+							short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 1000, z + 1000, id);
+							if (Math.abs(geoZ - z) > 1000 || geoZ == Short.MAX_VALUE)
+							{
+								invalidSpawnIds.add(id);
+								continue;
+							}
+						}
+						
 					}
 				}
 				else
@@ -316,25 +328,6 @@ public class SpawnTable
 					_log.warn("SpawnTable: Data missing or incorrect in NPC/Custom NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 				}
 				
-				// Após o loop, se houver spawns inválidos, remove-os do banco.
-				if (!invalidSpawnIds.isEmpty())
-				{
-					try (PreparedStatement delStmt = con.prepareStatement("DELETE FROM spawnlist WHERE id = ?"))
-					{
-						for (Integer id : invalidSpawnIds)
-						{
-							delStmt.setInt(1, id);
-							int deleted = delStmt.executeUpdate();
-							if (deleted > 0)
-								_log.info("SpawnTable: Deleted invalid spawn with id: " + id);
-						}
-					}
-					catch (Exception ex)
-					{
-						_log.warn("SpawnTable: Error deleting invalid spawns: " + ex);
-					}
-				}
-
 			}
 			rset.close();
 			statement.close();
@@ -345,22 +338,21 @@ public class SpawnTable
 		}
 		_log.info("Spawn Data: Loaded " + _spawntable.size() + " Npc Spawn Location(s).");
 		_log.info("Spawn Data: " + _cNotSpawned + " Npc Not Spawned.");
-
+		
 		if (Config.ALLOW_CUSTOM_SPAWNLIST_TABLE)
 		{
-			List<Integer> invalidCustomSpawnIds = new ArrayList<>();
 			
 			try
 			{
 				con = L2DatabaseFactory.getInstance().getConnection(con);
 				PreparedStatement statement = con.prepareStatement("SELECT id, count, npc_templateid, locx, locy, locz, heading, respawn_delay, loc_id, periodOfDay, random_zone FROM custom_spawnlist ORDER BY id");
 				ResultSet rset = statement.executeQuery();
-
+				
 				L2Spawn spawnDat;
 				L2NpcTemplate template1;
-
+				
 				_cSpawnCount = _spawntable.size();
-
+				
 				while (rset.next())
 				{
 					template1 = NpcTable.getInstance().getTemplate(rset.getInt("npc_templateid"));
@@ -384,22 +376,6 @@ public class SpawnTable
 							spawnDat.setLocx(rset.getInt("locx"));
 							spawnDat.setLocy(rset.getInt("locy"));
 							spawnDat.setLocz(rset.getInt("locz"));
-							
-							
-							int x = rset.getInt("locx");
-							int y = rset.getInt("locy");
-							int z = rset.getInt("locz");
-							int id = rset.getInt("id");
-							
-							short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 50, z + 50, id);
-
-							// Se a diferença for absurda, marcar como inválido
-							if (Math.abs(geoZ - z) > 50 || geoZ == Short.MAX_VALUE)
-							{
-								invalidCustomSpawnIds.add(id);
-								continue;
-							}
-							
 							
 							spawnDat.setHeading(rset.getInt("heading"));
 							spawnDat.setRespawnDelay(rset.getInt("respawn_delay"));
@@ -426,7 +402,7 @@ public class SpawnTable
 							spawnDat.setCustom();
 							int loc_id = rset.getInt("loc_id");
 							spawnDat.setLocation(loc_id);
-
+							
 							switch (rset.getInt("periodOfDay"))
 							{
 								case 0:
@@ -441,7 +417,7 @@ public class SpawnTable
 									_npcSpawnCount++;
 									break;
 							}
-
+							
 							if (spawnDat.getDbId() > _highestCustomDbId)
 							{
 								_highestCustomDbId = spawnDat.getDbId();
@@ -455,6 +431,30 @@ public class SpawnTable
 							{
 								SevenSigns.DEMONS.add(spawnDat);
 							}
+							
+							if (template1.getType().equalsIgnoreCase("L2Monster"))
+							{
+								int id = rset.getInt("id");
+								int npcId = rset.getInt("npc_templateid");
+								int x = rset.getInt("locx");
+								int y = rset.getInt("locy");
+								int z = rset.getInt("locz");
+								
+								String key = npcId + ":" + x + ":" + y + ":" + z;
+								
+								if (!uniqueCustomSpawns.add(key))
+								{
+									invalidCustomSpawnIds.add(id);
+									continue;
+								}
+								
+								short geoZ = GeoEngine.getInstance().getSpawnHeight(x, y, z - 1000, z + 1000, id);
+								if (Math.abs(geoZ - z) > 1000 || geoZ == Short.MAX_VALUE)
+								{
+									invalidCustomSpawnIds.add(id);
+									continue;
+								}
+							}
 						}
 					}
 					else
@@ -462,24 +462,6 @@ public class SpawnTable
 						_log.warn("SpawnTable: Data missing or incorrect in NPC/Custom NPC table for ID: " + rset.getInt("npc_templateid") + ".");
 					}
 					
-					// Remove os spawns custom inválidos
-					if (!invalidCustomSpawnIds.isEmpty())
-					{
-						try (PreparedStatement delStmt = con.prepareStatement("DELETE FROM custom_spawnlist WHERE id = ?"))
-						{
-							for (Integer id : invalidCustomSpawnIds)
-							{
-								delStmt.setInt(1, id);
-								int deleted = delStmt.executeUpdate();
-								if (deleted > 0)
-									_log.info("SpawnTable: Deleted invalid custom spawn with id: " + id);
-							}
-						}
-						catch (Exception ex)
-						{
-							_log.warn("SpawnTable: Error deleting invalid custom spawns: " + ex);
-						}
-					}
 				}
 				rset.close();
 				statement.close();
@@ -503,16 +485,54 @@ public class SpawnTable
 				}
 			}
 			_cSpawnCount = _spawntable.size() - _cSpawnCount;
-
+			
 			if (_cSpawnCount > 0)
 			{
 				_log.info("SpawnTable: Loaded " + _cSpawnCount + " Custom Spawn Locations.");
 			}
-
+			
 		}
-
+		
+		if (!invalidSpawnIds.isEmpty() || !invalidCustomSpawnIds.isEmpty())
+		{
+			ThreadPoolManager.getInstance().scheduleGeneral(() -> {
+				try (Connection conn = L2DatabaseFactory.getInstance().getConnection())
+				{
+					if (!invalidSpawnIds.isEmpty())
+					{
+						try (PreparedStatement stmt = conn.prepareStatement("DELETE FROM spawnlist WHERE id = ?"))
+						{
+							for (int id : invalidSpawnIds)
+							{
+								stmt.setInt(1, id);
+								stmt.executeUpdate();
+								_log.info("SpawnTable: Deleted invalid spawn (monster) with id: " + id);
+							}
+						}
+					}
+					
+					if (!invalidCustomSpawnIds.isEmpty())
+					{
+						try (PreparedStatement stmt = conn.prepareStatement("DELETE FROM custom_spawnlist WHERE id = ?"))
+						{
+							for (int id : invalidCustomSpawnIds)
+							{
+								stmt.setInt(1, id);
+								stmt.executeUpdate();
+								_log.info("SpawnTable: Deleted invalid custom spawn (monster) with id: " + id);
+							}
+						}
+					}
+				}
+				catch (Exception ex)
+				{
+					_log.warn("SpawnTable: Error deleting invalid spawns after delay: " + ex);
+				}
+			}, 30000); // 60 segundos
+		}
+		
 	}
-
+	
 	public L2Spawn[] findAllNpc(int npcId)
 	{
 		L2Spawn[] result = new L2Spawn[] {};
@@ -523,7 +543,7 @@ public class SpawnTable
 			}
 		return result;
 	}
-
+	
 	public void findNPCInstances(L2PcInstance activeChar, int npcId, int teleportIndex)
 	{
 		int index = 0;
@@ -548,17 +568,17 @@ public class SpawnTable
 			activeChar.sendMessage(Message.getMessage(activeChar, Message.MessageId.MSG_NO_SPAWN_FOUND));
 		}
 	}
-
+	
 	public Map<Integer, L2Spawn> getAllTemplates()
 	{
 		return _spawntable;
 	}
-
+	
 	public Map<Integer, L2Spawn> getSpawnTable()
 	{
 		return _spawntable;
 	}
-
+	
 	public L2Spawn getTemplate(int id)
 	{
 		L2Spawn result = _spawntable.get(id);
@@ -568,18 +588,17 @@ public class SpawnTable
 		}
 		return result;
 	}
-
+	
 	public void reloadAll()
 	{
 		cleanUp();
 		fillSpawnTable();
 	}
-
 	
 	public void updateSpawn(L2Spawn spawn)
 	{
 		Connection con = null;
-
+		
 		try
 		{
 			con = L2DatabaseFactory.getInstance().getConnection(con);
@@ -615,5 +634,5 @@ public class SpawnTable
 			}
 		}
 	}
-
+	
 }

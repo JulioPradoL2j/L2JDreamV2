@@ -22,7 +22,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
+
+import org.apache.log4j.Logger;
+
 
 /**
  * @author rapfersan92
@@ -65,7 +67,7 @@ public class RaidBossInfoManager
 		}
 		catch (Exception e)
 		{
-			_log.warning("Exception: RaidBossInfoManager load: " + e);
+			_log.warn("Exception: RaidBossInfoManager load: " + e);
 		}
 		
 		_log.info("RaidBossInfoManager: Loaded " + _raidBosses.size() + " instances.");
