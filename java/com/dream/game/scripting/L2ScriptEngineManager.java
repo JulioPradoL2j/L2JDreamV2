@@ -92,11 +92,6 @@ public final class L2ScriptEngineManager
 		return engine.getContext();
 	}
 
-	private static Object loadBinaryClassCache(ObjectInputStream is) throws IOException, ClassNotFoundException
-	{
-		return is.readObject();
-	}
-
 	public static void reportScriptFileError(File script, ScriptException e)
 	{
 		String dir = script.getParent();
@@ -476,36 +471,7 @@ public final class L2ScriptEngineManager
 						_log.warn("Script Engine Manager: Error loading " + je.getName(), e);
 					}
 				}
-				else if (je.getName().endsWith(".cs"))
-				{
-					try
-					{
-
-						ObjectInputStream ois = new ObjectInputStream(jar.getInputStream(je));
-						Object o = loadBinaryClassCache(ois);
-						ois.close();
-
-						if (o instanceof CompiledScript)
-						{
-							ScriptContext context = new SimpleScriptContext();
-							context.setAttribute(JythonScriptEngine.JYTHON_ENGINE_INSTANCE, getEngineByExtension("py"), ScriptContext.ENGINE_SCOPE);
-							setCurrentLoadingScript(jar.getName() + "::");
-							try
-							{
-								((CompiledScript) o).eval(context);
-								loaded++;
-							}
-							finally
-							{
-								setCurrentLoadingScript(null);
-							}
-						}
-					}
-					catch (Exception e)
-					{
-						_log.warn("Script Engine Manager: Error loading " + je.getName(), e);
-					}
-				}
+				
 		}
 		_log.info("Script Engine Manager: Loaded " + loaded + " script(s) from " + f.getName());
 	}
