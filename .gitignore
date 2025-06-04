@@ -2,3 +2,4 @@
 /game/log/
 /game/cachedir/
 /login/log/
+*.cs
