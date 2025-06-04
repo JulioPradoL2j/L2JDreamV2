@@ -6,7 +6,7 @@ public enum QuestMessage
 {
 	QComplite("<html><body>I have no task for you right now.</body></html>", 0),
 	QDefault("<html><body>I have no task for you right now.</body></html>", 0),
-
+	
 	Q1_name("Letters of Love", 1),
 	Q2_name("What Women Want", 2),
 	Q3_name("Will the Seal be Broken?", 3),
@@ -347,12 +347,12 @@ public enum QuestMessage
 	Q662_name("A Game of Cards", 662),
 	Q663_name("Seductive Whispers", 663),
 	Q688_name("Defeat the Elrokian Raiders!", 688);
-
+	
 	protected static Logger _log = Logger.getLogger(Quest.class.getName());
-
+	
 	public static final QuestMessage getQuestMessageById(int id)
 	{
-
+		
 		for (QuestMessage sm : QuestMessage.values())
 			if (sm._id == id)
 			{
@@ -361,7 +361,7 @@ public enum QuestMessage
 			}
 		return null;
 	}
-
+	
 	public static final void showNotRegQuest()
 	{
 		for (QuestMessage sm : QuestMessage.values())
@@ -370,19 +370,19 @@ public enum QuestMessage
 				_log.info("Quest " + sm._id + " not registered !");
 			}
 	}
-
+	
 	private final String _str;
-
+	
 	private final int _id;
-
+	
 	public boolean _isRegistered = false;
-
+	
 	private QuestMessage(String str, int id)
 	{
 		_str = str;
 		_id = id;
 	}
-
+	
 	public final String get()
 	{
 		return _str;
