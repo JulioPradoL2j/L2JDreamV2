@@ -27,6 +27,7 @@ import com.dream.game.datatables.xml.ClanLeveLUpPricesData;
 import com.dream.game.datatables.xml.DoorTable;
 import com.dream.game.datatables.xml.ExtractableItemsData;
 import com.dream.game.datatables.xml.FishTable;
+import com.dream.game.datatables.xml.GreetingData;
 import com.dream.game.datatables.xml.HelperBuffTable;
 import com.dream.game.datatables.xml.HennaTable;
 import com.dream.game.datatables.xml.IconTable;
@@ -571,6 +572,9 @@ public class L2GameServer
 		
 		Console.printSection("Auto Farm Task");
 		L2FarmPlayableAI.getInstance().start();
+		
+		Console.printSection("Greeter Data");
+		GreetingData.getInstance();
 		
 		Console.printSection("Oficial Event's");
 		Cristmas.startEvent();

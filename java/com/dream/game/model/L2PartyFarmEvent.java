@@ -19,8 +19,6 @@ import java.util.concurrent.ScheduledFuture;
 
 import org.apache.log4j.Logger;
 
-
-
 public class L2PartyFarmEvent
 {
 	public static Logger LOGGER = Logger.getLogger(L2PartyFarmEvent.class.getName());

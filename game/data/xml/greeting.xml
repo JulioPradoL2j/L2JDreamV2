@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Configuração do sistema de Saudação Real (Reverência ao Líder de Castelo)
+  
+  Este sistema ativa uma mecânica visual e de respeito dentro das vilas, similar ao Lineage II Classic Kamael.
+  Quando o líder do clã que possui um castelo estiver presente na vila correspondente, jogadores próximos
+  automaticamente fazem uma reverência (social ID definido) e recebem uma mensagem de saudação na tela.
+
+  A saudação só ocorre novamente após o tempo configurado no atributo "time".
+
+/////////////////////////////////////////////
+  TAGS DISPONÍVEIS:
+  - <greeting> : Define uma configuração de saudação para um castelo específico.
+////////////////////////////////////////////
+
+  ATRIBUTOS DE <greeting>:
+
+  • castleId (int)
+      - ID do castelo.
+      - Use os IDs conforme definidos no seu servidor (Ex: 1 = Gludio, 2 = Dion, etc).
+
+  • zone (string)
+      - Tipo da zona onde a saudação pode ocorrer.
+      - Use: "TOWN" para dentro da vila. (Outros tipos podem ser adicionados futuramente.)
+
+  • actionId (int)
+      - ID da animação social usada.
+      - Ex: 7 = /socialbow (reverência). Consulte SocialAction.java para outros IDs.
+
+  • msg (string)
+      - Mensagem exibida ao jogador no centro da tela (e também via chat).
+      - Ex: "Salve o Rei de Aden!"
+
+  • time (int)
+      - Intervalo mínimo de tempo (em segundos) entre cada saudação por castelo.
+      - Ex: 60 = saudação pode ocorrer a cada 60 segundos (1 minuto).
+-->
+
+<list>
+	<greeting castleId="1" zone="TOWN" actionId="7" msg="Salve o Rei de Gludio!" time="60" />
+	<greeting castleId="2" zone="TOWN" actionId="7" msg="Honrem o Senhor de Dion!" time="60" />
+</list>
