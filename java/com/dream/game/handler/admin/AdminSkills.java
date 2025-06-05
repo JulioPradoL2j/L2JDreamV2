@@ -1,12 +1,15 @@
 package com.dream.game.handler.admin;
 
 import com.dream.game.access.gmHandler;
+import com.dream.game.datatables.xml.ResetData;
 import com.dream.game.datatables.xml.SkillTable;
 import com.dream.game.datatables.xml.SkillTreeTable;
 import com.dream.game.model.L2Object;
 import com.dream.game.model.L2Skill;
 import com.dream.game.model.L2SkillLearn;
 import com.dream.game.model.actor.instance.L2PcInstance;
+import com.dream.game.model.holders.IntIntHolder;
+import com.dream.game.model.holders.ResetHolder;
 import com.dream.game.network.SystemChatChannelId;
 import com.dream.game.network.SystemMessageId;
 import com.dream.game.network.serverpackets.ActionFailed;
@@ -33,9 +36,9 @@ public class AdminSkills extends gmHandler
 		"cast_skill",
 		"clear_skill_reuse"
 	};
-
+	
 	private static L2Skill[] adminSkills;
-
+	
 	private static void adminAddClanSkill(L2PcInstance activeChar, int id, int level)
 	{
 		L2Object target = activeChar.getTarget();
@@ -62,7 +65,7 @@ public class AdminSkills extends gmHandler
 			showMainPage(activeChar);
 			return;
 		}
-
+		
 		L2Skill skill = SkillTable.getInstance().getInfo(id, level);
 		if (skill != null)
 		{
@@ -71,20 +74,20 @@ public class AdminSkills extends gmHandler
 			player.getClan().broadcastToOnlineMembers(SystemMessage.getSystemMessage(SystemMessageId.CLAN_SKILL_S1_ADDED).addSkillName(skill));
 			player.getClan().addNewSkill(skill);
 			activeChar.sendChatMessage(0, SystemChatChannelId.Chat_None, "SYS", "Added skill " + skillname + " clan " + player.getClan().getName());
-
+			
 			activeChar.getClan().broadcastToOnlineMembers(new PledgeSkillList(activeChar.getClan()));
 			for (L2PcInstance member : activeChar.getClan().getOnlineMembers(0))
 			{
 				member.sendSkillList();
 			}
-
+			
 			showMainPage(activeChar);
 			return;
 		}
-
+		
 		activeChar.sendChatMessage(0, SystemChatChannelId.Chat_None, "SYS", "Error. Skill does not exist");
 	}
-
+	
 	private static void adminAddSkill(L2PcInstance activeChar, int id, int lvl)
 	{
 		L2Object target = activeChar.getTarget();
@@ -92,14 +95,14 @@ public class AdminSkills extends gmHandler
 		{
 			target = activeChar;
 		}
-
+		
 		if (!(target instanceof L2PcInstance))
 		{
 			showMainPage(activeChar);
 			activeChar.sendPacket(SystemMessageId.INCORRECT_TARGET);
 			return;
 		}
-
+		
 		L2PcInstance player = (L2PcInstance) target;
 		L2Skill skill = SkillTable.getInstance().getInfo(id, lvl);
 		if (skill != null)
@@ -114,10 +117,10 @@ public class AdminSkills extends gmHandler
 		{
 			activeChar.sendChatMessage(0, SystemChatChannelId.Chat_None, "SYS", "Error. What does not exist");
 		}
-
+		
 		showMainPage(activeChar);
 	}
-
+	
 	private static void adminGetSkills(L2PcInstance activeChar)
 	{
 		L2Object target = activeChar.getTarget();
@@ -125,13 +128,13 @@ public class AdminSkills extends gmHandler
 		{
 			target = activeChar;
 		}
-
+		
 		if (!(target instanceof L2PcInstance))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return;
 		}
-
+		
 		L2PcInstance player = (L2PcInstance) target;
 		if (player == activeChar)
 		{
@@ -154,7 +157,7 @@ public class AdminSkills extends gmHandler
 		}
 		showMainPage(activeChar);
 	}
-
+	
 	private static void adminGiveAllSkills(L2PcInstance activeChar)
 	{
 		L2Object target = activeChar.getTarget();
@@ -194,7 +197,7 @@ public class AdminSkills extends gmHandler
 			countUnlearnable = false;
 			skills = SkillTreeTable.getInstance().getAvailableSkills(player, player.getClassId());
 		}
-
+		
 		if (skillCounter > 0)
 		{
 			player.sendChatMessage(0, SystemChatChannelId.Chat_None, "SYS", "A GM gave you " + skillCounter + " skills.");
@@ -202,7 +205,7 @@ public class AdminSkills extends gmHandler
 			player.sendSkillList();
 		}
 	}
-
+	
 	private static void adminRemoveSkill(L2PcInstance activeChar, int idval)
 	{
 		L2Object target = activeChar.getTarget();
@@ -231,7 +234,7 @@ public class AdminSkills extends gmHandler
 		}
 		removeSkillsPage(activeChar, 0);
 	}
-
+	
 	private static void adminResetSkills(L2PcInstance activeChar)
 	{
 		if (adminSkills == null)
@@ -255,7 +258,7 @@ public class AdminSkills extends gmHandler
 		}
 		showMainPage(activeChar);
 	}
-
+	
 	private static void removeSkillsPage(L2PcInstance activeChar, int page)
 	{
 		L2Object target = activeChar.getTarget();
@@ -263,35 +266,35 @@ public class AdminSkills extends gmHandler
 		{
 			target = activeChar;
 		}
-
+		
 		if (!(target instanceof L2PcInstance))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return;
 		}
-
+		
 		L2PcInstance player = (L2PcInstance) target;
 		L2Skill[] skills = player.getAllSkills();
-
+		
 		int MaxSkillsPerPage = 10;
 		int MaxPages = skills.length / MaxSkillsPerPage;
 		if (skills.length > MaxSkillsPerPage * MaxPages)
 		{
 			MaxPages++;
 		}
-
+		
 		if (page > MaxPages)
 		{
 			page = MaxPages;
 		}
-
+		
 		int SkillsStart = MaxSkillsPerPage * page;
 		int SkillsEnd = skills.length;
 		if (SkillsEnd - SkillsStart > MaxSkillsPerPage)
 		{
 			SkillsEnd = SkillsStart + MaxSkillsPerPage;
 		}
-
+		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		StringBuilder replyMSG = new StringBuilder("<html><body>");
 		replyMSG.append("<table width=260><tr>");
@@ -332,7 +335,7 @@ public class AdminSkills extends gmHandler
 		adminReply.setHtml(replyMSG.toString());
 		activeChar.sendPacket(adminReply);
 	}
-
+	
 	private static void showMainPage(L2PcInstance activeChar)
 	{
 		L2Object target = activeChar.getTarget();
@@ -340,15 +343,15 @@ public class AdminSkills extends gmHandler
 		{
 			target = activeChar;
 		}
-
+		
 		if (!(target instanceof L2PcInstance))
 		{
 			activeChar.sendPacket(SystemMessageId.TARGET_IS_INCORRECT);
 			return;
 		}
-
+		
 		L2PcInstance player = (L2PcInstance) target;
-
+		
 		NpcHtmlMessage adminReply = new NpcHtmlMessage(5);
 		adminReply.setFile("data/html/admin/menus/submenus/charskills_menu.htm");
 		adminReply.replace("%name%", player.getName());
@@ -356,7 +359,7 @@ public class AdminSkills extends gmHandler
 		adminReply.replace("%class%", player.getTemplate().getClassName());
 		activeChar.sendPacket(adminReply);
 	}
-
+	
 	public void castSkill(L2PcInstance activeChar, String val)
 	{
 		int skillid = Integer.parseInt(val);
@@ -374,21 +377,21 @@ public class AdminSkills extends gmHandler
 			activeChar.broadcastPacket(ActionFailed.STATIC_PACKET);
 		}
 	}
-
+	
 	@Override
 	public String[] getCommandList()
 	{
 		return commands;
 	}
-
+	
 	@Override
 	public void runCommand(L2PcInstance admin, String... params)
 	{
 		if (admin == null)
 			return;
-
+		
 		final String command = params[0];
-
+		
 		if (command.equals("show_skills"))
 		{
 			showMainPage(admin);
@@ -446,7 +449,7 @@ public class AdminSkills extends gmHandler
 			{
 				int id = Integer.parseInt(params[1]);
 				int level = 1;
-
+				
 				if (params.length > 2)
 				{
 					level = Integer.parseInt(params[2]);
@@ -476,21 +479,40 @@ public class AdminSkills extends gmHandler
 			{
 				tmp = admin;
 			}
-
+			
 			if (tmp instanceof L2PcInstance)
 			{
 				int count = 0;
 				L2PcInstance player = (L2PcInstance) tmp;
 				for (L2Skill skill : player.getAllSkills())
 				{
+					boolean isRewardSkill = false;
+					
 					if (skill == null)
 					{
 						continue;
 					}
-					player.removeSkill(skill);
+					
+					for (ResetHolder holder : ResetData.getInstance().getResets())
+					{
+						for (IntIntHolder skillReward : holder.getRewardSkills())
+						{
+							if (skill.getId() == skillReward.getId())
+							{
+								isRewardSkill = true;
+								break;
+							}
+						}
+					}
+					
+					if (!isRewardSkill)
+					{
+						player.removeSkill(skill, true, true);
+					}
+					
 					count++;
 				}
-
+				
 				if (count > 0)
 				{
 					admin.sendChatMessage(0, SystemChatChannelId.Chat_None, "SYS", count + " skill (s) removed the player " + player.getName());
@@ -518,7 +540,7 @@ public class AdminSkills extends gmHandler
 				admin.sendPacket(SystemMessageId.INCORRECT_TARGET);
 				return;
 			}
-
+			
 			if (object instanceof L2PcInstance)
 			{
 				((L2PcInstance) object).resetSkillTime(true);

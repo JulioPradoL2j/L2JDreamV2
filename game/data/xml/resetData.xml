@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+  <reset levelMax="80" requiredPvps="0" expPenalty="0.8">
+  
+	<set rankingDisplayLimit="3" />
+	<set dailyPoints="2" />
+	<set monthlyPoints="1" />
+	<set removeResetSkills="true" />
+	<set logger="false" />
+	
+    <requiredItems>
+      <item required="57-10000000;" />
+    </requiredItems>
+    
+    <rewardItems>
+      <item reward="57-15000;6392-3" skill="3135-4;3130-2;3131-10" />
+    </rewardItems>
+    
+    <prizes enable="true" type="DAILY" time="13:00">
+      <prize position="1" reward="57-15000;6392-3" />
+      <prize position="2" reward="57-10000;6392-2" />
+      <prize position="3" reward="57-5000;6392-1" />
+    </prizes>
+    
+    <prizes enable="true" type="MONTH" time="00:00">
+      <prize position="1" reward="57-15000;6392-3" />
+      <prize position="2" reward="57-10000;6392-2" />
+      <prize position="3" reward="57-5000;6392-1" />
+    </prizes>
+
+  </reset>
+</list>

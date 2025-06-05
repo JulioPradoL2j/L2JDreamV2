@@ -2655,7 +2655,6 @@ public class L2PcInstance extends L2Playable
 		CharNameTable.getInstance().update(getObjectId(), getName(), oldName);
 	}
 	
-	@SuppressWarnings("null")
 	public void checkAllowedSkills()
 	{
 		if (isGM())
@@ -2720,11 +2719,8 @@ public class L2PcInstance extends L2Playable
 				continue skill_loop;
 			}
 			
-			if (skill != null)
-			{
-				removeSkill(skill);
-				Count++;
-			}
+			removeSkill(skill);
+			Count++;
 		}
 		
 		if (Count > 0)
@@ -6758,7 +6754,7 @@ public class L2PcInstance extends L2Playable
 		return getShortCuts().getShortCut(slot, page);
 	}
 	
-	private ShortCuts getShortCuts()
+	public ShortCuts getShortCuts()
 	{
 		if (_shortCuts == null)
 		{
@@ -10417,23 +10413,28 @@ public class L2PcInstance extends L2Playable
 	public synchronized boolean setActiveClass(int classIndex)
 	{
 		for (L2ItemInstance temp : getInventory().getAugmentedItems())
+		{
 			if (temp != null && temp.isEquipped())
 			{
 				temp.getAugmentation().removeBonus(this);
 			}
-		
+		}
 		L2ItemInstance circlet = getInventory().getPaperdollItem(Inventory.PAPERDOLL_HAIRALL);
 		if (circlet != null)
+		{
 			if ((circlet.getItemId() >= 9397 && circlet.getItemId() <= 9408 || circlet.getItemId() == 10169) && circlet.isEquipped())
 			{
 				L2ItemInstance[] unequipped = getInventory().unEquipItemInBodySlotAndRecord(circlet.getItem().getBodyPart());
+				
 				InventoryUpdate iu = new InventoryUpdate();
+				
 				for (L2ItemInstance element : unequipped)
 				{
 					iu.addModifiedItem(element);
 				}
 				sendPacket(iu);
 			}
+		}
 		
 		if (_fusionSkill != null)
 		{
@@ -10714,6 +10715,17 @@ public class L2PcInstance extends L2Playable
 	public void setClanPrivileges(int n)
 	{
 		_clanPrivileges = n;
+	}
+	
+	public void setResetClassId(int Id)
+	{
+		academyCheck(Id);
+		if (isSubClassActive())
+		{
+			getSubClasses().get(_classIndex).setClassId(Id);
+		}
+		setClassTemplate(Id);
+		
 	}
 	
 	public void setClassId(int Id)
@@ -13787,10 +13799,10 @@ public class L2PcInstance extends L2Playable
 	{
 		_isAutoFarm = val;
 		
-		if(!val)
+		if (!val)
 		{
 			L2ShortCut[] shortcuts = getAllShortCuts();
-
+			
 			for (L2ShortCut sc : shortcuts)
 			{
 				if (sc.getPage() != 0)

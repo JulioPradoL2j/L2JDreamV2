@@ -37,6 +37,7 @@ import com.dream.game.datatables.xml.MerchantPriceConfigTable;
 import com.dream.game.datatables.xml.PartyFarmData;
 import com.dream.game.datatables.xml.PetDataTable;
 import com.dream.game.datatables.xml.PvPRankData;
+import com.dream.game.datatables.xml.ResetData;
 import com.dream.game.datatables.xml.RoletaData;
 import com.dream.game.datatables.xml.SkillSpellbookTable;
 import com.dream.game.datatables.xml.SkillTable;
@@ -109,6 +110,7 @@ import com.dream.game.model.L2FarmPlayableAI;
 import com.dream.game.model.L2Manor;
 import com.dream.game.model.L2PcOffline;
 import com.dream.game.model.L2SiegeStatus;
+import com.dream.game.model.ResetManager;
 import com.dream.game.model.entity.Hero;
 import com.dream.game.model.entity.events.BigSquash;
 import com.dream.game.model.entity.events.Cristmas;
@@ -575,6 +577,10 @@ public class L2GameServer
 		
 		Console.printSection("Greeter Data");
 		GreetingData.getInstance();
+		
+		Console.printSection("Reset Data");
+		ResetData.getInstance();
+		ResetManager.getInstance().start();
 		
 		Console.printSection("Oficial Event's");
 		Cristmas.startEvent();

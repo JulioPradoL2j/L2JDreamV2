@@ -1207,7 +1207,8 @@ public class Config extends L2Config
 	public static boolean VOICED_CLASS_MASTER;
 	public static boolean VOICED_AIOX_COMMAND;
 	public static boolean VOICED_AUTOFARM_COMMAND;
-	public static boolean  VOICED_ROULETTE_COMMAND;
+	public static boolean VOICED_ROULETTE_COMMAND;
+	public static boolean VOICED_RESET_COMMAND;
 	/** Server version */
 	public static String SERVER_VERSION;
 	/** Date of server build */
@@ -1640,7 +1641,6 @@ public class Config extends L2Config
 		loadSiegeConfig();
 	}
 	
-
 	public static void loadFilter()
 	{
 		if (!Config.USE_SAY_FILTER)
@@ -2209,6 +2209,7 @@ public class Config extends L2Config
 			VOICED_AIOX_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedAioxCommand", "False"));
 			VOICED_AUTOFARM_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedAutofarmCommand", "False"));
 			VOICED_ROULETTE_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedRouletteCommand", "False"));
+			VOICED_RESET_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedResetCommand", "False"));
 			
 			ENABLE_EVENT_MANAGER = Boolean.parseBoolean(p.getProperty("EnableEventManager", "false"));
 			EVENT_MANAGER_ID = Integer.parseInt(p.getProperty("EventManagerNpcId", "50004"));
@@ -2491,9 +2492,8 @@ public class Config extends L2Config
 			GAME_SERVER_LOGIN_PORT = Integer.parseInt(p.getProperty("LoginPort", "9014"));
 			GAME_SERVER_LOGIN_HOST = p.getProperty("LoginHost", "127.0.0.1");
 			
-			MIN_PROTOCOL_REVISION =  Integer.parseInt(p.getProperty("MinProtocolVersion", "730"));
-			MAX_PROTOCOL_REVISION =  Integer.parseInt(p.getProperty("MaxProtocolVersion", "746"));
-			
+			MIN_PROTOCOL_REVISION = Integer.parseInt(p.getProperty("MinProtocolVersion", "730"));
+			MAX_PROTOCOL_REVISION = Integer.parseInt(p.getProperty("MaxProtocolVersion", "746"));
 			
 			DATABASE_DRIVER = p.getProperty("Driver", "com.mysql.jdbc.Driver");
 			DATABASE_URL = p.getProperty("URL", "jdbc:mysql://localhost/");
@@ -3999,7 +3999,6 @@ public class Config extends L2Config
 		}
 	}
 	
-
 	public static void loadVersion()
 	{
 		try
@@ -4020,7 +4019,6 @@ public class Config extends L2Config
 		}
 	}
 	
-
 	public static void saveHexid(int serverId, String hexId)
 	{
 		try

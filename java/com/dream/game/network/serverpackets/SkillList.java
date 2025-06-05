@@ -14,48 +14,49 @@
  */
 package com.dream.game.network.serverpackets;
 
-import java.util.List;
-
 import com.dream.Config;
 import com.dream.game.model.L2Skill;
 import com.dream.game.model.actor.instance.L2PcInstance;
 
+import java.util.List;
+
 public final class SkillList extends L2GameServerPacket
 {
 	private final List<L2Skill> _skills;
-
+	
 	public SkillList(List<L2Skill> list)
 	{
 		_skills = list;
 	}
-
+	
 	@Override
 	protected void writeImpl()
 	{
 		L2PcInstance activeChar = getClient().getActiveChar();
-
+		
 		writeC(0x58);
 		writeD(_skills.size());
-
+		
 		for (L2Skill s : _skills)
 		{
 			if (!s.isBalance())
-
 			{
-			writeD(s.isPassive() || s.isChance() ? 1 : 0);
-			writeD(s.getLevel());
-
-			writeD(s.getDisplayId());
-
-			int grayed = 0;
-			if (Config.DISABLE_SKILLS_ON_LEVEL_LOST)
-				if (s.getMagicLevel() - activeChar.getLevel() >= 5)
+				writeD(s.isPassive() || s.isChance() ? 1 : 0);
+				writeD(s.getLevel());
+				
+				writeD(s.getDisplayId());
+				
+				int grayed = 0;
+				if (Config.DISABLE_SKILLS_ON_LEVEL_LOST)
 				{
-					grayed = 1;
+					if (s.getMagicLevel() - activeChar.getLevel() >= 5)
+					{
+						grayed = 1;
+					}
 				}
-			writeC(grayed);
-		}
+				writeC(grayed);
+			}
 		}
 	}
-
+	
 }

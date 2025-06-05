@@ -234,6 +234,7 @@ public class ClassMaster implements IVoicedCommandHandler
 		return sb.toString();
 	}
 
+
 	@Override
 	public boolean useVoicedCommand(String command, L2PcInstance activeChar, String target)
 	{

@@ -8,6 +8,7 @@ import com.dream.game.handler.voiced.ClassMaster;
 import com.dream.game.handler.voiced.Configurator;
 import com.dream.game.handler.voiced.Help;
 import com.dream.game.handler.voiced.Offline;
+import com.dream.game.handler.voiced.Reset;
 import com.dream.game.handler.voiced.Roulette;
 import com.dream.game.handler.voiced.Wedding;
 
@@ -73,6 +74,11 @@ public class VoicedCommandHandler
 		if (Config.VOICED_ROULETTE_COMMAND)
 		{
 			registerVoicedCommandHandler(new Roulette());
+		}
+		
+		if (Config.VOICED_RESET_COMMAND)
+		{
+			registerVoicedCommandHandler(new Reset());
 		}
 		
 		if (_datatable.size() > 0)
