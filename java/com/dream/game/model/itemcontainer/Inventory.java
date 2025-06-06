@@ -629,6 +629,7 @@ public abstract class Inventory extends ItemContainer
 		return -1;
 	}
 
+	
 	private final L2ItemInstance[] _paperdoll;
 
 	private final List<PaperdollListener> _paperdollListeners;
@@ -1262,6 +1263,66 @@ public abstract class Inventory extends ItemContainer
 			_paperdollListeners.get(2).notifyEquiped(i, getPaperdollItem(i));
 		}
 	}
+	
+	public void setPaperdollItemVisual(int slot)
+	{
+		L2ItemInstance item = getPaperdollItem(slot);
+		L2ItemInstance old = _paperdoll[slot];
+		if (old != item)
+		{
+			if (old != null)
+			{
+				_paperdoll[slot] = null;
+				old.setLocation(getBaseLocation());
+				old.setLastChange(L2ItemInstance.MODIFIED);
+
+				int mask = 0;
+				for (int i = 0; i < PAPERDOLL_LRHAND; i++)
+				{
+					L2ItemInstance pi = _paperdoll[i];
+					if (pi != null)
+					{
+						mask |= pi.getItem().getItemMask();
+					}
+				}
+				_wearedMask = mask;
+
+				for (PaperdollListener temp : _paperdollListeners)
+				{
+					try
+					{
+						temp.notifyUnequiped(slot, old);
+					}
+					catch (Exception e)
+					{
+						e.printStackTrace();
+					}
+				}
+			}
+
+			if (item != null)
+			{
+				_paperdoll[slot] = item;
+				item.setLocation(getEquipLocation(), slot);
+				item.setLastChange(L2ItemInstance.MODIFIED);
+				_wearedMask |= item.getItem().getItemMask();
+				for (PaperdollListener temp : _paperdollListeners)
+				{
+					temp.notifyEquiped(slot, item);
+				}
+			}
+		}
+
+
+		L2PcInstance owner = getOwner() instanceof L2PcInstance ? (L2PcInstance) getOwner() : null;
+		if (owner != null)
+		{
+			owner.broadcastUserInfo();
+			owner.broadcastFullInfoImpl();
+		}
+	}
+
+	
 
 	public synchronized L2ItemInstance setPaperdollItem(int slot, L2ItemInstance item)
 	{

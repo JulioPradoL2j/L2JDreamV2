@@ -369,7 +369,7 @@ public class AdminSkills extends gmHandler
 			if (skill.getTargetType() == L2Skill.SkillTargetType.TARGET_SELF)
 			{
 				activeChar.setTarget(activeChar);
-				activeChar.broadcastPacket(new MagicSkillUse(activeChar, skillid, 1, skill.getHitTime(), skill.getReuseDelay(), skill.isPositive()));
+				activeChar.broadcastPacket(new MagicSkillUse(activeChar, activeChar, skillid, 1, skill.getHitTime(), skill.getReuseDelay(), skill.isPositive()));
 			}
 		}
 		else

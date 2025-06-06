@@ -130,7 +130,7 @@ public class AdminMobGroup extends gmHandler
 
 	private static void doAnimation(L2PcInstance admin)
 	{
-		Broadcast.toSelfAndKnownPlayersInRadius(admin, new MagicSkillUse(admin, 1008, 1, 4000, 0, false), 2250000);
+		Broadcast.toSelfAndKnownPlayersInRadius(admin, new MagicSkillUse(admin, admin, 1008, 1, 4000, 0, false), 2250000);
 		admin.sendPacket(new SetupGauge(0, 4000));
 	}
 

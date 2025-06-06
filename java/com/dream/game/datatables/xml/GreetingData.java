@@ -3,7 +3,6 @@ package com.dream.game.datatables.xml;
 import com.dream.data.xml.IXmlReader;
 import com.dream.data.xml.StatSet;
 import com.dream.game.model.holders.GreetingHolder;
-import com.dream.game.taskmanager.GreetingManager;
 
 import java.nio.file.Path;
 import java.util.HashMap;
@@ -25,7 +24,7 @@ public class GreetingData implements IXmlReader
 	{
 		parseFile("./data/xml/greeting.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _greetings.size() + " greetings.");
-		GreetingManager.start();
+		
 	}
 	
 	@Override

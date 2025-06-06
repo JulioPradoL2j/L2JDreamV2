@@ -51,6 +51,7 @@ import com.dream.game.manager.RecipeController;
 import com.dream.game.manager.SiegeManager;
 import com.dream.game.model.BlockList;
 import com.dream.game.model.CursedWeapon;
+import com.dream.game.model.DressMeEffectManager;
 import com.dream.game.model.FishData;
 import com.dream.game.model.L2Clan;
 import com.dream.game.model.L2ClanMember;
@@ -101,6 +102,7 @@ import com.dream.game.model.entity.siege.Castle;
 import com.dream.game.model.entity.siege.Fort;
 import com.dream.game.model.entity.siege.FortSiege;
 import com.dream.game.model.entity.siege.Siege;
+import com.dream.game.model.holders.DressMeHolder;
 import com.dream.game.model.itemcontainer.Inventory;
 import com.dream.game.model.itemcontainer.ItemContainer;
 import com.dream.game.model.itemcontainer.PcFreight;
@@ -13848,4 +13850,148 @@ public class L2PcInstance extends L2Playable
 		_scriptValues.clear();
 	}
 	
+	private long _lastDressMeSummonTime;
+	
+	public long getLastDressMeSummonTime()
+	{
+		return _lastDressMeSummonTime;
+	}
+	
+	public void setLastDressMeSummonTime(long time)
+	{
+		_lastDressMeSummonTime = time;
+	}
+	
+	private boolean _isDressMe;
+	
+	public boolean isDressMe()
+	{
+		return _isDressMe;
+	}
+	
+	public void setDressMe(boolean val)
+	{
+		_isDressMe = val;
+	}
+	
+	private DressMeHolder _armorSkin;
+	private DressMeHolder _weaponSkin;
+	
+	public DressMeHolder getArmorSkin()
+	{
+		return _armorSkin;
+	}
+	
+	public void setArmorSkin(DressMeHolder skin)
+	{
+		_armorSkin = skin;
+	}
+	
+	public DressMeHolder getWeaponSkin()
+	{
+		return _weaponSkin;
+	}
+	
+	public void setWeaponSkin(DressMeHolder skin)
+	{
+		_weaponSkin = skin;
+	}
+	
+	public void setDressVisual(int chest, int legs, int gloves, int feet, int helmet)
+	{
+		Inventory inv = getInventory();
+		
+		if (chest > 0)
+			inv.setPaperdollItemVisual(Inventory.PAPERDOLL_CHEST);
+		if (legs > 0)
+			inv.setPaperdollItemVisual(Inventory.PAPERDOLL_LEGS);
+		if (gloves > 0)
+			inv.setPaperdollItemVisual(Inventory.PAPERDOLL_GLOVES);
+		if (feet > 0)
+			inv.setPaperdollItemVisual(Inventory.PAPERDOLL_FEET);
+		if (helmet > 0)
+			inv.setPaperdollItemVisual(Inventory.PAPERDOLL_HEAD);
+		
+		broadcastUserInfo();
+	}
+	
+	public void setWeaponVisual(int rhand, int lhand, int lrhand)
+	{
+		Inventory inv = getInventory();
+		
+		if (rhand > 0)
+			inv.setPaperdollItemVisual(Inventory.PAPERDOLL_RHAND);
+		if (lhand > 0)
+			inv.setPaperdollItemVisual(Inventory.PAPERDOLL_LHAND);
+		if (lrhand > 0)
+			inv.setPaperdollItemVisual(Inventory.PAPERDOLL_LRHAND);
+		
+		broadcastUserInfo();
+	}
+	
+	public void applyDressMe(DressMeHolder skin)
+	{
+		if (skin == null)
+			return;
+		
+		switch (skin.getType())
+		{
+			case ARMOR:
+			case CLOAK:
+				setArmorSkin(skin);
+				setDressVisual(skin.getChestId(), skin.getLegsId(), skin.getGlovesId(), skin.getFeetId(), skin.getHelmetId());
+				break;
+			
+			case WEAPON:
+				setWeaponSkin(skin);
+				setWeaponVisual(skin.getRightHandId(), skin.getLeftHandId(), skin.getTwoHandId());
+				break;
+		}
+		
+		setDressMe(true);
+		
+		// Aplica efeito visual, se houver
+		if (skin.getEffect() != null && skin.getEffect().getSkillId() > 0)
+		{
+			if (skin.getEffect().isRecurring())
+			{
+				DressMeEffectManager.getInstance().startEffect(this, skin);
+			}
+		}
+	}
+	
+	public void removeDressMeArmor()
+	{
+		DressMeEffectManager.getInstance().stopEffect(this);
+		_armorSkin = null;
+		Inventory inv = getInventory();
+		inv.setPaperdollItemVisual(Inventory.PAPERDOLL_CHEST);
+		inv.setPaperdollItemVisual(Inventory.PAPERDOLL_LEGS);
+		inv.setPaperdollItemVisual(Inventory.PAPERDOLL_GLOVES);
+		inv.setPaperdollItemVisual(Inventory.PAPERDOLL_FEET);
+		inv.setPaperdollItemVisual(Inventory.PAPERDOLL_HEAD);
+		broadcastUserInfo();
+		checkIfNoDressMe();
+	}
+	
+	public void removeDressMeWeapon()
+	{
+		DressMeEffectManager.getInstance().stopEffect(this);
+		_weaponSkin = null;
+		Inventory inv = getInventory();
+		inv.setPaperdollItemVisual(Inventory.PAPERDOLL_RHAND);
+		inv.setPaperdollItemVisual(Inventory.PAPERDOLL_LHAND);
+		inv.setPaperdollItemVisual(Inventory.PAPERDOLL_LRHAND);
+		broadcastUserInfo();
+		checkIfNoDressMe();
+	}
+	
+	private void checkIfNoDressMe()
+	{
+		if (_armorSkin == null && _weaponSkin == null)
+		{
+			setDressMe(false);
+
+		}
+	}
 }

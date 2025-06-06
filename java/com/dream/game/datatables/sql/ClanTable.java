@@ -196,7 +196,7 @@ public class ClanTable
 		player.sendPacket(new PledgeShowMemberListUpdate(player));
 		player.sendPacket(SystemMessageId.CLAN_CREATED);
 		player.sendPacket(new UserInfo(player));
-		player.broadcastPacket(new MagicSkillUse(player, 5103, 1, 0, 0, false));
+		player.broadcastPacket(new MagicSkillUse(player, player, 5103, 1, 0, 0, false));
 		player.broadcastPacket(new MagicSkillLaunched(player, 5103, 1, false));
 		return clan;
 	}

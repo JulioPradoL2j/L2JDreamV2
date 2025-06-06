@@ -29,7 +29,7 @@ public class GreetingManager
 	private static final Map<Integer, Long> _greetCooldown = new ConcurrentHashMap<>();
 	private static ScheduledFuture<?> _greetingChecker;
 	
-	public static void start()
+	public void start()
 	{
 		if (_greetingChecker == null || _greetingChecker.isCancelled())
 		{
@@ -81,6 +81,16 @@ public class GreetingManager
 			
 			_greetCooldown.put(castle.getCastleId(), System.currentTimeMillis());
 		}
+	}
+	
+	public static GreetingManager getInstance()
+	{
+		return SingletonHolder.INSTANCE;
+	}
+	
+	private static class SingletonHolder
+	{
+		private static final GreetingManager INSTANCE = new GreetingManager();
 	}
 	
 }

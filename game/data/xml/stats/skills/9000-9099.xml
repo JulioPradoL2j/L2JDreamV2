@@ -84,4 +84,52 @@
 			<add val="#lvl" order="0x10" stat="STR" />
 		</for>
 	</skill>
+	<skill id="9100" levels="1" name="Visual Style Draconic">
+		<set name="mpConsume" val="100" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DRESSME" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="23000" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="9101" levels="1" name="Visual Style Imperial">
+		<set name="mpConsume" val="100" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DRESSME" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="23000" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="9102" levels="1" name="Visual Style Majo">
+		<set name="mpConsume" val="100" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DRESSME" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="23000" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="9103" levels="1" name="Visual Style Titanium">
+		<set name="mpConsume" val="100" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DRESSME" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="23000" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="9104" levels="1" name="Visual Style Titanium">
+		<set name="mpConsume" val="100" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DRESSME" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="23000" />
+		<set name="hitTime" val="1000" />
+	</skill>
+	<skill id="9105" levels="1" name="Visual Style Titanium">
+		<set name="mpConsume" val="100" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DRESSME" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="23000" />
+		<set name="hitTime" val="1000" />
+	</skill>
 </list>

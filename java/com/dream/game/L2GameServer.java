@@ -25,6 +25,7 @@ import com.dream.game.datatables.xml.BuyListTable;
 import com.dream.game.datatables.xml.CharTemplateTable;
 import com.dream.game.datatables.xml.ClanLeveLUpPricesData;
 import com.dream.game.datatables.xml.DoorTable;
+import com.dream.game.datatables.xml.DressMeData;
 import com.dream.game.datatables.xml.ExtractableItemsData;
 import com.dream.game.datatables.xml.FishTable;
 import com.dream.game.datatables.xml.GreetingData;
@@ -137,6 +138,7 @@ import com.dream.game.network.ThreadPoolManager;
 import com.dream.game.scripting.L2ScriptEngineManager;
 import com.dream.game.taskmanager.AttackStanceTaskManager;
 import com.dream.game.taskmanager.DecayTaskManager;
+import com.dream.game.taskmanager.GreetingManager;
 import com.dream.game.taskmanager.KnownListUpdateTaskManager;
 import com.dream.game.taskmanager.LeakTaskManager;
 import com.dream.game.taskmanager.SQLQueue;
@@ -577,10 +579,14 @@ public class L2GameServer
 		
 		Console.printSection("Greeter Data");
 		GreetingData.getInstance();
+		GreetingManager.getInstance().start();
 		
 		Console.printSection("Reset Data");
 		ResetData.getInstance();
 		ResetManager.getInstance().start();
+		
+		Console.printSection("DressMe Data");
+		DressMeData.getInstance();
 		
 		Console.printSection("Oficial Event's");
 		Cristmas.startEvent();

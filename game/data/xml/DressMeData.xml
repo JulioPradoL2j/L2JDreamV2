@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dressMeList>
+  <dress skillId="9100" name="Draconic Armor" type="ARMOR" isVip="false" >
+    <visualSet chest="6379" legs="0" gloves="6380" feet="6381" helmet="6841" />
+    <visualEffect skillId="445" level="1" recurring="true" interval="35" />
+  </dress>
+
+  <dress skillId="9102" name="Cloak Style Armor" type="CLOAK" isVip="false">
+    <visualSet chest="7000" legs="0" gloves="0" feet="0" helmet="0" />
+    <visualEffect skillId="10005" level="1" recurring="false" />
+  </dress>
+  
+   <dress skillId="9103" name="Valakas Style Weapon" type="WEAPON" isVip="false">
+    <visualWep type="bow" rhand="7575" lhand="0" lrhand="0" />
+    <visualEffect skillId="10005" level="1" recurring="false" />
+  </dress>
+</dressMeList>

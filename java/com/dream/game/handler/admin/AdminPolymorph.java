@@ -46,31 +46,31 @@ public class AdminPolymorph extends gmHandler
 		"polymorph_menu",
 		"unpolymorph_menu"
 	};
-
+	
 	@Override
 	public String[] getCommandList()
 	{
 		return commands;
 	}
-
+	
 	@Override
 	public void runCommand(L2PcInstance admin, String... params)
 	{
 		if (admin == null)
 			return;
 		L2Object targetChar = admin.getTarget();
-
+		
 		final String command = params[0];
-
+		
 		if (command.startsWith("polymorph"))
 		{
 			StringTokenizer st = new StringTokenizer(command);
-
+			
 			try
 			{
 				st.nextToken();
 				String p1 = st.nextToken();
-
+				
 				if (st.hasMoreTokens())
 				{
 					String p2 = st.nextToken();
@@ -81,16 +81,16 @@ public class AdminPolymorph extends gmHandler
 				{
 					doPolymorph(admin, targetChar, p1, "npc");
 				}
-
+				
 				p1 = null;
 			}
 			catch (final Exception e)
 			{
 				e.printStackTrace();
-
+				
 				admin.sendMessage("Usage: //polymorph [type] <id>");
 			}
-
+			
 			targetChar = null;
 			st = null;
 		}
@@ -98,27 +98,26 @@ public class AdminPolymorph extends gmHandler
 		{
 			doUnpoly(admin, admin.getTarget());
 		}
-
+		
 		if (command.contains("menu"))
 		{
 			showMainPage(admin);
 		}
-
+		
 		return;
 	}
-
-
+	
 	private static void doPolymorph(final L2PcInstance activeChar, final L2Object obj, final String id, final String type)
 	{
 		if (obj != null)
 		{
 			obj.getPoly().setPolyInfo(type, id);
-
+			
 			// animation
 			if (obj instanceof L2Character)
 			{
 				L2Character Char = (L2Character) obj;
-				MagicSkillUse msk = new MagicSkillUse(Char, 1008, 1, 4000, 0, false);
+				MagicSkillUse msk = new MagicSkillUse(Char, Char, 1008, 1, 4000, 0, false);
 				Char.broadcastPacket(msk);
 				SetupGauge sg = new SetupGauge(0, 4000);
 				Char.sendPacket(sg);
@@ -126,7 +125,7 @@ public class AdminPolymorph extends gmHandler
 				sg = null;
 				msk = null;
 			}
-
+			
 			// end of animation
 			obj.decayMe();
 			obj.spawnMe(obj.getX(), obj.getY(), obj.getZ());
@@ -137,7 +136,7 @@ public class AdminPolymorph extends gmHandler
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
 		}
 	}
-
+	
 	/**
 	 * @param activeChar
 	 * @param target
@@ -156,12 +155,12 @@ public class AdminPolymorph extends gmHandler
 			activeChar.sendPacket(new SystemMessage(SystemMessageId.INCORRECT_TARGET));
 		}
 	}
-
+	
 	private static void showMainPage(final L2PcInstance admin)
 	{
 		sendHtml(admin, "effects");
 	}
-
+	
 	private static void sendHtml(L2PcInstance admin, String patch)
 	{
 		String name = patch + ".htm";
@@ -169,8 +168,10 @@ public class AdminPolymorph extends gmHandler
 		html.setFile("data/html/admin/menus/" + name);
 		admin.sendPacket(html);
 	}
-
-	/* (non-Javadoc)
-	 * @see com.dream.game.access.gmHandler#runCommand(com.dream.game.model.actor.instance.L2PcInstance, java.lang.String[]) */
-
+	
+	/*
+	 * (non-Javadoc)
+	 * @see com.dream.game.access.gmHandler#runCommand(com.dream.game.model.actor.instance.L2PcInstance, java.lang.String[])
+	 */
+	
 }

@@ -1,7 +1,5 @@
 package com.dream.game.templates.skills;
 
-import java.lang.reflect.Constructor;
-
 import com.dream.game.model.L2Skill;
 import com.dream.game.skills.l2skills.L2ScriptSkill;
 import com.dream.game.skills.l2skills.L2SkillChargeDmg;
@@ -13,8 +11,11 @@ import com.dream.game.skills.l2skills.L2SkillSignetCasttime;
 import com.dream.game.skills.l2skills.L2SkillSummon;
 import com.dream.util.StatsSet;
 
+import java.lang.reflect.Constructor;
+
 public enum L2SkillType
 {
+	DRESSME,
 	PDAM,
 	MDAM,
 	CPDAM,
