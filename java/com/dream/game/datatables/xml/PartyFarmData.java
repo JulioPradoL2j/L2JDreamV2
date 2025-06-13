@@ -36,7 +36,7 @@ public class PartyFarmData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseFile("./data/xml/partyfarm.xml");
+		parseFile("./data/custom/events/partyfarm.xml");
 		LOGGER.info("Loaded {" + _ptfarm.size() + "} Party Farm spawns.");
 	}
 	

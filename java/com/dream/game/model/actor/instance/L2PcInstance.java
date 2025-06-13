@@ -1014,6 +1014,7 @@ public class L2PcInstance extends L2Playable
 				
 				PcAppearance app = new PcAppearance(rset.getByte("face"), rset.getByte("hairColor"), rset.getByte("hairStyle"), female);
 				player = new L2PcInstance(objectId, template, rset.getString("account_name"), app);
+				restorePremServiceData(player, rset.getString("account_name"));
 				player.setName(rset.getString("char_name"));
 				player._lastAccess = rset.getLong("lastAccess");
 				player._baseExp = rset.getLong("exp");
@@ -13950,7 +13951,6 @@ public class L2PcInstance extends L2Playable
 		
 		setDressMe(true);
 		
-		// Aplica efeito visual, se houver
 		if (skin.getEffect() != null && skin.getEffect().getSkillId() > 0)
 		{
 			if (skin.getEffect().isRecurring())
@@ -13994,4 +13994,115 @@ public class L2PcInstance extends L2Playable
 
 		}
 	}
+	
+	private static final String INSERT_PREMIUMSERVICE = "INSERT INTO account_premium (account_name,premium_service,enddate) values(?,?,?) ON DUPLICATE KEY UPDATE premium_service=?, enddate=?";
+	private static final String RESTORE_PREMIUMSERVICE = "SELECT premium_service,enddate FROM account_premium WHERE account_name=?";
+	private static final String UPDATE_PREMIUMSERVICE = "UPDATE account_premium SET premium_service=?,enddate=? WHERE account_name=?";
+	
+	private void createPSdb()
+	{
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(INSERT_PREMIUMSERVICE))
+		{
+			ps.setString(1, _accountName);
+			ps.setInt(2, 0);
+			ps.setLong(3, 0);
+			ps.setInt(4, 0);
+			ps.setLong(5, 0);
+			ps.executeUpdate();
+		}
+		catch (Exception e)
+		{
+			_log.info("PremiumService: Could not insert char data: " + e);
+		}
+	}
+	
+	private static void psTimeOver(String account)
+	{
+		try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+			PreparedStatement ps = con.prepareStatement(UPDATE_PREMIUMSERVICE))
+		{
+			ps.setInt(1, 0);
+			ps.setLong(2, 0);
+			ps.setString(3, account);
+			ps.execute();
+		}
+		catch (SQLException e)
+		{
+			_log.info("PremiumService: Could not increase data");
+		}
+	}
+	
+	public long getPremServiceData()
+	{
+		long endDate = 0;
+		
+		if (Config.USE_PREMIUM_SERVICE)
+		{
+			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+				PreparedStatement ps = con.prepareStatement(RESTORE_PREMIUMSERVICE))
+			{
+				ps.setString(1, getAccountName());
+				try (ResultSet rs = ps.executeQuery())
+				{
+					while (rs.next())
+						endDate = rs.getLong("enddate");
+				}
+			}
+			catch (Exception e)
+			{
+				_log.info("PremiumService: Could not restore prem service data " + e);
+			}
+		}
+		
+		return endDate;
+	}
+	
+	private static void restorePremServiceData(L2PcInstance player, String account)
+	{
+		boolean sucess = false;
+		if (Config.USE_PREMIUM_SERVICE)
+		{
+			try (Connection con = L2DatabaseFactory.getInstance().getConnection();
+				PreparedStatement statement = con.prepareStatement(RESTORE_PREMIUMSERVICE))
+			{
+				statement.setString(1, account);
+				try (ResultSet rset = statement.executeQuery())
+				{
+					while (rset.next())
+					{
+						if (rset.getLong("enddate") <= System.currentTimeMillis())
+						{
+							psTimeOver(account);
+							player.setPremiumService(0);
+							player.setVip(sucess);
+						}
+						else
+						{
+							player.setPremiumService(rset.getInt("premium_service"));
+							sucess = true;
+							player.setVip(sucess);
+						}
+					}
+					
+					if (!sucess)
+					{
+						player.createPSdb();
+						player.setPremiumService(0);
+						player.setVip(sucess);
+					}
+				}
+			}
+			catch (SQLException e)
+			{
+				_log.info("PremiumService: Could not restore data for:" + account + "." + e);
+			}
+		}
+		else
+		{
+			player.createPSdb();
+			player.setPremiumService(0);
+		}
+	}
+	
 }

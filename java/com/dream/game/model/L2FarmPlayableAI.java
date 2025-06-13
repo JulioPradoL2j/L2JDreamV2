@@ -185,10 +185,12 @@ public class L2FarmPlayableAI
 				{
 					if (!player.isAttackingNow() && !player.isCastingNow())
 					{
-						player.getAI().setIntention(CtrlIntention.ATTACK, target);
+						if (!player.isMageClass())
+							player.getAI().setIntention(CtrlIntention.ATTACK, target);
+						
 						player.sendPacket(new ExAutoSoulShot(2, 1));
 						
-						if(player.isMageClass())
+						if (player.isMageClass())
 							player.abortAttack();
 					}
 				}
@@ -224,8 +226,8 @@ public class L2FarmPlayableAI
 				}
 				
 				player.sendPacket(new ValidateLocation(monster));
-				
-				player.getAI().setIntention(CtrlIntention.FOLLOW, monster);
+				if (!player.isMageClass())
+					player.getAI().setIntention(CtrlIntention.FOLLOW, monster);
 				
 			}
 		}

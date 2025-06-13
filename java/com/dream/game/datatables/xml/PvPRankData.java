@@ -37,7 +37,7 @@ public class PvPRankData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseFile("./data/xml/pvprank.xml");
+		parseFile("./data/custom/events/pvprank.xml");
 		LOGGER.info("Loaded Custom PvP Config.");
 	}
 	

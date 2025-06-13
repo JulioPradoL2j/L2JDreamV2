@@ -22,7 +22,7 @@ public class GreetingData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseFile("./data/xml/greeting.xml");
+		parseFile("./data/custom/mods/greeting.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _greetings.size() + " greetings.");
 		
 	}

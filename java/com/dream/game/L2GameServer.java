@@ -46,6 +46,7 @@ import com.dream.game.datatables.xml.SkillTreeTable;
 import com.dream.game.datatables.xml.StaticObjects;
 import com.dream.game.datatables.xml.SummonItemsData;
 import com.dream.game.datatables.xml.TeleportLocationTable;
+import com.dream.game.datatables.xml.TowerWarsData;
 import com.dream.game.datatables.xml.ZoneTable;
 import com.dream.game.geodata.GeoData;
 import com.dream.game.geodata.pathfinding.PathFinding;
@@ -112,6 +113,7 @@ import com.dream.game.model.L2Manor;
 import com.dream.game.model.L2PcOffline;
 import com.dream.game.model.L2SiegeStatus;
 import com.dream.game.model.ResetManager;
+import com.dream.game.model.TowerWarsManager;
 import com.dream.game.model.entity.Hero;
 import com.dream.game.model.entity.events.BigSquash;
 import com.dream.game.model.entity.events.Cristmas;
@@ -587,6 +589,10 @@ public class L2GameServer
 		
 		Console.printSection("DressMe Data");
 		DressMeData.getInstance();
+		
+		Console.printSection("TowerWars Data");
+		TowerWarsData.getInstance();
+		TowerWarsManager.getInstance().start();
 		
 		Console.printSection("Oficial Event's");
 		Cristmas.startEvent();

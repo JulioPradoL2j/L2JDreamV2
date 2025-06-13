@@ -29,7 +29,7 @@ public class DressMeData implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseFile("./data/xml/DressMeData.xml");
+		parseFile("./data/custom/mods/DressMeData.xml");
 		LOGGER.info("Loaded {" + _entries.size() + "} DressMe entries.");
 	}
 	

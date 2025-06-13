@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Configuração do evento Town Wars
+  Este evento ocorre em determinados dias e horários configurados abaixo.
+  Quando o horário for atingido, uma mensagem será enviada aos jogadores,
+-->
+
+<list><event>
+    <!-- Ativa ou desativa este evento -->
+    <enabled>true</enabled>
+    <!-- Duração total do evento em minutos (após o tempo de preparação) -->
+    <duration>30</duration>
+    <!-- Tempo de preparação em minutos após o aviso antes de iniciar o evento -->
+    <preparation>5</preparation>
+    <!-- Dias da semana em que o evento pode ocorrer:
+    0 = Domingo, 1 = Segunda, ..., 6 = Sábado.
+    Neste exemplo: Segunda (1), Quarta (3) e Sexta-feira (5) -->
+    <days>1,3,6</days>
+    <!-- Horários do dia em que o evento pode iniciar (formato 24h: HH:mm).
+    O sistema verifica a cada segundo se um desses horários foi atingido. -->
+    <times>
+        <time>14:32</time>
+        <time>15:00</time>
+        <time>17:20</time>
+        <time>21:15</time>
+    </times>
+	
+    <set popup="true" />
+	<set towertimerespawn="0" />
+	<set inhibitorrespawntime="300" />
+	
+		<routes>
+			<route name="top">
+				<tower npcId="21481" x="50334" y="-216693" z="16" order="1"/>
+				<tower npcId="21481" x="50334" y="-216693" z="16" order="2"/>
+				<tower npcId="21481" x="50334" y="-216693" z="16" order="3"/>
+				
+				<tower npcId="21481" x="50338" y="-209297" z="42" order="1"/>
+				<tower npcId="21481" x="50338" y="-209297" z="42" order="2"/>
+				<tower npcId="21481" x="50338" y="-209297" z="42" order="3"/>
+			</route>
+			<route name="mid">
+				<tower npcId="21481" x="49148" y="-215962" z="19" order="1"/>
+				<tower npcId="21481" x="49148" y="-215962" z="19" order="2"/>
+				<tower npcId="21481" x="49148" y="-215962" z="19" order="3"/>
+				
+				<tower npcId="21481" x="49155" y="-210027" z="19" order="1"/>
+				<tower npcId="21481" x="49155" y="-210027" z="19" order="2"/>
+				<tower npcId="21481" x="49155" y="-210027" z="19" order="3"/>
+			</route>
+			<route name="bot">
+				<tower npcId="21481" x="47964" y="-216686" z="44" order="1"/>
+				<tower npcId="21481" x="47964" y="-216686" z="44" order="2"/>
+				<tower npcId="21481" x="47964" y="-216686" z="44" order="3"/>
+				
+				<tower npcId="21481" x="47970" y="-209298" z="48" order="1"/>
+				<tower npcId="21481" x="47970" y="-209298" z="48" order="2"/>
+				<tower npcId="21481" x="47970" y="-209298" z="48" order="3"/>
+			</route>
+		</routes>
+		<crystals>
+			<team name="Elysian">
+				<inhibitor npcId="21481" x="49159" y="-216387" z="31" order="1"/>
+				<inhibitor npcId="21481" x="49159" y="-216387" z="31" order="1"/>
+				<inhibitor npcId="21481" x="49159" y="-216387" z="31" order="1"/>
+				<crystal npcId="21481" x="49145" y="-217491" z="32"/>
+			</team>
+			<team name="Realmes">
+				<inhibitor npcId="21481" x="49154" y="-209609" z="31" order="1"/>
+				<inhibitor npcId="21481" x="49154" y="-209609" z="31" order="1"/>
+				<inhibitor npcId="21481" x="49154" y="-209609" z="31" order="1"/>
+				<crystal npcId="21481" x="49144" y="-20488" z="32"/>
+			</team>
+		</crystals>
+		<players>
+			<team name="Elysian">
+				<spot count="5" x="49149" y="-207317" z="88"/>
+			</team>
+			<team name="Realmes">
+				<spot count="5" x="49155" y="-218657" z="84"/>
+			</team>
+		</players>
+</event></list>

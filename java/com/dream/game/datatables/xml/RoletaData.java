@@ -29,7 +29,7 @@ public class RoletaData implements IXmlReader
 	public void load()
 	{
 		_items.clear();
-		parseFile("./data/xml/roulette.xml");
+		parseFile("./data/custom/mods/roulette.xml");
 		LOGGER.info("Loaded {" + _items.size() + "} roulette items.");
 	}
 	

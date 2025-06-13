@@ -26,7 +26,7 @@ public class ResetData implements IXmlReader
 	public void load()
 	{
 		_resets.clear();
-		parseFile("./data/xml/resetData.xml");
+		parseFile("./data/custom/mods/resetData.xml");
 		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _resets.size() + " reset configs.");
 	}
 	

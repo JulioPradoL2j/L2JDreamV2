@@ -1209,6 +1209,7 @@ public class Config extends L2Config
 	public static boolean VOICED_AUTOFARM_COMMAND;
 	public static boolean VOICED_ROULETTE_COMMAND;
 	public static boolean VOICED_RESET_COMMAND;
+	public static boolean VOICED_TOWEREVENT_COMMAND;
 	/** Server version */
 	public static String SERVER_VERSION;
 	/** Date of server build */
@@ -2210,6 +2211,8 @@ public class Config extends L2Config
 			VOICED_AUTOFARM_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedAutofarmCommand", "False"));
 			VOICED_ROULETTE_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedRouletteCommand", "False"));
 			VOICED_RESET_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedResetCommand", "False"));
+			VOICED_TOWEREVENT_COMMAND = Boolean.parseBoolean(p.getProperty("LoadVoicedTowerEventCommand", "False"));
+			
 			
 			ENABLE_EVENT_MANAGER = Boolean.parseBoolean(p.getProperty("EnableEventManager", "false"));
 			EVENT_MANAGER_ID = Integer.parseInt(p.getProperty("EventManagerNpcId", "50004"));
@@ -2859,15 +2862,9 @@ public class Config extends L2Config
 	public static String RAID_BOSS_DATE_FORMAT;
 	public static String RAID_BOSS_IDS;
 	public static List<Integer> LIST_RAID_BOSS_IDS;
+
+	public static boolean USE_PREMIUM_SERVICE;
 	
-	public static int VIP_ITEM = 9212;
-	public static int VIP_DIAS;
-	
-	public static int VIP_ITEM2 = 9213;
-	public static int VIP_DIAS2;
-	
-	public static int VIP_ITEM3 = 9214;
-	public static int VIP_DIAS3;
 	
 	public static int CLANFULL_ITEM = 9220;
 	public static int CLANSKILL_ITEM;
@@ -2969,14 +2966,13 @@ public class Config extends L2Config
 		try
 		{
 			Properties p = new L2Properties(ConfigFiles.ADDON_FILE);
+
+			USE_PREMIUM_SERVICE = Boolean.parseBoolean(p.getProperty("UsePremiumServices", "false"));
 			
 			ALLOW_VIP_NCOLOR = Boolean.parseBoolean(p.getProperty("AllowVipNameColor", "True"));
 			VIP_NCOLOR = Integer.decode("0x" + p.getProperty("VipNameColor", "0088FF"));
 			ALLOW_VIP_TCOLOR = Boolean.parseBoolean(p.getProperty("AllowVipTitleColor", "True"));
 			VIP_TCOLOR = Integer.decode("0x" + p.getProperty("VipTitleColor", "0088FF"));
-			VIP_DIAS = Integer.parseInt(p.getProperty("VipDias", "30"));
-			VIP_DIAS2 = Integer.parseInt(p.getProperty("VipDias2", "60"));
-			VIP_DIAS3 = Integer.parseInt(p.getProperty("VipDias3", "90"));
 			CLANSKILL_ITEM = Integer.parseInt(p.getProperty("ClanSkillByItem", "0"));
 			CLANSKILL_ITEM_SKILL = parseItemsList(p.getProperty("ClanSkillID", "0,0"));
 			

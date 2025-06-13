@@ -31,7 +31,7 @@ public class IconTable implements IXmlReader
 	@Override
 	public void load()
 	{
-		parseFile("./data/xml/extraicons.xml");
+		parseFile("./data/custom/mods/extraicons.xml");
 		LOGGER.info("Loaded {" + _icons.size() + "} icons.");
 	}
 	

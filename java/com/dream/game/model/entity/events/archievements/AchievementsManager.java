@@ -40,7 +40,7 @@ public class AchievementsManager
 		factory.setValidating(false);
 		factory.setIgnoringComments(true);
 
-		File file = new File(Config.DATAPACK_ROOT + "/config/custom/achievements.xml");
+		File file = new File(Config.DATAPACK_ROOT + "/data/custom/mods/achievements.xml");
 
 		if (!file.exists())
 		{
@@ -73,7 +73,7 @@ public class AchievementsManager
 					}
 				}
 			}
-			_log.info("[AchievementsEngine] Successfully loaded: " + getAchievementList().size() + " achievements from xml!");
+			_log.info("Loaded: Successfully " + getAchievementList().size() + " achievements from xml!");
 		}
 		catch (Exception e)
 		{

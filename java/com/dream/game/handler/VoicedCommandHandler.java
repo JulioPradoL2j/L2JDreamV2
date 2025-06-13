@@ -10,6 +10,7 @@ import com.dream.game.handler.voiced.Help;
 import com.dream.game.handler.voiced.Offline;
 import com.dream.game.handler.voiced.Reset;
 import com.dream.game.handler.voiced.Roulette;
+import com.dream.game.handler.voiced.TowerEvent;
 import com.dream.game.handler.voiced.Wedding;
 
 import java.util.HashMap;
@@ -79,6 +80,11 @@ public class VoicedCommandHandler
 		if (Config.VOICED_RESET_COMMAND)
 		{
 			registerVoicedCommandHandler(new Reset());
+		}
+		
+		if (Config.VOICED_TOWEREVENT_COMMAND)
+		{
+			registerVoicedCommandHandler(new TowerEvent());
 		}
 		
 		if (_datatable.size() > 0)

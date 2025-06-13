@@ -17,13 +17,13 @@ public class ChatHero implements IChatHandler
 	{
 		SystemChatChannelId.Chat_Hero
 	};
-
+	
 	@Override
 	public SystemChatChannelId[] getChatTypes()
 	{
 		return _chatTypes;
 	}
-
+	
 	@Override
 	public void useChatHandler(L2PcInstance activeChar, String target, SystemChatChannelId chatType, String text)
 	{
@@ -32,26 +32,48 @@ public class ChatHero implements IChatHandler
 			activeChar.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
 		}
-
-		boolean canSpeak = activeChar.isGM();
-
-		if (!canSpeak)
-			if (activeChar.isHero())
-				if (FloodProtector.tryPerformAction(activeChar, Protected.HEROVOICE))
-				{
-					canSpeak = true;
-				}
-				else
-				{
-					activeChar.sendMessage(Message.getMessage(activeChar, Message.MessageId.MSG_HERO_CHAT_ONCE_PER_TEN_SEC));
-				}
+		
+		boolean isGM = activeChar.isGM();
+		boolean isVIP = activeChar.isVip();
+		boolean isHero = activeChar.isHero();
+		
+		boolean canSpeak = false;
+		
+		if (isGM)
+		{
+			canSpeak = true;
+		}
+		else if (isVIP || isHero)
+		{
+			if (FloodProtector.tryPerformAction(activeChar, Protected.HEROVOICE))
+			{
+				canSpeak = true;
+			}
+			else
+			{
+				activeChar.sendMessage(Message.getMessage(activeChar, Message.MessageId.MSG_HERO_CHAT_ONCE_PER_TEN_SEC));
+			}
+		}
+		
 		if (canSpeak)
 		{
+			String prefix = "";
+			if (isGM)
+			{
+				prefix = "[GM] ";
+			}
+			else if (isVIP)
+			{
+				prefix = "[VIP] ";
+			}
+			
+			String senderName = prefix + activeChar.getName();
+			
 			for (L2PcInstance player : L2World.getInstance().getAllPlayers())
 			{
 				if (player != null && !BlockList.isBlocked(player, activeChar))
 				{
-					player.sendPacket(new CreatureSay(activeChar.getObjectId(), chatType, activeChar.getName(), text));
+					player.sendPacket(new CreatureSay(activeChar.getObjectId(), chatType, senderName, text));
 				}
 			}
 		}
